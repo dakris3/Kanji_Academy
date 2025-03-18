@@ -15,6 +15,8 @@ public class Kuis : MonoBehaviour
     private List<int> questionOrder;   // Urutan soal acak
     private int currentQuestionIndex = 0; // Indeks soal saat ini
 
+    public PointManager pointManager;
+
     [System.Serializable]
     public class QuestionData
     {
@@ -29,6 +31,7 @@ public class Kuis : MonoBehaviour
 
     void Start()
     {
+        pointManager = FindObjectOfType<PointManager>();
         audioSource = GetComponent<AudioSource>(); // Mengambil komponen AudioSource
         
         // Cek apakah audioSource sudah diatur dengan benar
@@ -154,6 +157,8 @@ public class Kuis : MonoBehaviour
         else
         {
     Debug.Log("Level telah selesai");
+    pointManager.AddPoints(100);
+    Debug.Log(pointManager.totalPoints);
 
     // Panggil hasil dari LevelResultHandler
     FindObjectOfType<Hasil>().ShowResult();

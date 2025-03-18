@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 public class Hasil : MonoBehaviour
 {
     public string nextSceneName; // Nama scene berikutnya (atur di Inspector)
-
     public void ShowResult()
     {
         Debug.Log("Level telah selesai! Menampilkan hasil...");

@@ -871,7 +871,7 @@ GameObject:
   - component: {fileID: 775754002}
   - component: {fileID: 775754001}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -917,7 +917,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: = 100
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1004,6 +1004,7 @@ GameObject:
   m_Component:
   - component: {fileID: 837777834}
   - component: {fileID: 837777835}
+  - component: {fileID: 837777836}
   - component: {fileID: 837777837}
   m_Layer: 0
   m_Name: GameManager
@@ -1039,6 +1040,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c90dc09adb1f2614588b7519ab4dcf5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &837777836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837777833}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b7a5186f45319d448495914007c1ca2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointManager: {fileID: 0}
+  pointText: {fileID: 775754001}
+  achievementIcons:
+  - {fileID: 94751220}
+  - {fileID: 332160228}
+  - {fileID: 454997293}
+  - {fileID: 530854020}
+  - {fileID: 419156588}
+  - {fileID: 1608183818}
+  - {fileID: 1757249653}
+  - {fileID: 361912670}
+  - {fileID: 622616402}
+  - {fileID: 1199445461}
+  achievementThresholds: 2c0100005802000084030000b0040000dc0500000807000034080000600900008c0a00001c0c0000
 --- !u!114 &837777837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1048,9 +1075,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 837777833}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4f4febacbe05cd4f99e4e1f9c47c1ec, type: 3}
+  m_Script: {fileID: 11500000, guid: 1462ae1497ffcc1419bd5edbfe646ef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalPoints: 0
+  pointText: {fileID: 775754001}
 --- !u!1 &1131371542
 GameObject:
   m_ObjectHideFlags: 0
@@ -1197,7 +1226,7 @@ GameObject:
   - component: {fileID: 1145344580}
   - component: {fileID: 1145344579}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Judul
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1829,7 +1858,7 @@ GameObject:
   - component: {fileID: 1494001207}
   - component: {fileID: 1494001206}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
