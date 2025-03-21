@@ -2,67 +2,58 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro; // Pastikan TMP sudah di-import
+using TMPro;
+using UnityEngine.SceneManagement; // Tambahkan ini untuk memuat scene
 
 public class Kuis : MonoBehaviour
 {
-    // Referensi untuk elemen UI
-    public Image quizImage;            // Gambar kuis
-    public Button audioButton;         // Tombol untuk memutar audio
-    public Button[] answerButtons;     // Tombol jawaban
+    public Image quizImage;
+    public Button audioButton;
+    public Button[] answerButtons;
+    private AudioSource audioSource;
+    private List<int> questionOrder;
+    private int currentQuestionIndex = 0;
 
-    private AudioSource audioSource;   // Komponen AudioSource untuk memutar audio
-    private List<int> questionOrder;   // Urutan soal acak
-    private int currentQuestionIndex = 0; // Indeks soal saat ini
-
-    public PointManager pointManager;
+    public LevelManager levelManager; // Hubungkan ke LevelManager
 
     [System.Serializable]
     public class QuestionData
     {
-        public Sprite questionImage;    // Gambar untuk pertanyaan
-        public AudioClip questionAudio; // Audio untuk pertanyaan
-        public string[] answers;        // Jawaban pilihan ganda
-        public int correctAnswerIndex;  // Indeks jawaban benar
+        public Sprite questionImage;
+        public AudioClip questionAudio;
+        public string[] answers;
+        public int correctAnswerIndex;
     }
 
-    // Array pertanyaan yang langsung diatur di dalam skrip
     public QuestionData[] questions;
 
     void Start()
     {
-        pointManager = FindObjectOfType<PointManager>();
-        audioSource = GetComponent<AudioSource>(); // Mengambil komponen AudioSource
-        
-        // Cek apakah audioSource sudah diatur dengan benar
+        // Pastikan LevelManager ditemukan
+        levelManager = FindObjectOfType<LevelManager>();
+        if (levelManager == null)
+        {
+            Debug.LogError("LevelManager tidak ditemukan di scene!");
+        }
+
+        audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
         {
             Debug.LogError("AudioSource tidak ditemukan pada GameObject ini.");
-            return; // Hentikan eksekusi jika AudioSource tidak ditemukan
-        }
-
-        // Cek apakah array `questions` sudah diisi
-        if (questions == null || questions.Length == 0)
-        {
-            Debug.LogError("Pertanyaan belum diatur. Tambahkan pertanyaan di Inspector.");
             return;
         }
 
-        // Cek apakah `answerButtons` sudah diatur di Inspector
-        if (answerButtons == null || answerButtons.Length == 0)
+        if (quizImage == null || audioButton == null || answerButtons == null || answerButtons.Length == 0 || questions == null || questions.Length == 0)
         {
-            Debug.LogError("Answer buttons belum diatur di Inspector.");
+            Debug.LogError("Ada komponen yang belum diatur di Inspector!");
             return;
         }
 
-        InitializeQuestionOrder();  // Menginisialisasi urutan pertanyaan
-        DisplayQuestion();          // Menampilkan pertanyaan pertama
-
-        // Tambahkan listener untuk tombol audio
+        InitializeQuestionOrder();
+        DisplayQuestion();
         audioButton.onClick.AddListener(PlayQuestionAudio);
     }
 
-    // Membuat urutan pertanyaan secara acak
     void InitializeQuestionOrder()
     {
         questionOrder = new List<int>();
@@ -70,11 +61,9 @@ public class Kuis : MonoBehaviour
         {
             questionOrder.Add(i);
         }
-
         ShuffleList(questionOrder);
     }
 
-    // Fungsi untuk mengacak list
     void ShuffleList(List<int> list)
     {
         for (int i = 0; i < list.Count; i++)
@@ -86,53 +75,49 @@ public class Kuis : MonoBehaviour
         }
     }
 
-    // Menampilkan pertanyaan di UI
     void DisplayQuestion()
     {
+        if (currentQuestionIndex >= questionOrder.Count)
+        {
+            Debug.LogError("currentQuestionIndex melebihi jumlah pertanyaan!");
+            return;
+        }
+
         int questionIndex = questionOrder[currentQuestionIndex];
 
-        // Menampilkan gambar kuis
         quizImage.sprite = questions[questionIndex].questionImage;
-
-        // Memastikan audio pertanyaan yang benar siap diputar
         audioSource.clip = questions[questionIndex].questionAudio;
 
-        // Menampilkan pilihan jawaban
         for (int i = 0; i < answerButtons.Length; i++)
         {
-            TMP_Text buttonText = answerButtons[i].GetComponentInChildren<TMP_Text>(); // Menggunakan TMP_Text untuk teks tombol
+            TMP_Text buttonText = answerButtons[i].GetComponentInChildren<TMP_Text>();
             if (buttonText != null)
             {
                 buttonText.text = questions[questionIndex].answers[i];
             }
-            else
-            {
-                Debug.LogError("TMP_Text tidak ditemukan pada tombol " + i);
-            }
 
-            answerButtons[i].onClick.RemoveAllListeners();  // Menghapus listener sebelumnya
-            int index = i;  // Local copy untuk digunakan di listener
+            answerButtons[i].onClick.RemoveAllListeners();
+            int index = i;
             answerButtons[i].onClick.AddListener(() => CheckAnswer(index));
         }
     }
 
-    // Memutar audio pertanyaan
     void PlayQuestionAudio()
     {
-        // Memutar audio pertanyaan yang terkait dengan pertanyaan saat ini
         if (audioSource.clip != null)
         {
             audioSource.Play();
         }
-        else
-        {
-            Debug.LogWarning("Audio clip belum diatur untuk pertanyaan ini.");
-        }
     }
 
-    // Memeriksa apakah jawaban yang dipilih benar atau salah
     void CheckAnswer(int index)
     {
+        if (currentQuestionIndex >= questionOrder.Count)
+        {
+            Debug.LogError("currentQuestionIndex melebihi jumlah pertanyaan!");
+            return;
+        }
+
         int questionIndex = questionOrder[currentQuestionIndex];
 
         if (index == questions[questionIndex].correctAnswerIndex)
@@ -146,23 +131,29 @@ public class Kuis : MonoBehaviour
         }
     }
 
-    // Lanjut ke pertanyaan berikutnya
     void NextQuestion()
     {
         currentQuestionIndex++;
+
         if (currentQuestionIndex < questionOrder.Count)
         {
             DisplayQuestion();
         }
         else
         {
-    Debug.Log("Level telah selesai");
-    pointManager.AddPoints(100);
-    Debug.Log(pointManager.totalPoints);
+            Debug.Log("Level telah selesai");
 
-    // Panggil hasil dari LevelResultHandler
-    FindObjectOfType<Hasil>().ShowResult();
+            if (levelManager != null)
+            {
+                levelManager.LevelComplete();
+            }
+            else
+            {
+                Debug.LogError("LevelManager tidak ditemukan! Tidak bisa menyelesaikan level.");
+            }
+
+            // Pindah ke scene "Hasil"
+            SceneManager.LoadScene("Hasil");
         }
-
     }
 }

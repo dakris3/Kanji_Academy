@@ -1165,8 +1165,6 @@ GameObject:
   - component: {fileID: 837777834}
   - component: {fileID: 837777835}
   - component: {fileID: 837777836}
-  - component: {fileID: 837777837}
-  - component: {fileID: 837777838}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1210,37 +1208,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 837777833}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0960a340ca900d440a7ac265022283e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextSceneName: 
---- !u!114 &837777837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 837777833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1462ae1497ffcc1419bd5edbfe646ef8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  totalPoints: 0
-  pointText: {fileID: 351132054}
---- !u!114 &837777838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 837777833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e876024a3c0f72d439eb0c7130d621d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointManager: {fileID: 837777837}
+  levelPointReward: 100
+  pointText: {fileID: 351132054}
 --- !u!1 &1105983152
 GameObject:
   m_ObjectHideFlags: 0

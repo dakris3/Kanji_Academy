@@ -1,27 +1,38 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using TMPro;
 
 public class LevelManager : MonoBehaviour
 {
-    public PointManager pointManager; // Reference ke PointManager
+    public int levelPointReward = 100; // Poin yang diberikan per level selesai
+    public TextMeshProUGUI pointText; // UI untuk menampilkan poin
 
-    void Start()
+    private void Start()
     {
-        if (pointManager == null)
+        // Cek jika berada di scene "Hasil"
+        if (SceneManager.GetActiveScene().name == "Hasil")
         {
-            pointManager = FindObjectOfType<PointManager>();
+            // Tampilkan hanya 100 poin di UI
+            if (pointText != null)
+            {
+                pointText.text = levelPointReward.ToString();
+            }
+        }
+        else
+        {
+            // Jika di level lain, tambahkan poin sekali saja
+            int totalPoints = PlayerPrefs.GetInt("TotalPoints", 0);
+            totalPoints += levelPointReward;
+            PlayerPrefs.SetInt("TotalPoints", totalPoints);
+            PlayerPrefs.Save();
+
+            Debug.Log($"[LEVEL LOADED] Pemain mendapatkan {levelPointReward} poin! Total sekarang: {totalPoints}");
         }
     }
 
     public void LevelComplete()
     {
-        if (pointManager != null)
-        {
-            Debug.Log("Level selesai! Menambahkan 100 poin.");
-            pointManager.AddPoints(100); // Tambah 100 poin
-        }
-        else
-        {
-            Debug.LogWarning("PointManager tidak ditemukan!");
-        }
+        // Pindah ke scene "Hasil"
+        SceneManager.LoadScene("Hasil");
     }
 }

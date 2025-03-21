@@ -1,110 +1,169 @@
 using UnityEngine;
-using System.IO;
 using TMPro;
-using UnityEngine.UI;
 
 [System.Serializable]
 public class PlayerData
 {
-    public int totalPoints = 0; // Total poin pemain
+    public int totalPoints = 0;
 }
 
 public class Achievement : MonoBehaviour
 {
-    public TextMeshProUGUI pointText;
-    public PointManager pointManager;
-    private string filePath;
-    private PlayerData playerData;
-    public GameObject[] achievementIcons; // Ikon achievement yang ditampilkan
-    public int[] achievementThresholds = { 300, 600, 900, 1200, 1500 }; // Batas poin
+    public GameObject[] achievementIcons;
+    public int[] achievementThresholds;
+
+    [SerializeField] // Expose this field in the Inspector
+    private int _totalPointsDisplay; // Backing field for the property
+    
+    private bool _initialized = false;
+    private int _cachedPoints = 0; // Cache the points in memory
+
+    // Property to sync with PlayerPrefs
+    public int TotalPointsDisplay
+    {
+        get 
+        {
+            // Only load from PlayerPrefs during initialization
+            if (!_initialized)
+            {
+                _cachedPoints = PlayerPrefs.GetInt("TotalPoints", 0);
+                Debug.Log($"[INITIAL LOAD] Points loaded from PlayerPrefs: {_cachedPoints}");
+                _initialized = true;
+            }
+            return _cachedPoints;
+        }
+        set
+        {
+            // Only save if value actually changes
+            if (_cachedPoints != value)
+            {
+                _cachedPoints = value;
+                PlayerPrefs.SetInt("TotalPoints", value);
+                PlayerPrefs.Save(); // Ensure the value is written to disk immediately
+                Debug.Log($"[SAVE POINTS] Points saved to PlayerPrefs: {value}");
+                _totalPointsDisplay = value; // Sync the Inspector field
+                CheckAchievements(); // Update achievements when points change
+            }
+        }
+    }
+
+    void Awake()
+    {
+        // Force initialization in Awake
+        int points = TotalPointsDisplay;
+        Debug.Log($"[AWAKE] Initial points loaded: {points}");
+    }
 
     void Start()
     {
-        pointManager = FindObjectOfType<PointManager>();
-        filePath = Application.persistentDataPath + "/playerData.json";
-        LoadPoints();
-        UpdateUI();
+        // Initialize the Inspector field with the value from PlayerPrefs
+        _totalPointsDisplay = TotalPointsDisplay;
+        Debug.Log($"[START] Using loaded points: {_totalPointsDisplay}");
+
+        ValidateSetup();
         CheckAchievements();
     }
 
-    // ✅ Menambahkan poin dan update tampilan
-    public void AddPoints(int amount)
+    void OnValidate()
     {
-        if (playerData == null) playerData = new PlayerData(); // Pastikan tidak null
-        playerData.totalPoints += amount;
-        SavePoints();
-        UpdateUI();
-        CheckAchievements();
-    }
-
-    // ✅ Simpan poin ke JSON
-    private void SavePoints()
-    {
-        if (playerData == null) return;
-        string json = JsonUtility.ToJson(playerData, true);
-        File.WriteAllText(filePath, json);
-    }
-
-    // ✅ Muat poin dari JSON dengan pengecekan null
-    private void LoadPoints()
-    {
-        if (File.Exists(filePath))
+        // When the value is changed in the Inspector, update PlayerPrefs
+        if (Application.isPlaying)
         {
-            string json = File.ReadAllText(filePath);
-            playerData = JsonUtility.FromJson<PlayerData>(json);
-        }
-
-        if (playerData == null) // Jika gagal membaca file, buat baru
-        {
-            playerData = new PlayerData();
-            SavePoints();
+            TotalPointsDisplay = _totalPointsDisplay;
         }
     }
 
-    // ✅ Update UI untuk menampilkan total poin
-    private void UpdateUI()
+    // Manual method to force a reload from PlayerPrefs
+    public void ReloadFromPlayerPrefs()
     {
-        if (pointText != null && playerData != null)
+        _initialized = false; // Reset initialization flag
+        _cachedPoints = TotalPointsDisplay; // This will trigger a reload
+        _totalPointsDisplay = _cachedPoints;
+        Debug.Log($"[FORCE RELOAD] Reloaded points from PlayerPrefs: {_cachedPoints}");
+    }
+
+    void Update()
+    {
+        // Sync the Inspector field with the cached value
+        if (_totalPointsDisplay != _cachedPoints)
         {
-            pointText.text = playerData.totalPoints.ToString();
+            Debug.Log($"[SYNC] Points value changed in Inspector: {_totalPointsDisplay} -> {_cachedPoints}");
+            TotalPointsDisplay = _totalPointsDisplay; // This will save to PlayerPrefs if different
         }
     }
 
-    // ✅ Cek achievement dengan pengecekan aman
+    public void AddAchievementPoints(int amount)
+    {
+        Debug.Log($"[ADD POINTS] Before adding: {TotalPointsDisplay}");
+        TotalPointsDisplay += amount; // Use the property to update points
+        Debug.Log($"[ADD POINTS] Points added: {amount}, New total: {TotalPointsDisplay}");
+    }
+
     private void CheckAchievements()
     {
-        if (achievementIcons == null || achievementIcons.Length == 0)
-        {
-            Debug.LogWarning("Achievement icons belum diatur!");
-            return;
-        }
+        if (achievementIcons == null || achievementThresholds == null) return;
+
+        int currentPoints = TotalPointsDisplay; 
 
         for (int i = 0; i < achievementThresholds.Length; i++)
         {
-            if (i >= achievementIcons.Length) 
+            if (i >= achievementIcons.Length || achievementIcons[i] == null)
             {
-                Debug.LogWarning($"Index {i} melebihi jumlah achievementIcons! Pastikan jumlah ikon sesuai dengan threshold.");
+                Debug.LogWarning($"[ACHIEVEMENT] Achievement {i} tidak diatur dengan benar!");
                 continue;
             }
 
-            if (playerData.totalPoints >= achievementThresholds[i])
+            bool isAchieved = currentPoints >= achievementThresholds[i];
+
+            // Aktifkan ikon jika belum aktif
+            if (isAchieved && !achievementIcons[i].activeSelf)
             {
-                achievementIcons[i].SetActive(true); // Aktifkan achievement
+                achievementIcons[i].SetActive(true);
+                Debug.Log($"[ACHIEVEMENT] Achievement {i} AKTIF (poin: {currentPoints} / {achievementThresholds[i]})");
             }
-            // else
-            // {
-            //     achievementIcons[i].SetActive(false); // Sembunyikan achievement
-            // }
         }
     }
 
-    // ✅ Fungsi untuk mendapatkan total poin
-    public int GetTotalPoints()
+    private void ValidateSetup()
     {
-        return playerData != null ? playerData.totalPoints : 0;
+        if (achievementIcons == null || achievementIcons.Length == 0)
+        {
+            Debug.LogError("[ERROR] Achievement icons belum diatur di Inspector!");
+        }
+
+        if (achievementThresholds == null || achievementThresholds.Length == 0)
+        {
+            Debug.LogError("[ERROR] Achievement thresholds belum diatur di Inspector!");
+        }
+
+        if (achievementIcons.Length != achievementThresholds.Length)
+        {
+            Debug.LogError("[ERROR] Jumlah achievementIcons dan achievementThresholds tidak sama!");
+        }
     }
 
-    void update(){
-        pointText.text = "Points: " + pointManager.totalPoints.ToString();
+    public int GetTotalPoints()
+    {
+        return TotalPointsDisplay;
+    }
+
+    // Fungsi baru untuk menerima poin dari LevelManager
+    public void AddPointsFromLevel(int points)
+    {
+        AddAchievementPoints(points);
+    }
+
+    // If your game has a way to reset progress, you can call this
+    public void ResetPoints()
+    {
+        TotalPointsDisplay = 0;
+        Debug.Log("[RESET] Points reset to 0 and saved to PlayerPrefs");
+    }
+
+    // Make sure to save when the game quits
+    void OnApplicationQuit()
+    {
+        PlayerPrefs.Save();
+        Debug.Log("[QUIT] Saving points to PlayerPrefs before quitting");
     }
 }
