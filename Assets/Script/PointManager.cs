@@ -5,8 +5,8 @@ public class PointManager : MonoBehaviour
 {
     public TextMeshProUGUI pointText; // UI untuk menampilkan jumlah poin
     public int totalPointsDisplay; // Serialized field to display TotalPoints in Inspector
-    
     private int _lastDisplayedPoints = -1; // Track the last displayed points value
+    private const int MAX_POINTS = 3100; // Batas maksimal poin
 
     void Awake()
     {
@@ -17,8 +17,7 @@ public class PointManager : MonoBehaviour
     void Start()
     {
         Debug.Log("[POINT MANAGER] Start called");
-        
-        // Check if pointText is assigned
+
         if (pointText == null)
         {
             Debug.LogError("[POINT MANAGER] pointText not assigned in Inspector!");
@@ -27,62 +26,57 @@ public class PointManager : MonoBehaviour
         {
             Debug.Log($"[POINT MANAGER] pointText reference found: {pointText.name}");
         }
-        
-        // Force UI update in Start
+
         ForceUpdateUI();
     }
 
     void Update()
     {
-        // Keep the Inspector value synced with PlayerPrefs
         totalPointsDisplay = GetTotalPoints();
-        
-        // Check if points changed since last UI update
+
         if (_lastDisplayedPoints != totalPointsDisplay)
         {
             UpdateUI();
         }
     }
 
-    // Fungsi untuk menambahkan poin
+    // Fungsi untuk menambahkan poin dengan batas maksimal 3100
     public void AddPoints(int amount)
     {
         int currentPoints = PlayerPrefs.GetInt("TotalPoints", 0);
-        int newTotal = currentPoints + amount;
+        
+        // Cek apakah poin yang baru akan melebihi batas maksimal
+        if (currentPoints >= MAX_POINTS)
+        {
+            Debug.LogWarning("[POINT MANAGER] Poin sudah mencapai batas maksimal!");
+            return;
+        }
+
+        int newTotal = Mathf.Min(currentPoints + amount, MAX_POINTS);
         
         PlayerPrefs.SetInt("TotalPoints", newTotal);
         PlayerPrefs.Save();
-        
+
         Debug.Log($"[POINT MANAGER] Points added: {amount}, New total: {newTotal}");
-        
-        // Update totalPointsDisplay for immediate feedback
+
         totalPointsDisplay = newTotal;
-        
-        // Force UI update immediately
         ForceUpdateUI();
     }
 
-    // Ambil total poin dari PlayerPrefs
     private void LoadPoints()
     {
-        int loadedPoints = 0;
-        
-        if (PlayerPrefs.HasKey("TotalPoints"))
+        int loadedPoints = PlayerPrefs.GetInt("TotalPoints", 0);
+        if (loadedPoints > MAX_POINTS)
         {
-            loadedPoints = PlayerPrefs.GetInt("TotalPoints");
-            Debug.Log($"[POINT MANAGER] Loaded existing points: {loadedPoints}");
-        }
-        else
-        {
-            PlayerPrefs.SetInt("TotalPoints", 0);
+            loadedPoints = MAX_POINTS;
+            PlayerPrefs.SetInt("TotalPoints", MAX_POINTS);
             PlayerPrefs.Save();
-            Debug.Log("[POINT MANAGER] No saved points found, initialized to 0");
         }
-        
+
         totalPointsDisplay = loadedPoints;
+        Debug.Log($"[POINT MANAGER] Loaded points: {loadedPoints}");
     }
 
-    // Force UI update regardless of conditions
     private void ForceUpdateUI()
     {
         if (pointText != null)
@@ -90,8 +84,7 @@ public class PointManager : MonoBehaviour
             int currentPoints = GetTotalPoints();
             pointText.text = currentPoints.ToString();
             _lastDisplayedPoints = currentPoints;
-            
-            Debug.Log($"[POINT MANAGER] UI FORCE UPDATED with points: {currentPoints}");
+            Debug.Log($"[POINT MANAGER] UI updated with points: {currentPoints}");
         }
         else
         {
@@ -99,7 +92,6 @@ public class PointManager : MonoBehaviour
         }
     }
 
-    // Fungsi untuk mengupdate UI
     private void UpdateUI()
     {
         if (pointText != null)
@@ -107,7 +99,6 @@ public class PointManager : MonoBehaviour
             int currentPoints = GetTotalPoints();
             pointText.text = currentPoints.ToString();
             _lastDisplayedPoints = currentPoints;
-            
             Debug.Log($"[POINT MANAGER] UI updated with points: {currentPoints}");
         }
         else
@@ -116,7 +107,6 @@ public class PointManager : MonoBehaviour
         }
     }
 
-    // Reset poin (bisa dipanggil saat debugging atau fitur reset)
     public void ResetPoints()
     {
         PlayerPrefs.SetInt("TotalPoints", 0);
@@ -126,17 +116,14 @@ public class PointManager : MonoBehaviour
         Debug.Log("[POINT MANAGER] All points have been reset to 0");
     }
 
-    // Get total points from PlayerPrefs
     public int GetTotalPoints()
     {
         return PlayerPrefs.GetInt("TotalPoints", 0);
     }
-    
-    // This ensures the text is properly updated even after scene transitions
+
     void OnEnable()
     {
         Debug.Log("[POINT MANAGER] OnEnable called");
-        // Slight delay to ensure TextMeshProUGUI is fully initialized
         Invoke("ForceUpdateUI", 0.1f);
     }
 }

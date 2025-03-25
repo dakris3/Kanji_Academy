@@ -17,10 +17,7 @@ public class LevelManager : MonoBehaviour
             {
                 pointText.text = levelPointReward.ToString();
             }
-        }
-        else
-        {
-            // Jika di level lain, tambahkan poin sekali saja
+            
             int totalPoints = PlayerPrefs.GetInt("TotalPoints", 0);
             totalPoints += levelPointReward;
             PlayerPrefs.SetInt("TotalPoints", totalPoints);
