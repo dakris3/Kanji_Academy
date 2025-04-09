@@ -1,33 +1,20 @@
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Retry : MonoBehaviour
 {
-    private static Stack<string> sceneHistory = new Stack<string>();
-
-    void Start()
+    public void RetryLevel()
     {
-        string currentScene = SceneManager.GetActiveScene().name;
-        
-        // Hindari menambahkan scene "Hasil" ke dalam history jika sudah ada scene sebelumnya
-        if (sceneHistory.Count == 0 || sceneHistory.Peek() != currentScene)
-        {
-            sceneHistory.Push(currentScene);
-        }
-    }
+        string previousScene = PlayerPrefs.GetString("PreviousScene", "");
 
-    public void LoadPreviousScene()
-    {
-        if (sceneHistory.Count > 1) // Pastikan ada scene sebelumnya
+        if (!string.IsNullOrEmpty(previousScene))
         {
-            sceneHistory.Pop(); // Hapus scene saat ini
-            string previousScene = sceneHistory.Peek(); // Ambil scene sebelumnya
+            Debug.Log("Retry level: " + previousScene);
             SceneManager.LoadScene(previousScene);
         }
         else
         {
-            Debug.LogWarning("Tidak ada scene sebelumnya yang disimpan!");
+            Debug.LogWarning("Previous scene belum disimpan.");
         }
     }
 }

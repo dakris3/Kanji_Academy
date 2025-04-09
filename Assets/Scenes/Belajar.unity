@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -76}
-  m_SizeDelta: {x: 271, y: 228.6229}
+  m_AnchoredPosition: {x: 0, y: -68.44281}
+  m_SizeDelta: {x: 271, y: 243.7373}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &20809668
 MonoBehaviour:
@@ -365,12 +365,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 249886747}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -78, y: 11}
-  m_SizeDelta: {x: 95.871, y: 33.8393}
+  m_AnchoredPosition: {x: -62, y: 27}
+  m_SizeDelta: {x: 125.94, y: 38.3939}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &233014263
 MonoBehaviour:
@@ -394,10 +394,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 13
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -405,7 +405,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Arti
+  m_Text: Arti Kanji dalam bahasa Indonesia
 --- !u!222 &233014264
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -513,6 +513,7 @@ RectTransform:
   - {fileID: 20809667}
   - {fileID: 532793498}
   - {fileID: 458043978}
+  - {fileID: 369226507}
   - {fileID: 233014262}
   - {fileID: 658866044}
   - {fileID: 1393517087}
@@ -554,6 +555,8 @@ MonoBehaviour:
     romaji: yama
     onyomi: "\u30B5\u30F3"
     kanjiAudio: {fileID: 8300000, guid: 449c9c46c096f5c4fa8991abaf18f846, type: 3}
+    urutanImage1: {fileID: 21300000, guid: 11a4711de7437a64d92e62785bc1be49, type: 3}
+    urutanImage2: {fileID: 0}
   - kanjiImage: {fileID: 21300000, guid: 5080a8758f4329f44bd13512d74d53df, type: 3}
     writingImage: {fileID: 21300000, guid: 5034962de918df247938e0f89ef2e46d, type: 3}
     meaning: a
@@ -561,6 +564,8 @@ MonoBehaviour:
     romaji: a
     onyomi: a
     kanjiAudio: {fileID: 8300000, guid: edb610e3eb87e3141bb0a5b9ca371e28, type: 3}
+    urutanImage1: {fileID: 21300000, guid: 11a4711de7437a64d92e62785bc1be49, type: 3}
+    urutanImage2: {fileID: 21300000, guid: 5034962de918df247938e0f89ef2e46d, type: 3}
   - kanjiImage: {fileID: 0}
     writingImage: {fileID: 0}
     meaning: 
@@ -568,6 +573,8 @@ MonoBehaviour:
     romaji: 
     onyomi: 
     kanjiAudio: {fileID: 0}
+    urutanImage1: {fileID: 0}
+    urutanImage2: {fileID: 0}
   - kanjiImage: {fileID: 0}
     writingImage: {fileID: 0}
     meaning: 
@@ -575,6 +582,8 @@ MonoBehaviour:
     romaji: 
     onyomi: 
     kanjiAudio: {fileID: 0}
+    urutanImage1: {fileID: 0}
+    urutanImage2: {fileID: 0}
   - kanjiImage: {fileID: 0}
     writingImage: {fileID: 0}
     meaning: 
@@ -582,6 +591,8 @@ MonoBehaviour:
     romaji: 
     onyomi: 
     kanjiAudio: {fileID: 0}
+    urutanImage1: {fileID: 0}
+    urutanImage2: {fileID: 0}
   - kanjiImage: {fileID: 0}
     writingImage: {fileID: 0}
     meaning: 
@@ -589,6 +600,8 @@ MonoBehaviour:
     romaji: 
     onyomi: 
     kanjiAudio: {fileID: 0}
+    urutanImage1: {fileID: 0}
+    urutanImage2: {fileID: 0}
   - kanjiImage: {fileID: 0}
     writingImage: {fileID: 0}
     meaning: 
@@ -596,6 +609,8 @@ MonoBehaviour:
     romaji: 
     onyomi: 
     kanjiAudio: {fileID: 0}
+    urutanImage1: {fileID: 0}
+    urutanImage2: {fileID: 0}
   - kanjiImage: {fileID: 0}
     writingImage: {fileID: 0}
     meaning: 
@@ -603,6 +618,8 @@ MonoBehaviour:
     romaji: 
     onyomi: 
     kanjiAudio: {fileID: 0}
+    urutanImage1: {fileID: 0}
+    urutanImage2: {fileID: 0}
   - kanjiImage: {fileID: 0}
     writingImage: {fileID: 0}
     meaning: 
@@ -610,6 +627,8 @@ MonoBehaviour:
     romaji: 
     onyomi: 
     kanjiAudio: {fileID: 0}
+    urutanImage1: {fileID: 0}
+    urutanImage2: {fileID: 0}
   - kanjiImage: {fileID: 0}
     writingImage: {fileID: 0}
     meaning: 
@@ -617,8 +636,12 @@ MonoBehaviour:
     romaji: 
     onyomi: 
     kanjiAudio: {fileID: 0}
+    urutanImage1: {fileID: 0}
+    urutanImage2: {fileID: 0}
   kanjiDisplay: {fileID: 532793499}
   writingDisplay: {fileID: 458043979}
+  urutanDisplay1: {fileID: 458043979}
+  urutanDisplay2: {fileID: 369226508}
   meaningText: {fileID: 1559682766}
   kunyomiText: {fileID: 939231518}
   romajiText: {fileID: 734294995}
@@ -736,6 +759,82 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &369226506
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 369226507}
+  - component: {fileID: 369226509}
+  - component: {fileID: 369226508}
+  m_Layer: 5
+  m_Name: Urutan 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &369226507
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369226506}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 249886747}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 67.465, y: 85.60003}
+  m_SizeDelta: {x: 135.07, y: 43.6918}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &369226508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369226506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &369226509
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369226506}
+  m_CullTransparentMesh: 1
 --- !u!1 &458043977
 GameObject:
   m_ObjectHideFlags: 0
@@ -748,7 +847,7 @@ GameObject:
   - component: {fileID: 458043980}
   - component: {fileID: 458043979}
   m_Layer: 5
-  m_Name: Urutan
+  m_Name: Urutan 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -771,8 +870,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.1807, y: 74.998}
-  m_SizeDelta: {x: 215.51, y: 61.1}
+  m_AnchoredPosition: {x: -67.535, y: 85.60003}
+  m_SizeDelta: {x: 134.93, y: 43.692}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &458043979
 MonoBehaviour:
@@ -1065,8 +1164,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000014305, y: 160.39001}
-  m_SizeDelta: {x: 56.2797, y: 56.836}
+  m_AnchoredPosition: {x: -0.000002861, y: 169.07}
+  m_SizeDelta: {x: 54.6218, y: 48.5464}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &532793499
 MonoBehaviour:
@@ -1151,7 +1250,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 202
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1179,12 +1278,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 249886747}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 60, y: -164}
-  m_SizeDelta: {x: 95.871, y: 33.8393}
+  m_AnchoredPosition: {x: 71.106, y: -166.09998}
+  m_SizeDelta: {x: 118.08, y: 48.423}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &658866043
 GameObject:
@@ -1217,12 +1316,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 249886747}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -78, y: -42}
-  m_SizeDelta: {x: 95.8714, y: 33.8393}
+  m_AnchoredPosition: {x: -61.515, y: -30.507}
+  m_SizeDelta: {x: 126.91, y: 61.014}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &658866045
 MonoBehaviour:
@@ -1246,10 +1345,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 13
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -1257,7 +1356,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Kunyomi
+  m_Text: 'Kunyomi
+
+    (Cara baca Kanji berdasarkan bahasa Jepang asli)'
 --- !u!222 &658866046
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1311,7 +1412,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1339,12 +1440,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 249886747}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 60, y: -103}
-  m_SizeDelta: {x: 95.871, y: 33.8393}
+  m_AnchoredPosition: {x: 71.106, y: -103}
+  m_SizeDelta: {x: 118.08, y: 67.111}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &743851661
 GameObject:
@@ -1512,11 +1613,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 249886747}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000047684, y: 208.81}
+  m_AnchoredPosition: {x: -0.0000047684, y: 213.35}
   m_SizeDelta: {x: 72.224, y: 40.002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &763176168
@@ -1691,11 +1792,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 249886747}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000047684, y: 118.76}
+  m_AnchoredPosition: {x: 0.18069, y: 127.07}
   m_SizeDelta: {x: 129.634, y: 26.424}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &881116571
@@ -1840,7 +1941,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1868,12 +1969,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 249886747}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 60, y: -43}
-  m_SizeDelta: {x: 95.8714, y: 33.8393}
+  m_AnchoredPosition: {x: 71.106, y: -30.507}
+  m_SizeDelta: {x: 118.08, y: 61.015}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1017293909
 GameObject:
@@ -2043,7 +2144,7 @@ RectTransform:
   m_Children:
   - {fileID: 743851662}
   m_Father: {fileID: 249886747}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2259,12 +2360,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 249886747}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -78, y: -102}
-  m_SizeDelta: {x: 95.871, y: 33.8393}
+  m_AnchoredPosition: {x: -62, y: -103}
+  m_SizeDelta: {x: 125.94, y: 67.112}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1393517088
 MonoBehaviour:
@@ -2288,10 +2389,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 13
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -2299,7 +2400,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Romaji
+  m_Text: 'Romaji
+
+    (Cara baca Kanj menggunakan huruf alfabet Latin)'
 --- !u!222 &1393517089
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2353,7 +2456,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -2381,12 +2484,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 249886747}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 60, y: 10}
-  m_SizeDelta: {x: 95.871, y: 33.8393}
+  m_AnchoredPosition: {x: 71.104, y: 27}
+  m_SizeDelta: {x: 118.08, y: 38.394}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1631120691
 GameObject:
@@ -2421,7 +2524,7 @@ RectTransform:
   m_Children:
   - {fileID: 1017293910}
   m_Father: {fileID: 249886747}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2554,11 +2657,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 249886747}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 75.4, y: 160.39}
+  m_AnchoredPosition: {x: 71.106026, y: 169.06999}
   m_SizeDelta: {x: 52.018, y: 40.224}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1634202528
@@ -2686,12 +2789,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 249886747}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -78, y: -163}
-  m_SizeDelta: {x: 95.871, y: 33.8393}
+  m_AnchoredPosition: {x: -62.97, y: -166.1}
+  m_SizeDelta: {x: 125.94, y: 48.425}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1888710319
 MonoBehaviour:
@@ -2715,7 +2818,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 13
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -2726,7 +2829,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Onyomi
+  m_Text: 'Onyomi
+
+    (Cara baca Kanji dari bahasa Tionghoa)'
 --- !u!222 &1888710320
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -2,52 +2,74 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;  // Import for Button
+using UnityEngine.UI;
 
 public class KetikKata : MonoBehaviour
 {
-    public TMP_Text kanjiText;           // TextMesh Pro for displaying Kanji
-    public TMP_InputField inputField;    // TMP InputField for typing answers
+    public TMP_Text kanjiText;
+    public TMP_InputField inputField;
 
     [System.Serializable]
     public class KanjiQuestion
     {
-        public string kanji;   // Kanji displayed
-        public string answer;  // Expected answer (hiragana, kanji, or romaji)
+        public string kanji;
+        public string answer;
     }
 
     public KanjiQuestion[] kanjiQuestions;
     private List<KanjiQuestion> remainingQuestions;
     private KanjiQuestion currentQuestion;
 
-    // Array of buttons for each hiragana character
     public Button[] hiraganaButtons;
-    public Button checkButton;  // Button to check the answer
-    public Button deleteButton; // Button to delete the last character
+    public Button[] dakutenButtons;
+    public Button toggleButton;
+
+    public Button checkButton;
+    public Button deleteButton;
+
+    private bool showingDakuten = false;
 
     void Start()
     {
-        // Initialize input field settings
         inputField.inputType = TMP_InputField.InputType.Standard;
         inputField.keyboardType = TouchScreenKeyboardType.Default;
         inputField.characterValidation = TMP_InputField.CharacterValidation.None;
 
-        // Initialize the question pool
         ResetQuestions();
         NextQuestion();
 
-        // Add onClick listeners for each hiragana button
         foreach (Button button in hiraganaButtons)
         {
-            string hiraganaChar = button.GetComponentInChildren<TMP_Text>().text;
-            button.onClick.AddListener(() => AddHiraganaToInputField(hiraganaChar));
+            string charText = button.GetComponentInChildren<TMP_Text>().text;
+            button.onClick.AddListener(() => AddHiraganaToInputField(charText));
         }
 
-        // Add onClick listener for the check button
-        checkButton.onClick.AddListener(CheckAnswer);
+        foreach (Button button in dakutenButtons)
+        {
+            string charText = button.GetComponentInChildren<TMP_Text>().text;
+            button.onClick.AddListener(() => AddHiraganaToInputField(charText));
+        }
 
-        // Add onClick listener for the delete button
-        deleteButton.onClick.AddListener(DeleteLastCharacter);  // Add delete functionality
+        toggleButton.onClick.AddListener(ToggleKeyboard);
+        UpdateKeyboardVisibility();
+
+        checkButton.onClick.AddListener(CheckAnswer);
+        deleteButton.onClick.AddListener(DeleteLastCharacter);
+    }
+
+    void ToggleKeyboard()
+    {
+        showingDakuten = !showingDakuten;
+        UpdateKeyboardVisibility();
+    }
+
+    void UpdateKeyboardVisibility()
+    {
+        foreach (Button b in hiraganaButtons)
+            b.gameObject.SetActive(!showingDakuten);
+
+        foreach (Button b in dakutenButtons)
+            b.gameObject.SetActive(showingDakuten);
     }
 
     void ResetQuestions()
@@ -95,22 +117,19 @@ public class KetikKata : MonoBehaviour
 
         currentQuestion = remainingQuestions[0];
         remainingQuestions.RemoveAt(0);
-
         kanjiText.text = currentQuestion.kanji;
     }
 
-    // Function to add selected hiragana to the input field
     public void AddHiraganaToInputField(string hiraganaChar)
     {
         inputField.text += hiraganaChar;
     }
 
-    // Function to delete the last character in the input field
     public void DeleteLastCharacter()
     {
         if (!string.IsNullOrEmpty(inputField.text))
         {
-            inputField.text = inputField.text.Substring(0, inputField.text.Length - 1); // Remove last character
+            inputField.text = inputField.text.Substring(0, inputField.text.Length - 1);
         }
     }
 

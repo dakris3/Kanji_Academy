@@ -1165,6 +1165,8 @@ GameObject:
   - component: {fileID: 837777834}
   - component: {fileID: 837777835}
   - component: {fileID: 837777836}
+  - component: {fileID: 837777837}
+  - component: {fileID: 837777838}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1213,6 +1215,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelPointReward: 100
   pointText: {fileID: 351132054}
+  allowReward: 1
+--- !u!114 &837777837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837777833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0960a340ca900d440a7ac265022283e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextSceneName: 
+  levelID: Level_1
+  textSelamat: {fileID: 121119946}
+  coin: {fileID: 217676289}
+  point: {fileID: 351132052}
+  sudahMainSelamat: "\n\nLevel telah selesai.\n\u304A\u3064\u304B\u308C\u3055\u307E\u3067\u3057\u305F\n\nTerima
+    kasih telah bermain"
+  sudahPernahMain: 0
+--- !u!114 &837777838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837777833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f656d33dd03b32e47aa68de2f5f5519d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1105983152
 GameObject:
   m_ObjectHideFlags: 0
@@ -1297,9 +1332,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 837777838}
         m_TargetAssemblyTypeName: Retry, Assembly-CSharp
-        m_MethodName: RetryScene
+        m_MethodName: RetryLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

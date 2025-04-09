@@ -355,6 +355,7 @@ GameObject:
   - component: {fileID: 837777838}
   - component: {fileID: 837777839}
   - component: {fileID: 837777840}
+  - component: {fileID: 837777841}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -492,7 +493,7 @@ MonoBehaviour:
   - {fileID: 981988770}
   - {fileID: 1388694059}
   - {fileID: 1810226217}
-  levelManager: {fileID: 0}
+  levelManager: {fileID: 837777840}
   questions:
   - questionImage: {fileID: 21300000, guid: 82aba2557165fd845bc9e5f705734dea, type: 3}
     questionAudio: {fileID: 8300000, guid: 449c9c46c096f5c4fa8991abaf18f846, type: 3}
@@ -599,6 +600,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextSceneName: Hasil
+  levelID: Level_1
+  textSelamat: {fileID: 0}
+  coin: {fileID: 0}
+  point: {fileID: 0}
+  sudahMainSelamat: "Level telah selesai.\n\u304A\u3064\u304B\u308C\u3055\u307E\u3067\u3057\u305F"
+  sudahPernahMain: 0
 --- !u!114 &837777840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -613,6 +620,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelPointReward: 100
   pointText: {fileID: 0}
+  allowReward: 1
+  levelName: 
+--- !u!114 &837777841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837777833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15ac4d3a3a95f9478030c6254021f66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelID: Level_1
 --- !u!1 &841548498
 GameObject:
   m_ObjectHideFlags: 0
