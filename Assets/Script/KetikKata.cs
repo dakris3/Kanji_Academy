@@ -20,34 +20,51 @@ public class KetikKata : MonoBehaviour
     private List<KanjiQuestion> remainingQuestions;
     private KanjiQuestion currentQuestion;
 
-    public Button[] hiraganaButtons;
-    public Button[] dakutenButtons;
+    public Button[] sisi1Buttons;
+    public Button[] sisi2Buttons;
     public Button toggleButton;
 
     public Button checkButton;
     public Button deleteButton;
 
-    private bool showingDakuten = false;
+    private bool showingSisi2 = false;
 
     void Start()
     {
         inputField.inputType = TMP_InputField.InputType.Standard;
         inputField.keyboardType = TouchScreenKeyboardType.Default;
         inputField.characterValidation = TMP_InputField.CharacterValidation.None;
+        inputField.characterLimit = 10; // ⬅️ BATAS INPUT 10 KARAKTER
 
         ResetQuestions();
         NextQuestion();
 
-        foreach (Button button in hiraganaButtons)
+        // Listener tombol sisi 1
+        foreach (Button button in sisi1Buttons)
         {
-            string charText = button.GetComponentInChildren<TMP_Text>().text;
-            button.onClick.AddListener(() => AddHiraganaToInputField(charText));
+            if (button != null)
+            {
+                TMP_Text txt = button.GetComponentInChildren<TMP_Text>();
+                if (txt != null)
+                {
+                    string charText = txt.text;
+                    AddButtonListener(button, charText);
+                }
+            }
         }
 
-        foreach (Button button in dakutenButtons)
+        // Listener tombol sisi 2
+        foreach (Button button in sisi2Buttons)
         {
-            string charText = button.GetComponentInChildren<TMP_Text>().text;
-            button.onClick.AddListener(() => AddHiraganaToInputField(charText));
+            if (button != null)
+            {
+                TMP_Text txt = button.GetComponentInChildren<TMP_Text>();
+                if (txt != null)
+                {
+                    string charText = txt.text;
+                    AddButtonListener(button, charText);
+                }
+            }
         }
 
         toggleButton.onClick.AddListener(ToggleKeyboard);
@@ -57,19 +74,31 @@ public class KetikKata : MonoBehaviour
         deleteButton.onClick.AddListener(DeleteLastCharacter);
     }
 
+    void AddButtonListener(Button button, string character)
+    {
+        button.onClick.AddListener(() => {
+            AddHiraganaToInputField(character);
+            Debug.Log("Button clicked: " + character); // Optional log
+        });
+    }
+
     void ToggleKeyboard()
     {
-        showingDakuten = !showingDakuten;
+        showingSisi2 = !showingSisi2;
         UpdateKeyboardVisibility();
     }
 
     void UpdateKeyboardVisibility()
     {
-        foreach (Button b in hiraganaButtons)
-            b.gameObject.SetActive(!showingDakuten);
+        foreach (Button b in sisi1Buttons)
+        {
+            if (b != null) b.gameObject.SetActive(!showingSisi2);
+        }
 
-        foreach (Button b in dakutenButtons)
-            b.gameObject.SetActive(showingDakuten);
+        foreach (Button b in sisi2Buttons)
+        {
+            if (b != null) b.gameObject.SetActive(showingSisi2);
+        }
     }
 
     void ResetQuestions()
@@ -122,7 +151,10 @@ public class KetikKata : MonoBehaviour
 
     public void AddHiraganaToInputField(string hiraganaChar)
     {
-        inputField.text += hiraganaChar;
+        if (inputField.text.Length < inputField.characterLimit)
+        {
+            inputField.text += hiraganaChar;
+        }
     }
 
     public void DeleteLastCharacter()
