@@ -2326,6 +2326,8 @@ MonoBehaviour:
   - {fileID: 689413413}
   achievementThresholds: 2c0100005802000084030000b0040000dc0500000807000034080000600900008c0a00001c0c0000
   _totalPointsDisplay: 0
+  pointText: {fileID: 775754001}
+  maxPoints: 5000
 --- !u!114 &837777837
 MonoBehaviour:
   m_ObjectHideFlags: 0

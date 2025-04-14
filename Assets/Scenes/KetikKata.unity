@@ -5534,7 +5534,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: a
+  m_text: "\u3061"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ace45eaff40b2db408f0ee501ca71c39, type: 2}
   m_sharedMaterial: {fileID: 3556524417578264515, guid: ace45eaff40b2db408f0ee501ca71c39, type: 2}
@@ -8883,6 +8883,8 @@ GameObject:
   - component: {fileID: 837777835}
   - component: {fileID: 837777836}
   - component: {fileID: 837777837}
+  - component: {fileID: 837777839}
+  - component: {fileID: 837777838}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -8973,6 +8975,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sisi1Panel: {fileID: 543311924}
   sisi2Panel: {fileID: 967996277}
+--- !u!114 &837777838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837777833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15ac4d3a3a95f9478030c6254021f66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelID: Level_5
+--- !u!114 &837777839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837777833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e876024a3c0f72d439eb0c7130d621d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelPointReward: 100
+  pointText: {fileID: 0}
+  allowReward: 1
 --- !u!1 &845029361
 GameObject:
   m_ObjectHideFlags: 0

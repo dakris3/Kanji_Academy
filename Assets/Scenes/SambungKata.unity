@@ -1087,6 +1087,7 @@ GameObject:
   - component: {fileID: 555410197}
   - component: {fileID: 555410200}
   - component: {fileID: 555410201}
+  - component: {fileID: 555410202}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1169,6 +1170,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelID: Level_2
+--- !u!114 &555410202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555410196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e876024a3c0f72d439eb0c7130d621d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelPointReward: 100
+  pointText: {fileID: 0}
+  allowReward: 1
 --- !u!1 &759449022
 GameObject:
   m_ObjectHideFlags: 0

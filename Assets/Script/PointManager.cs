@@ -4,14 +4,13 @@ using TMPro;
 public class PointManager : MonoBehaviour
 {
     public TextMeshProUGUI pointText; // UI untuk menampilkan jumlah poin
-    public int totalPointsDisplay; // Serialized field to display TotalPoints in Inspector
-    private int _lastDisplayedPoints = -1; // Track the last displayed points value
-    private const int MAX_POINTS = 3100; // Batas maksimal poin
+    public int totalPointsDisplay; // Untuk ditampilkan di Inspector
+    private int _lastDisplayedPoints = -1;
 
     void Awake()
     {
         Debug.Log("[POINT MANAGER] Awake called");
-        LoadPoints(); // Memuat poin sebelum Start
+        LoadPoints();
     }
 
     void Start()
@@ -40,20 +39,11 @@ public class PointManager : MonoBehaviour
         }
     }
 
-    // Fungsi untuk menambahkan poin dengan batas maksimal 3100
     public void AddPoints(int amount)
     {
         int currentPoints = PlayerPrefs.GetInt("TotalPoints", 0);
-        
-        // Cek apakah poin yang baru akan melebihi batas maksimal
-        if (currentPoints >= MAX_POINTS)
-        {
-            Debug.LogWarning("[POINT MANAGER] Poin sudah mencapai batas maksimal!");
-            return;
-        }
+        int newTotal = currentPoints + amount;
 
-        int newTotal = Mathf.Min(currentPoints + amount, MAX_POINTS);
-        
         PlayerPrefs.SetInt("TotalPoints", newTotal);
         PlayerPrefs.Save();
 
@@ -65,26 +55,17 @@ public class PointManager : MonoBehaviour
 
     private void LoadPoints()
     {
-        int loadedPoints = PlayerPrefs.GetInt("TotalPoints", 0);
-        if (loadedPoints > MAX_POINTS)
-        {
-            loadedPoints = MAX_POINTS;
-            PlayerPrefs.SetInt("TotalPoints", MAX_POINTS);
-            PlayerPrefs.Save();
-        }
-
-        totalPointsDisplay = loadedPoints;
-        Debug.Log($"[POINT MANAGER] Loaded points: {loadedPoints}");
+        totalPointsDisplay = PlayerPrefs.GetInt("TotalPoints", 0);
+        Debug.Log($"[POINT MANAGER] Loaded points: {totalPointsDisplay}");
     }
 
     private void ForceUpdateUI()
     {
         if (pointText != null)
         {
-            int currentPoints = GetTotalPoints();
-            pointText.text = currentPoints.ToString();
-            _lastDisplayedPoints = currentPoints;
-            Debug.Log($"[POINT MANAGER] UI updated with points: {currentPoints}");
+            pointText.text = totalPointsDisplay.ToString();
+            _lastDisplayedPoints = totalPointsDisplay;
+            Debug.Log($"[POINT MANAGER] UI updated with points: {totalPointsDisplay}");
         }
         else
         {
@@ -96,10 +77,9 @@ public class PointManager : MonoBehaviour
     {
         if (pointText != null)
         {
-            int currentPoints = GetTotalPoints();
-            pointText.text = currentPoints.ToString();
-            _lastDisplayedPoints = currentPoints;
-            Debug.Log($"[POINT MANAGER] UI updated with points: {currentPoints}");
+            pointText.text = totalPointsDisplay.ToString();
+            _lastDisplayedPoints = totalPointsDisplay;
+            Debug.Log($"[POINT MANAGER] UI updated with points: {totalPointsDisplay}");
         }
         else
         {

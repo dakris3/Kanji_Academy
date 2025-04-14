@@ -5,7 +5,6 @@ using TMPro;
 public class Hasil : MonoBehaviour
 {
     public string nextSceneName;
-    public string levelID = "Level_1"; // Ganti sesuai nama unik level
 
     public TMP_Text textSelamat;
     public GameObject coin;
@@ -15,27 +14,50 @@ public class Hasil : MonoBehaviour
     public string sudahMainSelamat = "Level telah selesai.\nおつかれさまでした";
 
     public bool sudahPernahMain = false;
-
-    // Bisa diakses dari skrip lain seperti LevelManager
     public static bool isLevelAlreadyPlayed = false;
+
+    private string levelID;
+    private int rewardPoint = 100;
 
     void Start()
     {
-        // Cek apakah level sudah pernah dimainkan
+        levelID = PlayerPrefs.GetString("PreviousLevelID", "");
+
+        if (string.IsNullOrEmpty(levelID))
+        {
+            Debug.LogError("[HASIL] LevelID tidak ditemukan di PlayerPrefs!");
+            return;
+        }
+
         sudahPernahMain = PlayerPrefs.GetInt(levelID, 0) == 1;
         isLevelAlreadyPlayed = sudahPernahMain;
 
-        // Debug log
         Debug.Log("[HASIL] Cek level " + levelID + " - Sudah pernah main: " + sudahPernahMain);
 
-        ShowResult();
-
-        // Tandai sudah main kalau ini pertama kali
         if (!sudahPernahMain)
         {
+            // Tambahkan coin
+            int currentCoins = PlayerPrefs.GetInt("coins", 0);
+            PlayerPrefs.SetInt("coins", currentCoins + rewardPoint);
+
+            // Tambahkan poin ke sistem Achievement
+            int totalPoints = PlayerPrefs.GetInt("TotalPoints", 0);
+            totalPoints += rewardPoint;
+            PlayerPrefs.SetInt("TotalPoints", totalPoints);
+
+            // Simpan bahwa level ini sudah dimainkan
             PlayerPrefs.SetInt(levelID, 1);
             PlayerPrefs.Save();
+
+            Debug.Log($"[HASIL] Poin diberikan untuk level '{levelID}': {rewardPoint}");
+            Debug.Log($"[HASIL] Total poin pemain sekarang: {totalPoints}");
         }
+        else
+        {
+            Debug.Log("[HASIL] Level sudah pernah dimainkan, tidak ada poin.");
+        }
+
+        ShowResult();
     }
 
     public void ShowResult()
@@ -44,7 +66,6 @@ public class Hasil : MonoBehaviour
 
         if (sudahPernahMain)
         {
-            Debug.Log("Level sudah pernah dimainkan, tidak ada poin.");
             TampilkanPerubahanJikaSudahMain();
         }
     }

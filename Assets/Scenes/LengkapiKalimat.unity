@@ -134,6 +134,8 @@ GameObject:
   - component: {fileID: 85816846}
   - component: {fileID: 85816847}
   - component: {fileID: 85816848}
+  - component: {fileID: 85816849}
+  - component: {fileID: 85816850}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -176,6 +178,7 @@ MonoBehaviour:
   - {fileID: 925132053}
   - {fileID: 1649775481}
   - {fileID: 919388430}
+  levelManager: {fileID: 85816850}
   questions:
   - japaneseText: "\u308F\u305F\u3057\u308F \u3044\u3061_(man) \u306E \u307B\u3093
       \u3092 \u3082\u3063\u3066\u3044\u307E\u3059"
@@ -209,6 +212,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c90dc09adb1f2614588b7519ab4dcf5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &85816849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85816845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15ac4d3a3a95f9478030c6254021f66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelID: Level_3
+--- !u!114 &85816850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85816845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e876024a3c0f72d439eb0c7130d621d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelPointReward: 100
+  pointText: {fileID: 0}
+  allowReward: 1
 --- !u!1 &107067290
 GameObject:
   m_ObjectHideFlags: 0

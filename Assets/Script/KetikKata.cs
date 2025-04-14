@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement; // <-- Tambahkan ini untuk pindah scene
 
 public class KetikKata : MonoBehaviour
 {
@@ -34,12 +35,11 @@ public class KetikKata : MonoBehaviour
         inputField.inputType = TMP_InputField.InputType.Standard;
         inputField.keyboardType = TouchScreenKeyboardType.Default;
         inputField.characterValidation = TMP_InputField.CharacterValidation.None;
-        inputField.characterLimit = 10; // ⬅️ BATAS INPUT 10 KARAKTER
+        inputField.characterLimit = 10;
 
         ResetQuestions();
         NextQuestion();
 
-        // Listener tombol sisi 1
         foreach (Button button in sisi1Buttons)
         {
             if (button != null)
@@ -53,7 +53,6 @@ public class KetikKata : MonoBehaviour
             }
         }
 
-        // Listener tombol sisi 2
         foreach (Button button in sisi2Buttons)
         {
             if (button != null)
@@ -78,7 +77,7 @@ public class KetikKata : MonoBehaviour
     {
         button.onClick.AddListener(() => {
             AddHiraganaToInputField(character);
-            Debug.Log("Button clicked: " + character); // Optional log
+            Debug.Log("Button clicked: " + character);
         });
     }
 
@@ -141,6 +140,7 @@ public class KetikKata : MonoBehaviour
         if (remainingQuestions.Count == 0)
         {
             Debug.Log("Semua soal telah dijawab!");
+            SceneManager.LoadScene("Hasil"); // <-- Pindah ke scene Hasil
             return;
         }
 

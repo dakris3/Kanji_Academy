@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Belajar : MonoBehaviour
 {
@@ -39,6 +40,9 @@ public class Belajar : MonoBehaviour
 
     private int currentKanjiIndex = 0;
 
+    // Tambahan untuk mengatur scene tujuan setelah tutorial
+    public string targetSceneAfterTutorial;
+
     void Start()
     {
         if (kanjiList != null && kanjiList.Count > 0)
@@ -68,7 +72,6 @@ public class Belajar : MonoBehaviour
         bool hasUrutan1 = kanji.urutanImage1 != null;
         bool hasUrutan2 = kanji.urutanImage2 != null;
 
-        // Urutan gambar 1
         if (urutanDisplay1 != null)
         {
             if (hasUrutan1)
@@ -83,7 +86,6 @@ public class Belajar : MonoBehaviour
             }
         }
 
-        // Urutan gambar 2
         if (urutanDisplay2 != null)
         {
             if (hasUrutan2)
@@ -98,12 +100,11 @@ public class Belajar : MonoBehaviour
             }
         }
 
-        // Atur posisi jika salah satu atau dua gambar urutan aktif
         if (urutanDisplay1 != null && urutanDisplay2 != null)
         {
             if (hasUrutan1 && !hasUrutan2)
             {
-                urutanDisplay1.rectTransform.anchoredPosition = new Vector2(0f, 85f); // di tengah atas
+                urutanDisplay1.rectTransform.anchoredPosition = new Vector2(0f, 85f);
             }
             else if (hasUrutan1 && hasUrutan2)
             {
@@ -131,5 +132,12 @@ public class Belajar : MonoBehaviour
         }
 
         ShowKanji(currentKanjiIndex);
+    }
+
+    // Fungsi untuk mulai tutorial dan simpan scene tujuan
+    public void StartTutorial()
+    {
+        LevelRedirect.targetSceneName = targetSceneAfterTutorial;
+        SceneManager.LoadScene("Tutorial");
     }
 }

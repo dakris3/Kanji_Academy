@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class TemukanKanji : MonoBehaviour
 {
@@ -23,9 +24,14 @@ public class TemukanKanji : MonoBehaviour
     private List<Button> selectedButtons = new List<Button>();
     private Dictionary<Button, Color> originalColors = new Dictionary<Button, Color>();
 
+    private LevelManager levelManager;
+
     void Start()
     {
-        // Cek validitas data
+        // Cari LevelManager (jika ada di scene)
+        levelManager = FindObjectOfType<LevelManager>();
+
+        // Validasi data
         if (kanjiList == null || hiraganaAnswers == null || kanjiList.Count != hiraganaAnswers.Count || kanjiList.Count == 0)
         {
             Debug.LogError("❌ Data Kanji dan Hiragana tidak valid! Periksa Inspector.");
@@ -51,7 +57,7 @@ public class TemukanKanji : MonoBehaviour
             btn.onClick.AddListener(() => OnHiraganaButtonClick(btn));
         }
 
-        // Event untuk tombol Check
+        // Event tombol Check
         checkButton.onClick.AddListener(CheckAnswer);
     }
 
@@ -78,12 +84,32 @@ public class TemukanKanji : MonoBehaviour
 
             currentQuestionCount++;
             selectedButtons.Clear();
-            ResetButtonColors(); // Reset semua tombol saat ganti soal
+            ResetButtonColors();
         }
         else
         {
-            kanjiText.text = "🎉 Semua pertanyaan selesai!";
+            // Semua soal sudah dijawab
+            kanjiText.text = "Semua pertanyaan selesai!";
+
+            Debug.Log("Level telah selesai");
+
+            if (levelManager != null)
+            {
+                levelManager.LevelComplete();
+            }
+            else
+            {
+                Debug.LogWarning("LevelManager tidak ditemukan!");
+            }
+
+            // Pindah ke scene hasil setelah delay sebentar
+            Invoke("LoadResultScene", 2f);
         }
+    }
+
+    void LoadResultScene()
+    {
+        SceneManager.LoadScene("Hasil");
     }
 
     public void OnHiraganaButtonClick(Button clickedButton)
@@ -98,7 +124,7 @@ public class TemukanKanji : MonoBehaviour
             selectedButtons.Remove(clickedButton);
             if (originalColors.ContainsKey(clickedButton))
             {
-                clickedButton.GetComponent<Image>().color = originalColors[clickedButton]; // Reset ke warna asli
+                clickedButton.GetComponent<Image>().color = originalColors[clickedButton];
             }
         }
     }

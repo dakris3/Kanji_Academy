@@ -7,7 +7,6 @@ public class LevelManager : MonoBehaviour
     public int levelPointReward = 100; // Poin yang diberikan per level selesai
     public TextMeshProUGUI pointText;  // UI untuk menampilkan poin
     public bool allowReward = true;    // Default-nya true, nanti diatur otomatis
-    public string levelName;           // Nama level saat ini (misalnya "Level1")
 
     private void Start()
     {
@@ -23,7 +22,7 @@ public class LevelManager : MonoBehaviour
                 allowReward = false;
             }
 
-            // Tampilkan poin ke UI (hanya 100)
+            // Tampilkan poin ke UI
             if (pointText != null)
             {
                 pointText.text = levelPointReward.ToString();
@@ -49,8 +48,11 @@ public class LevelManager : MonoBehaviour
 
     public void LevelComplete()
     {
-        // Simpan nama level yang sedang dimainkan agar dicek nanti di scene "Hasil"
-        PlayerPrefs.SetString("LastPlayedLevel", levelName);
+        // Ambil nama level dari scene saat ini
+        string currentLevel = SceneManager.GetActiveScene().name;
+
+        // Simpan nama level untuk pengecekan di scene "Hasil"
+        PlayerPrefs.SetString("LastPlayedLevel", currentLevel);
         PlayerPrefs.Save();
 
         // Pindah ke scene "Hasil"
