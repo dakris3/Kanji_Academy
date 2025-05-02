@@ -1690,7 +1690,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: KetikKata
+          m_StringArgument: lvl 5
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1168182960
@@ -2447,7 +2447,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: TemukanKata
+          m_StringArgument: lvl 4
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1491881439
@@ -3120,7 +3120,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: LengkapiKalimat
+          m_StringArgument: lvl 3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1877193526
@@ -3254,7 +3254,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: SambungKata
+          m_StringArgument: Belajar 2
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1880265117
@@ -3388,7 +3388,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Belajar
+          m_StringArgument: Belajar 1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1883223247
@@ -3512,7 +3512,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1919050545}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 837777835}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: LoadSceneAutomatically
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Belajar 11
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1919050545
 MonoBehaviour:
   m_ObjectHideFlags: 0

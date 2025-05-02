@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement; // <-- Tambahkan ini untuk pindah scene
+using UnityEngine.SceneManagement;
 
 public class KetikKata : MonoBehaviour
 {
@@ -23,12 +23,16 @@ public class KetikKata : MonoBehaviour
 
     public Button[] sisi1Buttons;
     public Button[] sisi2Buttons;
-    public Button toggleButton;
+    public Button[] sisi3Buttons;
+
+    public Button switch1Button;
+    public Button switch2Button;
+    public Button switch3Button;
 
     public Button checkButton;
     public Button deleteButton;
 
-    private bool showingSisi2 = false;
+    private int currentSisi = 1;
 
     void Start()
     {
@@ -40,37 +44,34 @@ public class KetikKata : MonoBehaviour
         ResetQuestions();
         NextQuestion();
 
-        foreach (Button button in sisi1Buttons)
-        {
-            if (button != null)
-            {
-                TMP_Text txt = button.GetComponentInChildren<TMP_Text>();
-                if (txt != null)
-                {
-                    string charText = txt.text;
-                    AddButtonListener(button, charText);
-                }
-            }
-        }
+        AddListenersToButtons(sisi1Buttons);
+        AddListenersToButtons(sisi2Buttons);
+        AddListenersToButtons(sisi3Buttons);
 
-        foreach (Button button in sisi2Buttons)
-        {
-            if (button != null)
-            {
-                TMP_Text txt = button.GetComponentInChildren<TMP_Text>();
-                if (txt != null)
-                {
-                    string charText = txt.text;
-                    AddButtonListener(button, charText);
-                }
-            }
-        }
+        switch1Button.onClick.AddListener(() => SwitchToSisi(1));
+        switch2Button.onClick.AddListener(() => SwitchToSisi(2));
+        switch3Button.onClick.AddListener(() => SwitchToSisi(3));
 
-        toggleButton.onClick.AddListener(ToggleKeyboard);
         UpdateKeyboardVisibility();
 
         checkButton.onClick.AddListener(CheckAnswer);
         deleteButton.onClick.AddListener(DeleteLastCharacter);
+    }
+
+    void AddListenersToButtons(Button[] buttons)
+    {
+        foreach (Button button in buttons)
+        {
+            if (button != null)
+            {
+                TMP_Text txt = button.GetComponentInChildren<TMP_Text>();
+                if (txt != null)
+                {
+                    string charText = txt.text;
+                    AddButtonListener(button, charText);
+                }
+            }
+        }
     }
 
     void AddButtonListener(Button button, string character)
@@ -81,22 +82,27 @@ public class KetikKata : MonoBehaviour
         });
     }
 
-    void ToggleKeyboard()
+    void SwitchToSisi(int targetSisi)
     {
-        showingSisi2 = !showingSisi2;
-        UpdateKeyboardVisibility();
+        if (currentSisi != targetSisi)
+        {
+            currentSisi = targetSisi;
+            UpdateKeyboardVisibility();
+        }
     }
 
     void UpdateKeyboardVisibility()
     {
-        foreach (Button b in sisi1Buttons)
-        {
-            if (b != null) b.gameObject.SetActive(!showingSisi2);
-        }
+        SetButtonsActive(sisi1Buttons, currentSisi == 1);
+        SetButtonsActive(sisi2Buttons, currentSisi == 2);
+        SetButtonsActive(sisi3Buttons, currentSisi == 3);
+    }
 
-        foreach (Button b in sisi2Buttons)
+    void SetButtonsActive(Button[] buttons, bool isActive)
+    {
+        foreach (Button b in buttons)
         {
-            if (b != null) b.gameObject.SetActive(showingSisi2);
+            if (b != null) b.gameObject.SetActive(isActive);
         }
     }
 
@@ -140,7 +146,7 @@ public class KetikKata : MonoBehaviour
         if (remainingQuestions.Count == 0)
         {
             Debug.Log("Semua soal telah dijawab!");
-            SceneManager.LoadScene("Hasil"); // <-- Pindah ke scene Hasil
+            SceneManager.LoadScene("Hasil");
             return;
         }
 

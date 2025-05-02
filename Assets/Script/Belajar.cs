@@ -40,8 +40,11 @@ public class Belajar : MonoBehaviour
 
     private int currentKanjiIndex = 0;
 
-    // Tambahan untuk mengatur scene tujuan setelah tutorial
+    [Header("Scene Tujuan Setelah Tutorial")]
     public string targetSceneAfterTutorial;
+
+    [Header("Nama Scene Tutorial (misal: Tutorial1, Tutorial2, dst.)")]
+    public string selectedTutorialScene = "Tutorial1";
 
     void Start()
     {
@@ -74,30 +77,14 @@ public class Belajar : MonoBehaviour
 
         if (urutanDisplay1 != null)
         {
-            if (hasUrutan1)
-            {
-                urutanDisplay1.sprite = kanji.urutanImage1;
-                urutanDisplay1.enabled = true;
-            }
-            else
-            {
-                urutanDisplay1.sprite = null;
-                urutanDisplay1.enabled = false;
-            }
+            urutanDisplay1.sprite = hasUrutan1 ? kanji.urutanImage1 : null;
+            urutanDisplay1.enabled = hasUrutan1;
         }
 
         if (urutanDisplay2 != null)
         {
-            if (hasUrutan2)
-            {
-                urutanDisplay2.sprite = kanji.urutanImage2;
-                urutanDisplay2.enabled = true;
-            }
-            else
-            {
-                urutanDisplay2.sprite = null;
-                urutanDisplay2.enabled = false;
-            }
+            urutanDisplay2.sprite = hasUrutan2 ? kanji.urutanImage2 : null;
+            urutanDisplay2.enabled = hasUrutan2;
         }
 
         if (urutanDisplay1 != null && urutanDisplay2 != null)
@@ -116,7 +103,10 @@ public class Belajar : MonoBehaviour
 
     public void PlayKanjiAudio()
     {
-        if (kanjiList != null && kanjiList.Count > 0 && kanjiList[currentKanjiIndex].kanjiAudio != null)
+        if (audioSource != null &&
+            kanjiList != null && 
+            kanjiList.Count > 0 && 
+            kanjiList[currentKanjiIndex].kanjiAudio != null)
         {
             audioSource.clip = kanjiList[currentKanjiIndex].kanjiAudio;
             audioSource.Play();
@@ -125,19 +115,26 @@ public class Belajar : MonoBehaviour
 
     public void NextKanji()
     {
-        currentKanjiIndex++;
-        if (currentKanjiIndex >= kanjiList.Count)
-        {
-            currentKanjiIndex = 0;
-        }
-
+        currentKanjiIndex = (currentKanjiIndex + 1) % kanjiList.Count;
         ShowKanji(currentKanjiIndex);
     }
 
-    // Fungsi untuk mulai tutorial dan simpan scene tujuan
+    public void PreviousKanji()
+    {
+        currentKanjiIndex = (currentKanjiIndex - 1 + kanjiList.Count) % kanjiList.Count;
+        ShowKanji(currentKanjiIndex);
+    }
+
     public void StartTutorial()
     {
-        LevelRedirect.targetSceneName = targetSceneAfterTutorial;
-        SceneManager.LoadScene("Tutorial");
+        if (!string.IsNullOrEmpty(targetSceneAfterTutorial) && !string.IsNullOrEmpty(selectedTutorialScene))
+        {
+            LevelRedirect.targetSceneName = targetSceneAfterTutorial;
+            SceneManager.LoadScene(selectedTutorialScene);
+        }
+        else
+        {
+            Debug.LogWarning("Nama scene tutorial atau scene tujuan setelah tutorial belum ditentukan!");
+        }
     }
 }
