@@ -9,12 +9,14 @@ public class KetikKata : MonoBehaviour
 {
     public TMP_Text kanjiText;
     public TMP_InputField inputField;
+    public Image kanjiImage; // Gambar untuk soal
 
     [System.Serializable]
     public class KanjiQuestion
     {
         public string kanji;
         public string answer;
+        public Sprite image; // Tambahan untuk menampung gambar
     }
 
     public KanjiQuestion[] kanjiQuestions;
@@ -152,7 +154,14 @@ public class KetikKata : MonoBehaviour
 
         currentQuestion = remainingQuestions[0];
         remainingQuestions.RemoveAt(0);
+
         kanjiText.text = currentQuestion.kanji;
+
+        if (kanjiImage != null)
+        {
+            kanjiImage.sprite = currentQuestion.image;
+            kanjiImage.gameObject.SetActive(currentQuestion.image != null);
+        }
     }
 
     public void AddHiraganaToInputField(string hiraganaChar)

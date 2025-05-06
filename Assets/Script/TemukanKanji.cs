@@ -9,12 +9,14 @@ public class TemukanKanji : MonoBehaviour
 {
     [Header("UI Elements")]
     public TextMeshProUGUI kanjiText;
+    public TextMeshProUGUI romajiText; // Tambahan untuk menampilkan Romaji
     public Button[] hiraganaButtons;
     public Button checkButton;
 
     [Header("Kanji & Hiragana Data")]
     public List<string> kanjiList = new List<string>();          // Diisi dari Inspector
     public List<string> hiraganaAnswers = new List<string>();    // Diisi dari Inspector
+    public List<string> romajiList = new List<string>();         // Tambahan - Diisi dari Inspector
 
     private string correctHiragana;
     private int totalQuestions;
@@ -32,10 +34,12 @@ public class TemukanKanji : MonoBehaviour
         levelManager = FindObjectOfType<LevelManager>();
 
         // Validasi data
-        if (kanjiList == null || hiraganaAnswers == null || kanjiList.Count != hiraganaAnswers.Count || kanjiList.Count == 0)
+        if (kanjiList == null || hiraganaAnswers == null || romajiList == null ||
+            kanjiList.Count != hiraganaAnswers.Count || kanjiList.Count != romajiList.Count || kanjiList.Count == 0)
         {
-            Debug.LogError("❌ Data Kanji dan Hiragana tidak valid! Periksa Inspector.");
+            Debug.LogError("❌ Data Kanji, Hiragana, atau Romaji tidak valid! Periksa Inspector.");
             kanjiText.text = "Data tidak valid!";
+            if (romajiText != null) romajiText.text = "";
             return;
         }
 
@@ -81,6 +85,7 @@ public class TemukanKanji : MonoBehaviour
 
             kanjiText.text = kanjiList[index];
             correctHiragana = hiraganaAnswers[index];
+            if (romajiText != null) romajiText.text = romajiList[index];
 
             currentQuestionCount++;
             selectedButtons.Clear();
@@ -88,8 +93,8 @@ public class TemukanKanji : MonoBehaviour
         }
         else
         {
-            // Semua soal sudah dijawab
             kanjiText.text = "Semua pertanyaan selesai!";
+            if (romajiText != null) romajiText.text = "";
 
             Debug.Log("Level telah selesai");
 
@@ -102,7 +107,6 @@ public class TemukanKanji : MonoBehaviour
                 Debug.LogWarning("LevelManager tidak ditemukan!");
             }
 
-            // Pindah ke scene hasil setelah delay sebentar
             Invoke("LoadResultScene", 2f);
         }
     }

@@ -548,96 +548,96 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   kanjiList:
-  - kanjiImage: {fileID: 21300000, guid: 5080a8758f4329f44bd13512d74d53df, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: 964706d6d72172f4c9b378d0e405203e, type: 3}
     writingImage: {fileID: 21300000, guid: 11a4711de7437a64d92e62785bc1be49, type: 3}
-    meaning: gunung
-    kunyomi: "\u3084\u307E"
-    romaji: yama
-    onyomi: "\u30B5\u30F3"
-    kanjiAudio: {fileID: 8300000, guid: 449c9c46c096f5c4fa8991abaf18f846, type: 3}
-    urutanImage1: {fileID: 21300000, guid: 11a4711de7437a64d92e62785bc1be49, type: 3}
-    urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 21300000, guid: 5080a8758f4329f44bd13512d74d53df, type: 3}
+    meaning: Rumah
+    kunyomi: "\u3044\u3048"
+    romaji: ie
+    onyomi: "\u30AB"
+    kanjiAudio: {fileID: 8300000, guid: 29debb8a9a110ce44abdc152f6aef6b6, type: 3}
+    urutanImage1: {fileID: 21300000, guid: 5a5ef0f7269042941ace6ea073b31c25, type: 3}
+    urutanImage2: {fileID: 21300000, guid: 4c009a304921b7d44b49f78f79535c58, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: 5d578b386ed66c445bd0259e662c0085, type: 3}
     writingImage: {fileID: 21300000, guid: 5034962de918df247938e0f89ef2e46d, type: 3}
-    meaning: a
-    kunyomi: a
-    romaji: a
-    onyomi: a
-    kanjiAudio: {fileID: 8300000, guid: edb610e3eb87e3141bb0a5b9ca371e28, type: 3}
-    urutanImage1: {fileID: 21300000, guid: 11a4711de7437a64d92e62785bc1be49, type: 3}
-    urutanImage2: {fileID: 21300000, guid: 5034962de918df247938e0f89ef2e46d, type: 3}
-  - kanjiImage: {fileID: 0}
+    meaning: Suku
+    kunyomi: "\u3044\u3061\u305E\u304F"
+    romaji: ichizoku
+    onyomi: "\u30BE\u30AF"
+    kanjiAudio: {fileID: 8300000, guid: 9318d3f303d8c3949a91a90940586c05, type: 3}
+    urutanImage1: {fileID: 21300000, guid: 77f1d92b9c9d7b34fb1446b645502eb8, type: 3}
+    urutanImage2: {fileID: 21300000, guid: 86bd86324d1e2d44982f910f0842676c, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: 7ff20c4a368f1034990bc3afb50a32cf, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+    meaning: Saya
+    kunyomi: "\u308F\u305F\u3057"
+    romaji: watashi
+    onyomi: "\u30B7"
+    kanjiAudio: {fileID: 8300000, guid: 531bff8351eec6446aff22bdf6b85215, type: 3}
+    urutanImage1: {fileID: 21300000, guid: 88bec893d62f0e04cb11813a6677a34e, type: 3}
+    urutanImage2: {fileID: 21300000, guid: 31fc03d06ff453044b05d529e782597f, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: 222e173820d02cc428ad611759fe5f37, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+    meaning: Diri sendiri
+    kunyomi: "\u3058\u3076\u3093"
+    romaji: jibun
+    onyomi: "\u30B7"
+    kanjiAudio: {fileID: 8300000, guid: df70d64f945c9184db37669c29b2eb9d, type: 3}
+    urutanImage1: {fileID: 21300000, guid: ebc08b8c8875a2440826b7831239ae17, type: 3}
+    urutanImage2: {fileID: 21300000, guid: 9d71c6c19d12e6a43a7ac751c80b4b98, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: 45d23553ee41d6842b57662a8a931503, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+    meaning: Orang tua
+    kunyomi: "\u304A\u3084"
+    romaji: oya
+    onyomi: "\u30B7\u30F3"
+    kanjiAudio: {fileID: 8300000, guid: 960be255b25eb704caae561dd945e486, type: 3}
+    urutanImage1: {fileID: 21300000, guid: 73d6e6d81d607ac47b533e267b7eb068, type: 3}
+    urutanImage2: {fileID: 21300000, guid: 01cb8a27c2edd6548b125a4697b01e19, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: adb8ce1e4bf460f46b40b7efbacb580f, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+    meaning: Keduanya
+    kunyomi: "\u308A\u3087\u3046\u307B\u3046"
+    romaji: ryouhou
+    onyomi: "\u30EA\u30E7\u30A6"
+    kanjiAudio: {fileID: 8300000, guid: f6be3e521e9e5b445b9c0ab2c39b575b, type: 3}
+    urutanImage1: {fileID: 21300000, guid: 4d242c1ccaa4de646835fa7c8c4a9557, type: 3}
+    urutanImage2: {fileID: 21300000, guid: 5ab6ca8e2a2ad4547b94643c2f5da25a, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: 6e44d2c1e4fd1654f91ab1bcea068e44, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
+    meaning: Kakak laki-laki
+    kunyomi: "\u3042\u306B"
+    romaji: ani
+    onyomi: "\u30B1\u30A4"
+    kanjiAudio: {fileID: 8300000, guid: 6d257d14ae6393740ab7015188838215, type: 3}
+    urutanImage1: {fileID: 21300000, guid: 3c6828341366b02438531875c6dc9cdd, type: 3}
     urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+  - kanjiImage: {fileID: 21300000, guid: 9d0ad1f6150e3bb4f8586192d3d832e4, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+    meaning: Adik laki-laki
+    kunyomi: "\u304A\u3068\u3046\u3068"
+    romaji: otouto
+    onyomi: "\u30C6\u30A4"
+    kanjiAudio: {fileID: 8300000, guid: 0f1c2f13dea0d844f99a5335c08cd439, type: 3}
+    urutanImage1: {fileID: 21300000, guid: 4dc9b432a5a54484a855d5aef9230bb4, type: 3}
+    urutanImage2: {fileID: 21300000, guid: 7b41aa13433801745b0a4e5e70a5127f, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: a8eefc1bb26b39e49bfa03f2389d9ed9, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+    meaning: Kakak perempuan
+    kunyomi: "\u3042\u306D"
+    romaji: ane
+    onyomi: "\u30B7"
+    kanjiAudio: {fileID: 8300000, guid: 806628f49daef5740919b090bae811f9, type: 3}
+    urutanImage1: {fileID: 21300000, guid: 903d5de7291fb6a43a70015bc2b54b59, type: 3}
+    urutanImage2: {fileID: 21300000, guid: 7da17955e4c4acb449ca5d8a4cd3c85e, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: ff884d4e18320e746a15cf6f94f2daf3, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
+    meaning: Adik perempuan
+    kunyomi: "\u3044\u3082\u3046\u3068"
+    romaji: imouto
+    onyomi: "\u30DE\u30A4"
+    kanjiAudio: {fileID: 8300000, guid: 49ace0da954f1774fbfbb98bc636c04f, type: 3}
+    urutanImage1: {fileID: 21300000, guid: 3fafb0b9a4432c7429123cdceb7b188d, type: 3}
+    urutanImage2: {fileID: 21300000, guid: 52ab8c16ebc6530499a4dc1c8bae9f85, type: 3}
   kanjiDisplay: {fileID: 532793499}
   writingDisplay: {fileID: 458043979}
   urutanDisplay1: {fileID: 458043979}

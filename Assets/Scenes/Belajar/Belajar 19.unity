@@ -548,96 +548,96 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   kanjiList:
-  - kanjiImage: {fileID: 21300000, guid: 5080a8758f4329f44bd13512d74d53df, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: ffa01d4eeed5ef740bc3720c21df455d, type: 3}
     writingImage: {fileID: 21300000, guid: 11a4711de7437a64d92e62785bc1be49, type: 3}
-    meaning: gunung
-    kunyomi: "\u3084\u307E"
-    romaji: yama
-    onyomi: "\u30B5\u30F3"
-    kanjiAudio: {fileID: 8300000, guid: 449c9c46c096f5c4fa8991abaf18f846, type: 3}
-    urutanImage1: {fileID: 21300000, guid: 11a4711de7437a64d92e62785bc1be49, type: 3}
-    urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 21300000, guid: 5080a8758f4329f44bd13512d74d53df, type: 3}
+    meaning: Musim
+    kunyomi: "\u304D\u305B\u3064"
+    romaji: kisetsu
+    onyomi: "\u30AD\u30BB\u30C4"
+    kanjiAudio: {fileID: 8300000, guid: 36074dc5a1748db458aa44bf07da9e74, type: 3}
+    urutanImage1: {fileID: 21300000, guid: d7df54acf61666240a7c12f2a98d51c1, type: 3}
+    urutanImage2: {fileID: 21300000, guid: 61351af0a22e0ad49a3c85e16e260343, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: 5366fac542f2a2f4884fdfb8902dec8a, type: 3}
     writingImage: {fileID: 21300000, guid: 5034962de918df247938e0f89ef2e46d, type: 3}
-    meaning: a
-    kunyomi: a
-    romaji: a
-    onyomi: a
-    kanjiAudio: {fileID: 8300000, guid: edb610e3eb87e3141bb0a5b9ca371e28, type: 3}
-    urutanImage1: {fileID: 21300000, guid: 11a4711de7437a64d92e62785bc1be49, type: 3}
-    urutanImage2: {fileID: 21300000, guid: 5034962de918df247938e0f89ef2e46d, type: 3}
-  - kanjiImage: {fileID: 0}
+    meaning: Pemisah
+    kunyomi: "\u304F\u304E\u308A"
+    romaji: kugiri
+    onyomi: "\u30BB\u30C4"
+    kanjiAudio: {fileID: 8300000, guid: efb7c924c04948b4ab914724942d9eb3, type: 3}
+    urutanImage1: {fileID: 21300000, guid: 3b156a4514cea3140bce54169c71e2fb, type: 3}
+    urutanImage2: {fileID: 21300000, guid: 2840ca18cb8edf84bae36e863b826bd5, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: 64d99e0ab1e96e945af8e79b33b5331e, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+    meaning: Musim semi
+    kunyomi: "\u306F\u308B"
+    romaji: haru
+    onyomi: "\u30B7\u30E5\u30F3"
+    kanjiAudio: {fileID: 8300000, guid: 46b29b45cf0514e409005ef1ba0e7c98, type: 3}
+    urutanImage1: {fileID: 21300000, guid: b58b9ce18f0fe92429daf79ad0d15010, type: 3}
+    urutanImage2: {fileID: 21300000, guid: 87009642957622046b576392b2c9808d, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: d0dedacc25426a345856ebfc35872b4a, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+    meaning: Musim panas
+    kunyomi: "\u306A\u3064"
+    romaji: natsu
+    onyomi: "\u30AB"
+    kanjiAudio: {fileID: 8300000, guid: 92c230dc84e22964c8e8d9b8f3381bbd, type: 3}
+    urutanImage1: {fileID: 21300000, guid: 597a645196b85e24babe2b2a5b6d4e51, type: 3}
+    urutanImage2: {fileID: 21300000, guid: e35dc48975e5a3844b9b87ab349b3ec6, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: 5b3b73edaefffea40a6c28619bcade73, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+    meaning: Musim gugur
+    kunyomi: "\u3042\u304D"
+    romaji: aki
+    onyomi: "\u30B7\u30E5\u30A6"
+    kanjiAudio: {fileID: 8300000, guid: 864f2e7bbba544740bc0c8689710c31e, type: 3}
+    urutanImage1: {fileID: 21300000, guid: c9f72a9dbda10544abae2f5f32272b74, type: 3}
+    urutanImage2: {fileID: 21300000, guid: 6776f0e4979981749b9f422a4c1a36a1, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: 80410c6474277314182c3659756dec86, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
+    meaning: Musim dingin
+    kunyomi: "\u3075\u3086"
+    romaji: fuyu
+    onyomi: "\u30C8\u30A6"
+    kanjiAudio: {fileID: 8300000, guid: da6106f6e8537a542ad019ddbe41ae02, type: 3}
+    urutanImage1: {fileID: 21300000, guid: 470631292c1a2ef49bfb30291e5818eb, type: 3}
     urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+  - kanjiImage: {fileID: 21300000, guid: e8732efb733082e4c8459d5fedfa7270, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+    meaning: 'Panas '
+    kunyomi: "\u3042\u3064\u3044"
+    romaji: atsui
+    onyomi: "\u30B7\u30E7"
+    kanjiAudio: {fileID: 8300000, guid: 2194c967dda45e649985f7be0de3c0b6, type: 3}
+    urutanImage1: {fileID: 21300000, guid: ecf0a35c2b3540f4e85fb096af56b333, type: 3}
+    urutanImage2: {fileID: 21300000, guid: 82cad6d369657b849904ca925d12aebf, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: 3f9e1c5fbf42e6d4c8ff68d84621e5f3, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+    meaning: Dingin
+    kunyomi: "\u3055\u3080\u3044"
+    romaji: samui
+    onyomi: "\u30AB\u30F3"
+    kanjiAudio: {fileID: 8300000, guid: e98c06190c489b949afc0de6a5e1d6c3, type: 3}
+    urutanImage1: {fileID: 21300000, guid: 36e816660ad5b52419014d65f6c92362, type: 3}
+    urutanImage2: {fileID: 21300000, guid: 11ea08a9bb9f39748b661ad3fc4daf4a, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: 7662ba41ac7e530469ae474c4d2b1674, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+    meaning: Hangat
+    kunyomi: "\u3042\u305F\u305F\u304B\u3044"
+    romaji: atatakai
+    onyomi: "\u30C0\u30F3"
+    kanjiAudio: {fileID: 8300000, guid: 9774c7707d210fb4cb2211a9927b2bb8, type: 3}
+    urutanImage1: {fileID: 21300000, guid: 23e9304f4b4441843ac6ecd80948d637, type: 3}
+    urutanImage2: {fileID: 21300000, guid: f617a09ccdc98bd47b312fcf6405f6b3, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: af1a62f15dba89748914e55dcecdbe64, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
+    meaning: Sejuk
+    kunyomi: "\u3059\u305A\u3057\u3044"
+    romaji: 'suzushii '
+    onyomi: "\u30EA\u30E7\u30A6"
+    kanjiAudio: {fileID: 8300000, guid: 7c26656d06c2ae0448f159ea5e0598df, type: 3}
+    urutanImage1: {fileID: 21300000, guid: 36a7acb0d24964142a3cd21a87e48352, type: 3}
+    urutanImage2: {fileID: 21300000, guid: 518f6a12a20f6fd48bf70b4c9fc17227, type: 3}
   kanjiDisplay: {fileID: 532793499}
   writingDisplay: {fileID: 458043979}
   urutanDisplay1: {fileID: 458043979}

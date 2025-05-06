@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement; // Tambahkan untuk load scene
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class LengkapiKalimat : MonoBehaviour
@@ -31,6 +31,7 @@ public class LengkapiKalimat : MonoBehaviour
 
     void Start()
     {
+        ShuffleQuestions(); // Acak urutan soal
         ShowQuestion();
     }
 
@@ -43,7 +44,7 @@ public class LengkapiKalimat : MonoBehaviour
         indonesianText.text = currentQuestion.indonesianText;
 
         List<string> shuffledAnswers = new List<string>(currentQuestion.answers);
-        Shuffle(shuffledAnswers);
+        Shuffle(shuffledAnswers); // Acak jawaban
 
         for (int i = 0; i < answerButtons.Length; i++)
         {
@@ -135,6 +136,17 @@ public class LengkapiKalimat : MonoBehaviour
             string temp = list[i];
             list[i] = list[randomIndex];
             list[randomIndex] = temp;
+        }
+    }
+
+    void ShuffleQuestions()
+    {
+        for (int i = questions.Length - 1; i > 0; i--)
+        {
+            int randomIndex = Random.Range(0, i + 1);
+            Question temp = questions[i];
+            questions[i] = questions[randomIndex];
+            questions[randomIndex] = temp;
         }
     }
 }

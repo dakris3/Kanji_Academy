@@ -548,96 +548,96 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   kanjiList:
-  - kanjiImage: {fileID: 21300000, guid: 5080a8758f4329f44bd13512d74d53df, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: 07e033ef3bae2d34cb08a40d1a9e2f77, type: 3}
     writingImage: {fileID: 21300000, guid: 11a4711de7437a64d92e62785bc1be49, type: 3}
-    meaning: gunung
-    kunyomi: "\u3084\u307E"
-    romaji: yama
-    onyomi: "\u30B5\u30F3"
-    kanjiAudio: {fileID: 8300000, guid: 449c9c46c096f5c4fa8991abaf18f846, type: 3}
-    urutanImage1: {fileID: 21300000, guid: 11a4711de7437a64d92e62785bc1be49, type: 3}
+    meaning: Besar
+    kunyomi: "\u304A\u304A\u304D\u3044"
+    romaji: ookii
+    onyomi: "\u30C0\u30A4"
+    kanjiAudio: {fileID: 8300000, guid: e1a6d5413e3c916499c88828f16fcb9f, type: 3}
+    urutanImage1: {fileID: 21300000, guid: e9ed409799ad2be459f86dceacc48735, type: 3}
     urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 21300000, guid: 5080a8758f4329f44bd13512d74d53df, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: 2eeed1008b868144e8f729b893a72fd9, type: 3}
     writingImage: {fileID: 21300000, guid: 5034962de918df247938e0f89ef2e46d, type: 3}
-    meaning: a
-    kunyomi: a
-    romaji: a
-    onyomi: a
-    kanjiAudio: {fileID: 8300000, guid: edb610e3eb87e3141bb0a5b9ca371e28, type: 3}
-    urutanImage1: {fileID: 21300000, guid: 11a4711de7437a64d92e62785bc1be49, type: 3}
+    meaning: Kecil
+    kunyomi: "\u3061\u3044\u3055\u3044"
+    romaji: chiisai
+    onyomi: "\u30B7\u30E7\u30A6"
+    kanjiAudio: {fileID: 8300000, guid: 78aad23723381884fb23d6577c1ee672, type: 3}
+    urutanImage1: {fileID: 21300000, guid: b9c1657e8ac961a4cbed7c3f1c9708b4, type: 3}
     urutanImage2: {fileID: 21300000, guid: 5034962de918df247938e0f89ef2e46d, type: 3}
-  - kanjiImage: {fileID: 0}
+  - kanjiImage: {fileID: 21300000, guid: 842eeaef9ddc79645bec2e57c93d357f, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+    meaning: Tinggi
+    kunyomi: "\u305F\u304B\u3044"
+    romaji: takai
+    onyomi: "\u30B3\u30A6"
+    kanjiAudio: {fileID: 8300000, guid: 8495139d37a0a62489e33d0f52eed17a, type: 3}
+    urutanImage1: {fileID: 21300000, guid: a9c3c34c2e9dc2844a13b0988b2d0d89, type: 3}
+    urutanImage2: {fileID: 21300000, guid: 68c361dfc3816274aa210ce26a0ebef5, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: a3c7e3e639d4eb743bccf132d4d6bf57, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+    meaning: Murah
+    kunyomi: "\u3084\u3059\u3044"
+    romaji: yasui
+    onyomi: "\u30A2\u30F3"
+    kanjiAudio: {fileID: 8300000, guid: 746fa8bfc7da3084695e4701d58d0d92, type: 3}
+    urutanImage1: {fileID: 21300000, guid: 8d3ec2b701af2494d8eeb0c2471de969, type: 3}
+    urutanImage2: {fileID: 21300000, guid: c3edd0346568af74ca11b81c93157b79, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: 586c3fb0b3066d1489dedff5710fc34e, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+    meaning: Baru
+    kunyomi: "\u3042\u305F\u3089\u3057\u3044"
+    romaji: atarashii
+    onyomi: "\u30B7\u30F3"
+    kanjiAudio: {fileID: 8300000, guid: 4bc5ac331fa993e488c9211c722a9907, type: 3}
+    urutanImage1: {fileID: 21300000, guid: 8fa9bb9693e6d9649ac8d91fbcc3b954, type: 3}
+    urutanImage2: {fileID: 21300000, guid: ed25877f482898d478e378c320ecf9aa, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: cd00cb71957bb25429db40a9914dd625, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
+    meaning: Tua
+    kunyomi: "\u3075\u308B\u3044"
+    romaji: furui
+    onyomi: "\u30B3"
+    kanjiAudio: {fileID: 8300000, guid: a9efb4ec5a59e1d41940fc196ac27970, type: 3}
+    urutanImage1: {fileID: 21300000, guid: a20a67825052e0143844eb68cce87463, type: 3}
     urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+  - kanjiImage: {fileID: 21300000, guid: 6d6deb64c9a563f4e8208b96d01e7afc, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+    meaning: Panjang
+    kunyomi: "\u306A\u304C\u3044"
+    romaji: nagai
+    onyomi: "\u30C1\u30E7\u30A6"
+    kanjiAudio: {fileID: 8300000, guid: 64ecb266274fec1498946642714a5ba9, type: 3}
+    urutanImage1: {fileID: 21300000, guid: 837a050be8480974ab9ab0fafd1b89f2, type: 3}
+    urutanImage2: {fileID: 21300000, guid: 418a0e7a3e4ff7f49ba149da90cddf50, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: 1003d3ed030a97d4ca37ca05a464b834, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+    meaning: Banyak
+    kunyomi: "\u304A\u304A\u3044"
+    romaji: ooi
+    onyomi: "\u30BF"
+    kanjiAudio: {fileID: 8300000, guid: 135099d3f3303a54ebcf50bce2a76eb9, type: 3}
+    urutanImage1: {fileID: 21300000, guid: 72c79810351584d409398907650d1eef, type: 3}
+    urutanImage2: {fileID: 21300000, guid: e4c7c88d7337b274d8054bdd4795cea6, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: e02a25a458edd044db188f79098e6dc8, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
+    meaning: Sedikit
+    kunyomi: "\u3059\u304F\u306A\u3044"
+    romaji: sukunai
+    onyomi: "\u30B7\u30E7\u30A6"
+    kanjiAudio: {fileID: 8300000, guid: d29a59f4e70bf6742aa3bc052a0a76ac, type: 3}
+    urutanImage1: {fileID: 21300000, guid: 783242e239ba24048a14a3416d6ccaec, type: 3}
     urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+  - kanjiImage: {fileID: 21300000, guid: 258ef55c7d3220342a4570f00d92350b, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
+    meaning: Cepat
+    kunyomi: "\u306F\u3084\u3044"
+    romaji: hayai
+    onyomi: "\u30BD\u30A6"
+    kanjiAudio: {fileID: 8300000, guid: a6f7cabeb63b7f84bb41c8fdc13ba6b2, type: 3}
+    urutanImage1: {fileID: 21300000, guid: 783d0fd9a153fa5458dc378b2ba72da1, type: 3}
+    urutanImage2: {fileID: 21300000, guid: 5e420630454c3534aaffa0e92086bc9e, type: 3}
   kanjiDisplay: {fileID: 532793499}
   writingDisplay: {fileID: 458043979}
   urutanDisplay1: {fileID: 458043979}
@@ -1247,7 +1247,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1409,10 +1409,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -1938,10 +1938,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -2453,10 +2453,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0

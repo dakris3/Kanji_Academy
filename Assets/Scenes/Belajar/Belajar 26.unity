@@ -548,96 +548,96 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   kanjiList:
-  - kanjiImage: {fileID: 21300000, guid: 5080a8758f4329f44bd13512d74d53df, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: 6c1ba16f53276ac45b941ddf3550b8d6, type: 3}
     writingImage: {fileID: 21300000, guid: 11a4711de7437a64d92e62785bc1be49, type: 3}
-    meaning: gunung
-    kunyomi: "\u3084\u307E"
-    romaji: yama
-    onyomi: "\u30B5\u30F3"
-    kanjiAudio: {fileID: 8300000, guid: 449c9c46c096f5c4fa8991abaf18f846, type: 3}
-    urutanImage1: {fileID: 21300000, guid: 11a4711de7437a64d92e62785bc1be49, type: 3}
+    meaning: Berubah
+    kunyomi: "\u304B\u308F\u308B"
+    romaji: kawaru
+    onyomi: "\u30D8\u30F3"
+    kanjiAudio: {fileID: 8300000, guid: 54c8aea2a9b88134b99567a0124b07da, type: 3}
+    urutanImage1: {fileID: 21300000, guid: ec0a7e405347e9142b7d7a502d29fcaf, type: 3}
     urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 21300000, guid: 5080a8758f4329f44bd13512d74d53df, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: 51c1a8791fa67224c99af8920900aaee, type: 3}
     writingImage: {fileID: 21300000, guid: 5034962de918df247938e0f89ef2e46d, type: 3}
-    meaning: a
-    kunyomi: a
-    romaji: a
-    onyomi: a
-    kanjiAudio: {fileID: 8300000, guid: edb610e3eb87e3141bb0a5b9ca371e28, type: 3}
-    urutanImage1: {fileID: 21300000, guid: 11a4711de7437a64d92e62785bc1be49, type: 3}
-    urutanImage2: {fileID: 21300000, guid: 5034962de918df247938e0f89ef2e46d, type: 3}
-  - kanjiImage: {fileID: 0}
+    meaning: Menggunakan
+    kunyomi: "\u3064\u304B\u3046"
+    romaji: tsukau
+    onyomi: "\u30B7"
+    kanjiAudio: {fileID: 8300000, guid: a8115003854729147a375065b918a96e, type: 3}
+    urutanImage1: {fileID: 21300000, guid: 3f942e18a70a83f43bfe4691943f4f9d, type: 3}
+    urutanImage2: {fileID: 21300000, guid: 00cd9ee37cd05784eb9d27088d74b99c, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: 7257a17cf81d73242ae40919f8bae149, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+    meaning: Membuat
+    kunyomi: "\u3064\u304F\u308B"
+    romaji: tsukuru
+    onyomi: "\u30B5\u30AF"
+    kanjiAudio: {fileID: 8300000, guid: 8009fb21989637944ae352e2db3d3afe, type: 3}
+    urutanImage1: {fileID: 21300000, guid: 878e69f8794384c4a88d18b32fb17b55, type: 3}
+    urutanImage2: {fileID: 21300000, guid: 230d62d907c05624eab637b749d7407a, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: 460c0ddeb3b89354ab9e40a7301ce48c, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
+    meaning: Berganti
+    kunyomi: "\u304B\u308F\u308B"
+    romaji: kawaru
+    onyomi: "\u30BF\u30A4"
+    kanjiAudio: {fileID: 8300000, guid: 4c601d385bb10ab4882f4aba87029152, type: 3}
+    urutanImage1: {fileID: 21300000, guid: cbe2fd857b5d88e4186756577213b52a, type: 3}
     urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+  - kanjiImage: {fileID: 21300000, guid: 8c55e27d0956eba4d83b209cecb12ce8, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+    meaning: Percaya
+    kunyomi: "\u3057\u3093\u3058\u308B"
+    romaji: shinjiru
+    onyomi: "\u30B7\u30F3"
+    kanjiAudio: {fileID: 8300000, guid: aa2bd261339f1524c9135efc411caf4c, type: 3}
+    urutanImage1: {fileID: 21300000, guid: b3e5e2ab1b3da054dabc9e630661b1f9, type: 3}
+    urutanImage2: {fileID: 21300000, guid: 7edd1f9c8fa956a4299d6228614c03a8, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: f664d3cd9e009fd479a6085d75bcb2f7, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+    meaning: Maju
+    kunyomi: "\u3059\u3059\u3080"
+    romaji: susumu
+    onyomi: "\u30B7\u30F3"
+    kanjiAudio: {fileID: 8300000, guid: e57535be7bad8df4080b2d7abd106c74, type: 3}
+    urutanImage1: {fileID: 21300000, guid: 7e044a1d4815018459f29e0f0f6bfe5d, type: 3}
+    urutanImage2: {fileID: 21300000, guid: 85b2dca98bad6e5468f1d1389c971a9f, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: a90fab687b7b31449bba64e7809d05ec, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+    meaning: Mengirim
+    kunyomi: "\u304A\u304F\u308B"
+    romaji: okuru
+    onyomi: "\u30BD\u30A6"
+    kanjiAudio: {fileID: 8300000, guid: b41b36a8ba663bd4b9e03077ded0cef3, type: 3}
+    urutanImage1: {fileID: 21300000, guid: c40afc06d1e92ad45b56dd4b021b0ea3, type: 3}
+    urutanImage2: {fileID: 21300000, guid: b8e8dfe2806f97c4cb1b60f92f14e64e, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: 29f43042078bc0d468953ca7b7832589, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+    meaning: Mengembalikan
+    kunyomi: "\u304B\u3048\u3059"
+    romaji: kaesu
+    onyomi: "\u30D8\u30F3"
+    kanjiAudio: {fileID: 8300000, guid: 223de11d7b43ec645905df4bece1a991, type: 3}
+    urutanImage1: {fileID: 21300000, guid: d1639aa013ff6ae4a85c883262e0f7a7, type: 3}
+    urutanImage2: {fileID: 21300000, guid: 9b3934b4468e13b40a0f3d0449db9c9a, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: e51caba851b187d488ba7a2d6db63b6a, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+    meaning: Mencuci
+    kunyomi: "\u3042\u3089\u3046"
+    romaji: arau
+    onyomi: "\u30BB\u30F3"
+    kanjiAudio: {fileID: 8300000, guid: c194dbf9bb100da4299f01673690e834, type: 3}
+    urutanImage1: {fileID: 21300000, guid: e3dfcabc987238b419ea5444c9ce52d8, type: 3}
+    urutanImage2: {fileID: 21300000, guid: 0c892a86fac188e4eb5314b9798a68f9, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: bfa2395f22a8fbf4eb1f1e5097f14e63, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
+    meaning: Menuang
+    kunyomi: "\u305D\u305D\u3050"
+    romaji: sosogu
+    onyomi: "\u30C1\u30E5\u30A6"
+    kanjiAudio: {fileID: 8300000, guid: 1628c2c10c7647c4b9dce4907bac865c, type: 3}
+    urutanImage1: {fileID: 21300000, guid: 380afd2ca0b07704ba31d0e5e0042bee, type: 3}
+    urutanImage2: {fileID: 21300000, guid: 9b56633fbd24f7b44bfc3245077681da, type: 3}
   kanjiDisplay: {fileID: 532793499}
   writingDisplay: {fileID: 458043979}
   urutanDisplay1: {fileID: 458043979}
@@ -2453,10 +2453,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -2490,8 +2490,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 71.104, y: 27}
-  m_SizeDelta: {x: 118.08, y: 38.394}
+  m_AnchoredPosition: {x: 66.042, y: 27}
+  m_SizeDelta: {x: 128.2, y: 38.394}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1631120691
 GameObject:

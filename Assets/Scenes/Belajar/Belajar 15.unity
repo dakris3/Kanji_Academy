@@ -527,8 +527,9 @@ RectTransform:
   - {fileID: 1634202527}
   - {fileID: 763176167}
   - {fileID: 881116570}
+  - {fileID: 837777834}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -548,96 +549,96 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   kanjiList:
-  - kanjiImage: {fileID: 21300000, guid: 5080a8758f4329f44bd13512d74d53df, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: 161af1f9cc0666740b2d8763ce018c65, type: 3}
     writingImage: {fileID: 21300000, guid: 11a4711de7437a64d92e62785bc1be49, type: 3}
-    meaning: gunung
-    kunyomi: "\u3084\u307E"
-    romaji: yama
-    onyomi: "\u30B5\u30F3"
-    kanjiAudio: {fileID: 8300000, guid: 449c9c46c096f5c4fa8991abaf18f846, type: 3}
-    urutanImage1: {fileID: 21300000, guid: 11a4711de7437a64d92e62785bc1be49, type: 3}
-    urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 21300000, guid: 5080a8758f4329f44bd13512d74d53df, type: 3}
+    meaning: Rendah
+    kunyomi: "\u3072\u304F\u3044"
+    romaji: hikui
+    onyomi: "\u30C6\u30A4"
+    kanjiAudio: {fileID: 8300000, guid: 0f0a801ac4793424f90e9f1fa6ffe948, type: 3}
+    urutanImage1: {fileID: 21300000, guid: c5056ae4a894b304dbcf20587840aa06, type: 3}
+    urutanImage2: {fileID: 21300000, guid: 1262550d4766b924185194546d103432, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: 212b88fcb24b0eb438626d88d2db1ba6, type: 3}
     writingImage: {fileID: 21300000, guid: 5034962de918df247938e0f89ef2e46d, type: 3}
-    meaning: a
-    kunyomi: a
-    romaji: a
-    onyomi: a
-    kanjiAudio: {fileID: 8300000, guid: edb610e3eb87e3141bb0a5b9ca371e28, type: 3}
-    urutanImage1: {fileID: 21300000, guid: 11a4711de7437a64d92e62785bc1be49, type: 3}
+    meaning: Luas
+    kunyomi: "\u3072\u308D\u3044"
+    romaji: hiroi
+    onyomi: "\u30B3\u30A6"
+    kanjiAudio: {fileID: 8300000, guid: aee94f34b286d9847b3fdeb6915bc642, type: 3}
+    urutanImage1: {fileID: 21300000, guid: b4cb134ac6e9ab4429d5b6f95760f657, type: 3}
     urutanImage2: {fileID: 21300000, guid: 5034962de918df247938e0f89ef2e46d, type: 3}
-  - kanjiImage: {fileID: 0}
+  - kanjiImage: {fileID: 21300000, guid: f82e2c0893dc3cd42b7739ac0703ea00, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+    meaning: Pendek
+    kunyomi: "\u307F\u3058\u304B\u3044"
+    romaji: mijikai
+    onyomi: "\u30BF\u30F3"
+    kanjiAudio: {fileID: 8300000, guid: f4b62521326e3ed428ac85ef5ef0d125, type: 3}
+    urutanImage1: {fileID: 21300000, guid: 7515394adcfae5346932824cec28b477, type: 3}
+    urutanImage2: {fileID: 21300000, guid: 4716bbd48699d21498b7b2928c075dda, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: c4f161ba838418b49a182be6b5089192, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+    meaning: Baik
+    kunyomi: "\u3088\u3044"
+    romaji: yoi
+    onyomi: "\u30EA\u30E7\u30A6"
+    kanjiAudio: {fileID: 8300000, guid: b069dba2979b39b4dab591dedb39527d, type: 3}
+    urutanImage1: {fileID: 21300000, guid: 9a242f5cf2521bf48b93949d811a5f80, type: 3}
+    urutanImage2: {fileID: 21300000, guid: bf0e2a49a4b7e7048ad2d7c445623154, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: 7eeb9d6fc82412547b5347aa7de905c1, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+    meaning: Buruk
+    kunyomi: "\u308F\u308B\u3044"
+    romaji: warui
+    onyomi: "\u30A2\u30AF"
+    kanjiAudio: {fileID: 8300000, guid: ce43d33b8da35974b9c7cf7d02a0e6d0, type: 3}
+    urutanImage1: {fileID: 21300000, guid: 4ff817a4c491ca845b582ce5e267b488, type: 3}
+    urutanImage2: {fileID: 21300000, guid: ca5b7a21db22ce5408f0709b9f84e5ae, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: 2cf98b9c43285ad47889274b9452b657, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
+    meaning: Benar
+    kunyomi: "\u305F\u3060\u3057\u3044"
+    romaji: tadashii
+    onyomi: "\u30BB\u30A4"
+    kanjiAudio: {fileID: 8300000, guid: 0db46baf78323df4195f0a1c88729240, type: 3}
+    urutanImage1: {fileID: 21300000, guid: 6e9b6b89b68b71849bfc6752632b58b8, type: 3}
     urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+  - kanjiImage: {fileID: 21300000, guid: 26c214987092bb1459d4b1293f669ebf, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+    meaning: Berubah
+    kunyomi: "\u304B\u308F\u308B"
+    romaji: kawaru
+    onyomi: "\u30D8\u30F3"
+    kanjiAudio: {fileID: 8300000, guid: ec910649985cd03468009687515adea0, type: 3}
+    urutanImage1: {fileID: 21300000, guid: 381033b67f7850f46ab53af4fe411c59, type: 3}
+    urutanImage2: {fileID: 21300000, guid: 0c480f606ce543d4ea24af7864b402cc, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: ce17a65ed4c3daa439699f6f0a91086e, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+    meaning: Merah
+    kunyomi: "\u3042\u304B"
+    romaji: aka
+    onyomi: "\u30BB\u30AD"
+    kanjiAudio: {fileID: 8300000, guid: d28d6b6461abce44ba3d6914af176f77, type: 3}
+    urutanImage1: {fileID: 21300000, guid: 1f3213e23dd94a64ea71b31da9bce2a2, type: 3}
+    urutanImage2: {fileID: 21300000, guid: a27a848b4b4e903479d6e7567ce6a3f7, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: 872a28263f9b9d049ba4f76a11ffcf91, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+    meaning: Biru
+    kunyomi: "\u3042\u304A"
+    romaji: ao
+    onyomi: "\u30BB\u30A4"
+    kanjiAudio: {fileID: 8300000, guid: 439326d3c63602d468f92f02007fb41b, type: 3}
+    urutanImage1: {fileID: 21300000, guid: 6f5033516bd46a84faf62d9e9dbf30e8, type: 3}
+    urutanImage2: {fileID: 21300000, guid: b4ceebb9b296dc840830cd5a266cf980, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: 9082946ab6c86574088e32deb3437074, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
+    meaning: Hitam
+    kunyomi: "\u304F\u308D"
+    romaji: kuro
+    onyomi: "\u30B3\u30AF"
+    kanjiAudio: {fileID: 8300000, guid: 0d8875f48021599479a438b3f5930a23, type: 3}
+    urutanImage1: {fileID: 21300000, guid: 0be2dc37a3515ce41b57014c29e84b4f, type: 3}
+    urutanImage2: {fileID: 21300000, guid: 8e1729abe7cf9a3408f967ef72becc0a, type: 3}
   kanjiDisplay: {fileID: 532793499}
   writingDisplay: {fileID: 458043979}
   urutanDisplay1: {fileID: 458043979}
@@ -1743,13 +1744,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 837777833}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 182.38889, y: 176.25056, z: -0.408613}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 88.840904, y: -83.45386, z: -0.50147957}
+  m_LocalScale: {x: 1.2272727, y: 1.2272727, z: 1.2272727}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_Father: {fileID: 249886747}
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &837777835
 MonoBehaviour:
@@ -2908,5 +2909,5 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

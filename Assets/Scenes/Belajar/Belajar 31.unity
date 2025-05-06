@@ -548,96 +548,96 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   kanjiList:
-  - kanjiImage: {fileID: 21300000, guid: 5080a8758f4329f44bd13512d74d53df, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: 583a6dfec15de524bad5002b4e939d51, type: 3}
     writingImage: {fileID: 21300000, guid: 11a4711de7437a64d92e62785bc1be49, type: 3}
-    meaning: gunung
-    kunyomi: "\u3084\u307E"
-    romaji: yama
-    onyomi: "\u30B5\u30F3"
-    kanjiAudio: {fileID: 8300000, guid: 449c9c46c096f5c4fa8991abaf18f846, type: 3}
-    urutanImage1: {fileID: 21300000, guid: 11a4711de7437a64d92e62785bc1be49, type: 3}
+    meaning: Menarik
+    kunyomi: "\u3072\u304F"
+    romaji: hiku
+    onyomi: "\u30A4\u30F3"
+    kanjiAudio: {fileID: 8300000, guid: 3c52974a3487b434dae0e8742db207c4, type: 3}
+    urutanImage1: {fileID: 21300000, guid: bf2a9b372051a4f4db1b0c04fc33ab63, type: 3}
     urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 21300000, guid: 5080a8758f4329f44bd13512d74d53df, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: 44641ab9c16a5e544b2c863c5be880f0, type: 3}
     writingImage: {fileID: 21300000, guid: 5034962de918df247938e0f89ef2e46d, type: 3}
-    meaning: a
-    kunyomi: a
-    romaji: a
-    onyomi: a
-    kanjiAudio: {fileID: 8300000, guid: edb610e3eb87e3141bb0a5b9ca371e28, type: 3}
-    urutanImage1: {fileID: 21300000, guid: 11a4711de7437a64d92e62785bc1be49, type: 3}
-    urutanImage2: {fileID: 21300000, guid: 5034962de918df247938e0f89ef2e46d, type: 3}
-  - kanjiImage: {fileID: 0}
+    meaning: Membuka
+    kunyomi: "\u3042\u3051\u308B"
+    romaji: akeru
+    onyomi: "\u30AB\u30A4"
+    kanjiAudio: {fileID: 8300000, guid: 1da9724e594b4354a88081cce2e9af10, type: 3}
+    urutanImage1: {fileID: 21300000, guid: 3d38bb88e0d4fa4498a2641138630ae1, type: 3}
+    urutanImage2: {fileID: 21300000, guid: 73325047713fa6f47903f2fb01c483b1, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: c6b09c6ff8608c44989d6a28e09c71ed, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+    meaning: Menutup
+    kunyomi: "\u3057\u3081\u308B"
+    romaji: shimeru
+    onyomi: "\u30D8\u30A4"
+    kanjiAudio: {fileID: 8300000, guid: 3fe8366207569e24fbcdae58b40c6cfa, type: 3}
+    urutanImage1: {fileID: 21300000, guid: c49304bb8018cce4691e59da90912f93, type: 3}
+    urutanImage2: {fileID: 21300000, guid: 3aac43812ff73f74598218dbd6909e00, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: 5d72c19268e67e74e9ff1a737852c497, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
+    meaning: Meninggalkan
+    kunyomi: "\u3055\u308B"
+    romaji: saru
+    onyomi: "\u30AD\u30E7"
+    kanjiAudio: {fileID: 8300000, guid: 889b786d9339318459b5cb7989d478f1, type: 3}
+    urutanImage1: {fileID: 21300000, guid: c8e020cf18a9de842be11365f7c22228, type: 3}
     urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+  - kanjiImage: {fileID: 21300000, guid: 73b4b638406749c43af14cdc5eb9edd8, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+    meaning: Mati
+    kunyomi: "\u3057\u306C"
+    romaji: "\u30B7"
+    onyomi: shinu
+    kanjiAudio: {fileID: 8300000, guid: 4a99267ad518828458e45fb32a6bca6d, type: 3}
+    urutanImage1: {fileID: 21300000, guid: e774fa41ef2b96840a529013c1b301a0, type: 3}
+    urutanImage2: {fileID: 21300000, guid: 3e7f38d49100b7149b3804fa156e8006, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: 65c97b294f39a924bb2f195f43ffdc4e, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+    meaning: Mengumpulkan
+    kunyomi: "\u3042\u3064\u3081\u308B"
+    romaji: atsumeru
+    onyomi: "\u30B7\u30E5\u30A6"
+    kanjiAudio: {fileID: 8300000, guid: b655fa94dd0d265479d1487f923ed574, type: 3}
+    urutanImage1: {fileID: 21300000, guid: 1dcfbea4028bf444c94236311e742b13, type: 3}
+    urutanImage2: {fileID: 21300000, guid: 26beafd724672274dbaa1149773cc48c, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: 6091faba66fe7074a9e84f56fa3f73e1, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+    meaning: Mengetahui
+    kunyomi: "\u3057\u3066\u3044\u308B"
+    romaji: shitteiru
+    onyomi: "\u30C1"
+    kanjiAudio: {fileID: 8300000, guid: 65d451306fe044c459e5593764f07350, type: 3}
+    urutanImage1: {fileID: 21300000, guid: 499f6f00f1f8dfc499f5e11bcc09b58c, type: 3}
+    urutanImage2: {fileID: 21300000, guid: 521c7c1d017101d43a47dfe429310087, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: d9f5d0ae95991664e8dcbac497811616, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+    meaning: Menjual
+    kunyomi: "\u3046\u308B"
+    romaji: uru
+    onyomi: "\u30D0\u30A4"
+    kanjiAudio: {fileID: 8300000, guid: 9fd28133d595cc848bb4c0c8f0a72cad, type: 3}
+    urutanImage1: {fileID: 21300000, guid: 3bb1b500348c9de4398407d739a52ee1, type: 3}
+    urutanImage2: {fileID: 21300000, guid: 5d601ce340a61e240be58f5f22927954, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: 3298801bf109f3943be1f837ae51cde6, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
-  - kanjiImage: {fileID: 0}
+    meaning: Menjelaskan
+    kunyomi: "\u305B\u3064\u3081\u3044\u3059\u308B"
+    romaji: setsumeisuru
+    onyomi: "\u30BB\u30C4"
+    kanjiAudio: {fileID: 8300000, guid: fc5801fb75bcb2142bb5a10c8a4878c2, type: 3}
+    urutanImage1: {fileID: 21300000, guid: c892b2ccf496a614a83b2b080fc2099c, type: 3}
+    urutanImage2: {fileID: 21300000, guid: f6455a1223566274cb23bee0ed1abcb5, type: 3}
+  - kanjiImage: {fileID: 21300000, guid: 272e49f9d3221d6408c86d4375d9a374, type: 3}
     writingImage: {fileID: 0}
-    meaning: 
-    kunyomi: 
-    romaji: 
-    onyomi: 
-    kanjiAudio: {fileID: 0}
-    urutanImage1: {fileID: 0}
-    urutanImage2: {fileID: 0}
+    meaning: Berpikir
+    kunyomi: "\u304A\u3082\u3046"
+    romaji: omou
+    onyomi: "\u30B7"
+    kanjiAudio: {fileID: 8300000, guid: d0798d779ac9fa7409b4643970f2bd52, type: 3}
+    urutanImage1: {fileID: 21300000, guid: a3b0bf411126a3a4b9ef6df8607d29f6, type: 3}
+    urutanImage2: {fileID: 21300000, guid: 216ca9e37dc4ef242be4c2366d53c695, type: 3}
   kanjiDisplay: {fileID: 532793499}
   writingDisplay: {fileID: 458043979}
   urutanDisplay1: {fileID: 458043979}

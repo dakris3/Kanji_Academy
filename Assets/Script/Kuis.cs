@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEngine.SceneManagement; // Tambahkan ini untuk memuat scene
+using UnityEngine.SceneManagement;
 
 public class Kuis : MonoBehaviour
 {
@@ -14,7 +14,11 @@ public class Kuis : MonoBehaviour
     private List<int> questionOrder;
     private int currentQuestionIndex = 0;
 
-    public LevelManager levelManager; // Hubungkan ke LevelManager
+    public LevelManager levelManager;
+
+    public Color correctColor = Color.green;
+    public Color wrongColor = Color.red;
+    public Color defaultColor = Color.white;
 
     [System.Serializable]
     public class QuestionData
@@ -29,7 +33,6 @@ public class Kuis : MonoBehaviour
 
     void Start()
     {
-        // Pastikan LevelManager ditemukan
         levelManager = FindObjectOfType<LevelManager>();
         if (levelManager == null)
         {
@@ -83,6 +86,8 @@ public class Kuis : MonoBehaviour
             return;
         }
 
+        ResetButtonColors();
+
         int questionIndex = questionOrder[currentQuestionIndex];
 
         quizImage.sprite = questions[questionIndex].questionImage;
@@ -119,15 +124,41 @@ public class Kuis : MonoBehaviour
         }
 
         int questionIndex = questionOrder[currentQuestionIndex];
+        int correctIndex = questions[questionIndex].correctAnswerIndex;
 
-        if (index == questions[questionIndex].correctAnswerIndex)
-        {
-            Debug.Log("Jawaban benar!");
-            NextQuestion();
-        }
-        else
+        // Tampilkan jawaban benar (hijau)
+        answerButtons[correctIndex].GetComponent<Image>().color = correctColor;
+
+        if (index != correctIndex)
         {
             Debug.Log("Jawaban salah, coba lagi.");
+            answerButtons[index].GetComponent<Image>().color = wrongColor;
+            StartCoroutine(ResetAfterDelay(0.5f)); // Hanya reset warna, tidak lanjut
+            return;
+        }
+
+        Debug.Log("Jawaban benar!");
+        StartCoroutine(NextQuestionAfterDelay(0f)); // Lanjut ke pertanyaan berikutnya
+    }
+
+    IEnumerator ResetAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        ResetButtonColors();
+    }
+
+    IEnumerator NextQuestionAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        ResetButtonColors();
+        NextQuestion();
+    }
+
+    void ResetButtonColors()
+    {
+        foreach (Button btn in answerButtons)
+        {
+            btn.GetComponent<Image>().color = defaultColor;
         }
     }
 
@@ -152,7 +183,6 @@ public class Kuis : MonoBehaviour
                 Debug.LogError("LevelManager tidak ditemukan! Tidak bisa menyelesaikan level.");
             }
 
-            // Pindah ke scene "Hasil"
             SceneManager.LoadScene("Hasil");
         }
     }
