@@ -9,15 +9,20 @@ public class TemukanKanji : MonoBehaviour
 {
     [Header("UI Elements")]
     public TextMeshProUGUI kanjiText;
-    public TextMeshProUGUI romajiText; // Tambahan untuk menampilkan Romaji
+    public TextMeshProUGUI romajiText;
     public Button[] hiraganaButtons;
     public Button checkButton;
 
     [Header("Kanji & Hiragana Data")]
-    public List<string> kanjiList = new List<string>();          // Diisi dari Inspector
-    public List<string> hiraganaAnswers = new List<string>();    // Diisi dari Inspector
-    public List<string> romajiList = new List<string>();         // Tambahan - Diisi dari Inspector
+    public List<string> kanjiList = new List<string>();
+    public List<string> hiraganaAnswers = new List<string>();
+    public List<string> romajiList = new List<string>();
 
+    [Header("Sound Effects")]
+    public AudioClip correctSFX;
+    public AudioClip wrongSFX;
+
+    private AudioSource audioSource;
     private string correctHiragana;
     private int totalQuestions;
     private int currentQuestionCount = 0;
@@ -30,14 +35,18 @@ public class TemukanKanji : MonoBehaviour
 
     void Start()
     {
-        // Cari LevelManager (jika ada di scene)
         levelManager = FindObjectOfType<LevelManager>();
+        audioSource = GetComponent<AudioSource>();
 
-        // Validasi data
+        if (audioSource == null)
+        {
+            Debug.LogError("AudioSource tidak ditemukan pada GameObject ini.");
+        }
+
         if (kanjiList == null || hiraganaAnswers == null || romajiList == null ||
             kanjiList.Count != hiraganaAnswers.Count || kanjiList.Count != romajiList.Count || kanjiList.Count == 0)
         {
-            Debug.LogError("❌ Data Kanji, Hiragana, atau Romaji tidak valid! Periksa Inspector.");
+            Debug.LogError("Data Kanji, Hiragana, atau Romaji tidak valid! Periksa Inspector.");
             kanjiText.text = "Data tidak valid!";
             if (romajiText != null) romajiText.text = "";
             return;
@@ -54,14 +63,12 @@ public class TemukanKanji : MonoBehaviour
         Shuffle(remainingIndexes);
         ShowNewKanji();
 
-        // Simpan warna awal tombol & pasang event listener
         foreach (Button btn in hiraganaButtons)
         {
             originalColors[btn] = btn.GetComponent<Image>().color;
             btn.onClick.AddListener(() => OnHiraganaButtonClick(btn));
         }
 
-        // Event tombol Check
         checkButton.onClick.AddListener(CheckAnswer);
     }
 
@@ -139,6 +146,7 @@ public class TemukanKanji : MonoBehaviour
         {
             Debug.Log("Jumlah huruf tidak cocok.");
             HighlightIncorrect();
+            if (wrongSFX != null) audioSource.PlayOneShot(wrongSFX);
             Invoke("ResetButtonColors", 2f);
             return;
         }
@@ -162,10 +170,12 @@ public class TemukanKanji : MonoBehaviour
 
         if (isCorrect)
         {
+            if (correctSFX != null) audioSource.PlayOneShot(correctSFX);
             Invoke("ShowNewKanji", 2f);
         }
         else
         {
+            if (wrongSFX != null) audioSource.PlayOneShot(wrongSFX);
             Invoke("ResetButtonColors", 2f);
         }
     }

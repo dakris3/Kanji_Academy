@@ -4,22 +4,27 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Linq;
+using System.Text;
 
 public class KetikKata : MonoBehaviour
 {
     public TMP_Text kanjiText;
     public TMP_InputField inputField;
-    public Image kanjiImage; // Gambar untuk soal
+    public Image kanjiImage;
 
     [System.Serializable]
     public class KanjiQuestion
     {
         public string kanji;
         public string answer;
-        public Sprite image; // Tambahan untuk menampung gambar
+        public Sprite image;
     }
 
+    [Header("Question Settings")]
     public KanjiQuestion[] kanjiQuestions;
+    public bool shuffleQuestions = true;
+
     private List<KanjiQuestion> remainingQuestions;
     private KanjiQuestion currentQuestion;
 
@@ -36,12 +41,24 @@ public class KetikKata : MonoBehaviour
 
     private int currentSisi = 1;
 
+    [Header("Sound Effects")]
+    public AudioClip correctSFX;
+    public AudioClip wrongSFX;
+    private AudioSource audioSource;
+
     void Start()
     {
         inputField.inputType = TMP_InputField.InputType.Standard;
         inputField.keyboardType = TouchScreenKeyboardType.Default;
         inputField.characterValidation = TMP_InputField.CharacterValidation.None;
         inputField.characterLimit = 10;
+
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            Debug.LogWarning("AudioSource tidak ditemukan. Menambahkan komponen AudioSource.");
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
 
         ResetQuestions();
         NextQuestion();
@@ -111,7 +128,11 @@ public class KetikKata : MonoBehaviour
     void ResetQuestions()
     {
         remainingQuestions = new List<KanjiQuestion>(kanjiQuestions);
-        ShuffleQuestions();
+
+        if (shuffleQuestions)
+        {
+            ShuffleQuestions();
+        }
     }
 
     void ShuffleQuestions()
@@ -130,14 +151,18 @@ public class KetikKata : MonoBehaviour
         string playerAnswer = NormalizeInput(inputField.text);
         string correctAnswer = NormalizeInput(currentQuestion.answer);
 
+        Debug.Log($"[DEBUG] Player Answer: '{playerAnswer}' | Correct Answer: '{correctAnswer}'");
+
         if (playerAnswer == correctAnswer)
         {
             Debug.Log("Jawaban benar!");
+            if (correctSFX != null && audioSource != null) audioSource.PlayOneShot(correctSFX);
             NextQuestion();
         }
         else
         {
             Debug.Log("Jawaban salah!");
+            if (wrongSFX != null && audioSource != null) audioSource.PlayOneShot(wrongSFX);
         }
 
         inputField.text = "";
@@ -182,6 +207,11 @@ public class KetikKata : MonoBehaviour
 
     string NormalizeInput(string input)
     {
-        return input.Trim().ToLower();
+        if (string.IsNullOrEmpty(input)) return "";
+
+        // Hapus spasi dan normalisasi unicode (penting untuk karakter Jepang)
+        return new string(input.Where(c => !char.IsWhiteSpace(c)).ToArray())
+            .Normalize(NormalizationForm.FormC)
+            .ToLowerInvariant();
     }
 }

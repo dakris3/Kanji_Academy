@@ -486,7 +486,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Kuis
+          m_StringArgument: Belajar 24
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &93256979
@@ -620,7 +620,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: lvl 25
+          m_StringArgument: Belajar 25
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &160181434
@@ -889,7 +889,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Kuis
+          m_StringArgument: Belajar 22
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &222576383
@@ -1280,7 +1280,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Kuis
+          m_StringArgument: Belajar 26
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &313701115
@@ -1414,7 +1414,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Kuis
+          m_StringArgument: Belajar 23
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &504708729
@@ -1632,7 +1632,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: lvl 20
+          m_StringArgument: Belajar 20
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &560600318
@@ -1900,7 +1900,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: lvl 15
+          m_StringArgument: Belajar 15
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &800597089
@@ -2483,7 +2483,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Kuis
+          m_StringArgument: Belajar 18
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &922929969
@@ -2617,7 +2617,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Kuis
+          m_StringArgument: Belajar 13
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &947575820
@@ -2751,7 +2751,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Kuis
+          m_StringArgument: Belajar 31
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &949530622
@@ -2885,7 +2885,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Kuis
+          m_StringArgument: Belajar 21
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1022460173
@@ -3289,7 +3289,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Kuis
+          m_StringArgument: Belajar 29
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1227126808
@@ -3423,7 +3423,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Kuis
+          m_StringArgument: Belajar 28
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1310881975
@@ -3557,7 +3557,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Kuis
+          m_StringArgument: Belajar 17
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1319404523
@@ -4450,7 +4450,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Kuis
+          m_StringArgument: Belajar 14
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1498302506
@@ -4584,7 +4584,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Kuis
+          m_StringArgument: Belajar 16
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1598484245
@@ -4988,7 +4988,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Kuis
+          m_StringArgument: Belajar 19
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1622026367
@@ -5392,7 +5392,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Kuis
+          m_StringArgument: Belajar 27
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1730249875
@@ -5516,7 +5516,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1739997557}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 837777835}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: LoadSceneAutomatically
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Belajar 12
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1739997557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5851,7 +5863,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: lvl 30
+          m_StringArgument: Belajar 30
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1947938733

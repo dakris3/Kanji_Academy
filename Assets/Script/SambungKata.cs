@@ -11,7 +11,7 @@ public class SambungKata : MonoBehaviour
 
     public List<Button> romajiButtons = new List<Button>();
     public List<Button> kanjiButtons = new List<Button>();
-    public List<Button> soundButtons = new List<Button>(); // Tombol suara
+    public List<Button> soundButtons = new List<Button>();
 
     public List<string> romajiSet1 = new List<string>();
     public List<string> kanjiSet1 = new List<string>();
@@ -34,6 +34,10 @@ public class SambungKata : MonoBehaviour
 
     public List<AudioClip> kanjiSounds = new List<AudioClip>();
     public AudioSource audioSource;
+
+    [Header("Sound Effects")]
+    public AudioClip correctSFX;
+    public AudioClip wrongSFX;
 
     void Start()
     {
@@ -61,11 +65,24 @@ public class SambungKata : MonoBehaviour
         }
     }
 
+    string FormatRomaji(string input)
+    {
+        int openParenIndex = input.IndexOf('(');
+        if (openParenIndex > 0)
+        {
+            string main = input.Substring(0, openParenIndex);
+            string romaji = input.Substring(openParenIndex);
+            return main + "\n" + romaji;
+        }
+        return input;
+    }
+
     void SetContent(List<string> romajiContent, List<string> kanjiContent)
     {
         for (int i = 0; i < romajiButtons.Count; i++)
         {
-            romajiButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = romajiContent[i];
+            string formattedText = FormatRomaji(romajiContent[i]);
+            romajiButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = formattedText;
         }
         for (int i = 0; i < kanjiButtons.Count; i++)
         {
@@ -90,14 +107,19 @@ public class SambungKata : MonoBehaviour
             points.Add(selectedRomaji.transform.position);
             points.Add(selectedKanji.transform.position);
 
-            if (IsCorrectPair(selectedRomaji.GetComponentInChildren<TextMeshProUGUI>().text, 
-                              selectedKanji.GetComponentInChildren<TextMeshProUGUI>().text))
+            string romajiText = selectedRomaji.GetComponentInChildren<TextMeshProUGUI>().text.Replace("\n", "");
+            string kanjiText = selectedKanji.GetComponentInChildren<TextMeshProUGUI>().text;
+
+            if (IsCorrectPair(romajiText, kanjiText))
             {
                 Debug.Log("Correct");
                 selectedRomaji.GetComponent<Image>().color = correctButtonColor;
                 clickedButton.GetComponent<Image>().color = correctButtonColor;
                 connectedRomajiButtons.Add(selectedRomaji);
                 connectedKanjiButtons.Add(selectedKanji);
+
+                if (correctSFX != null)
+                    audioSource.PlayOneShot(correctSFX);
 
                 if (connectedRomajiButtons.Count == 5)
                 {
@@ -111,6 +133,13 @@ public class SambungKata : MonoBehaviour
                         NextQuestion();
                     }
                 }
+            }
+            else
+            {
+                Debug.Log("Incorrect");
+
+                if (wrongSFX != null)
+                    audioSource.PlayOneShot(wrongSFX);
             }
 
             selectedRomaji = null;
@@ -155,7 +184,7 @@ public class SambungKata : MonoBehaviour
 
     void PlayKanjiSound(int index)
     {
-        int adjustedIndex = (currentSet == 2) ? index + 5 : index; // Pindah ke suara 6-10 jika Set 2
+        int adjustedIndex = (currentSet == 2) ? index + 5 : index;
         if (audioSource != null && adjustedIndex < kanjiSounds.Count)
         {
             audioSource.PlayOneShot(kanjiSounds[adjustedIndex]);

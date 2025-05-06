@@ -20,6 +20,10 @@ public class Kuis : MonoBehaviour
     public Color wrongColor = Color.red;
     public Color defaultColor = Color.white;
 
+    [Header("Sound Effects")]
+    public AudioClip correctSFX;
+    public AudioClip wrongSFX;
+
     [System.Serializable]
     public class QuestionData
     {
@@ -126,19 +130,25 @@ public class Kuis : MonoBehaviour
         int questionIndex = questionOrder[currentQuestionIndex];
         int correctIndex = questions[questionIndex].correctAnswerIndex;
 
-        // Tampilkan jawaban benar (hijau)
         answerButtons[correctIndex].GetComponent<Image>().color = correctColor;
 
         if (index != correctIndex)
         {
             Debug.Log("Jawaban salah, coba lagi.");
             answerButtons[index].GetComponent<Image>().color = wrongColor;
-            StartCoroutine(ResetAfterDelay(0.5f)); // Hanya reset warna, tidak lanjut
+
+            if (wrongSFX != null)
+                audioSource.PlayOneShot(wrongSFX);
+
+            StartCoroutine(ResetAfterDelay(0.5f));
             return;
         }
 
         Debug.Log("Jawaban benar!");
-        StartCoroutine(NextQuestionAfterDelay(0f)); // Lanjut ke pertanyaan berikutnya
+        if (correctSFX != null)
+            audioSource.PlayOneShot(correctSFX);
+
+        StartCoroutine(NextQuestionAfterDelay(0f));
     }
 
     IEnumerator ResetAfterDelay(float delay)

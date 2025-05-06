@@ -621,7 +621,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Lvl 6
+          m_StringArgument: Belajar 6
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &376021838
@@ -755,7 +755,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Lvl 8
+          m_StringArgument: Belajar 8
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &438951559
@@ -1242,7 +1242,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Lvl 7
+          m_StringArgument: Belajar 7
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &683705320
@@ -1690,7 +1690,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: lvl 5
+          m_StringArgument: Belajar 5
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1168182960
@@ -2094,7 +2094,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Lvl 10
+          m_StringArgument: Belajar 10
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1212148023
@@ -2447,7 +2447,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: lvl 4
+          m_StringArgument: Belajar 4
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1491881439
@@ -2581,7 +2581,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Lvl 9
+          m_StringArgument: Belajar 9
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1636086347
@@ -3120,7 +3120,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: lvl 3
+          m_StringArgument: Belajar 3
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1877193526

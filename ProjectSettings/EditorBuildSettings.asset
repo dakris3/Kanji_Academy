@@ -95,4 +95,88 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Belajar/Belajar 2.unity
     guid: 8be30e9faaaa1844d806a2f900606f65
+  - enabled: 1
+    path: Assets/Scenes/Belajar/Belajar 3.unity
+    guid: caf38bc43a23e2742a3179f726bb1960
+  - enabled: 1
+    path: Assets/Scenes/Belajar/Belajar 4.unity
+    guid: 1fe7d760ffe3689469482e0cb23ab55b
+  - enabled: 1
+    path: Assets/Scenes/Belajar/Belajar 5.unity
+    guid: 4fec3fa6a8fd5804a95f7cd24ebc107e
+  - enabled: 1
+    path: Assets/Scenes/Belajar/Belajar 6.unity
+    guid: dd0d54ccab309b448b0b7f1803ce846e
+  - enabled: 1
+    path: Assets/Scenes/Belajar/Belajar 7.unity
+    guid: 156ca7a692ac1dd4d85b0ef8c7bb0266
+  - enabled: 1
+    path: Assets/Scenes/Belajar/Belajar 8.unity
+    guid: da26322e6bc08264d937e4c955fea17a
+  - enabled: 1
+    path: Assets/Scenes/Belajar/Belajar 9.unity
+    guid: ed857ff9abe2f0b45817fb9ea7410055
+  - enabled: 1
+    path: Assets/Scenes/Belajar/Belajar 10.unity
+    guid: c18ee3aca5a8d5843bfcc04701578ad7
+  - enabled: 1
+    path: Assets/Scenes/Belajar/Belajar 12.unity
+    guid: 195b3a55072731a4d9c3862e1d675e3f
+  - enabled: 1
+    path: Assets/Scenes/Belajar/Belajar 13.unity
+    guid: 632525bcfc681ef4b95636142deb29a8
+  - enabled: 1
+    path: Assets/Scenes/Belajar/Belajar 14.unity
+    guid: 1559da60e82115249a88773f6fc7f6a2
+  - enabled: 1
+    path: Assets/Scenes/Belajar/Belajar 15.unity
+    guid: f545119f35d938e47b363372dd49c361
+  - enabled: 1
+    path: Assets/Scenes/Belajar/Belajar 16.unity
+    guid: ccff474eff5b20342824110243383943
+  - enabled: 1
+    path: Assets/Scenes/Belajar/Belajar 17.unity
+    guid: 127d3df1709afab4692703cd0315acbe
+  - enabled: 1
+    path: Assets/Scenes/Belajar/Belajar 18.unity
+    guid: 36bd6f7bf6038c840b8f8807fd0ccdf2
+  - enabled: 1
+    path: Assets/Scenes/Belajar/Belajar 19.unity
+    guid: 40ef0f3e665358f4bb56acc796ef1077
+  - enabled: 1
+    path: Assets/Scenes/Belajar/Belajar 20.unity
+    guid: 83342befa62d9e44f8cd8f6097daaf96
+  - enabled: 1
+    path: Assets/Scenes/Belajar/Belajar 21.unity
+    guid: 50b079b071c9d12439d2ef3211b594fb
+  - enabled: 1
+    path: Assets/Scenes/Belajar/Belajar 22.unity
+    guid: 2534aa25295e5f44d83e95603daed9f0
+  - enabled: 1
+    path: Assets/Scenes/Belajar/Belajar 23.unity
+    guid: 4de25fba891783645bb006824de78adb
+  - enabled: 1
+    path: Assets/Scenes/Belajar/Belajar 24.unity
+    guid: 448b5b82562192f459c5dcd7c99e4944
+  - enabled: 1
+    path: Assets/Scenes/Belajar/Belajar 25.unity
+    guid: cd5b4a14b392b524b8a874db0d729056
+  - enabled: 1
+    path: Assets/Scenes/Belajar/Belajar 26.unity
+    guid: 8ee6b8c69b87627448de904cebfb5af5
+  - enabled: 1
+    path: Assets/Scenes/Belajar/Belajar 27.unity
+    guid: b0f9b36be83148c49a3b059016e2dfdb
+  - enabled: 1
+    path: Assets/Scenes/Belajar/Belajar 28.unity
+    guid: 001ccad894d6bcd4e822b21fc5ee5cb1
+  - enabled: 1
+    path: Assets/Scenes/Belajar/Belajar 29.unity
+    guid: 16015150d3aecc1408a002a78ad4aef2
+  - enabled: 1
+    path: Assets/Scenes/Belajar/Belajar 30.unity
+    guid: b988681b21ec1df41adeb25f4cb0f3c0
+  - enabled: 1
+    path: Assets/Scenes/Belajar/Belajar 31.unity
+    guid: 4085425944432424fbff7ba402764a8a
   m_configObjects: {}

@@ -651,8 +651,8 @@ MonoBehaviour:
   kanjiBoxWidthRatio: 0.2
   writingBoxHeightRatio: 0.45
   writingBoxWidthRatio: 0.35
-  targetSceneAfterTutorial: lvl 11
-  selectedTutorialScene: Tutorial 1
+  targetSceneAfterTutorial: lvl 10
+  selectedTutorialScene: Tutorial Ketik Kata
 --- !u!114 &249886749
 MonoBehaviour:
   m_ObjectHideFlags: 0

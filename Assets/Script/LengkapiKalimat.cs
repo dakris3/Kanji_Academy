@@ -16,6 +16,11 @@ public class LengkapiKalimat : MonoBehaviour
     // Tambahan untuk memanggil LevelManager
     public LevelManager levelManager;
 
+    [Header("Sound Effects")]
+    public AudioClip correctSFX;
+    public AudioClip wrongSFX;
+    private AudioSource audioSource;
+
     [System.Serializable]
     public class Question
     {
@@ -31,6 +36,12 @@ public class LengkapiKalimat : MonoBehaviour
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            Debug.LogError("AudioSource tidak ditemukan! Harap tambahkan komponen AudioSource ke GameObject ini.");
+        }
+
         ShuffleQuestions(); // Acak urutan soal
         ShowQuestion();
     }
@@ -72,6 +83,9 @@ public class LengkapiKalimat : MonoBehaviour
         if (selectedAnswer == correctAnswer)
         {
             Debug.Log("Jawaban benar!");
+            if (correctSFX != null && audioSource != null)
+                audioSource.PlayOneShot(correctSFX);
+
             NextQuestion();
         }
         else
@@ -89,6 +103,9 @@ public class LengkapiKalimat : MonoBehaviour
                 if (btn.GetComponentInChildren<TextMeshProUGUI>().text == selectedAnswer)
                     btn.GetComponent<Image>().color = Color.red;
             }
+
+            if (wrongSFX != null && audioSource != null)
+                audioSource.PlayOneShot(wrongSFX);
 
             StartCoroutine(ResetButtonColor());
         }

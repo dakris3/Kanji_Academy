@@ -16,11 +16,28 @@ public class Hasil : MonoBehaviour
     public bool sudahPernahMain = false;
     public static bool isLevelAlreadyPlayed = false;
 
+    [Header("Sound Effect")]
+    public AudioClip sceneOpenedSFX;
+    private AudioSource audioSource;
+
     private string levelID;
     private int rewardPoint = 100;
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+            Debug.LogWarning("[HASIL] AudioSource tidak ditemukan. Menambahkan komponen AudioSource.");
+        }
+
+        if (sceneOpenedSFX != null)
+        {
+            audioSource.PlayOneShot(sceneOpenedSFX);
+            Debug.Log("[HASIL] Memainkan SFX scene terbuka.");
+        }
+
         levelID = PlayerPrefs.GetString("PreviousLevelID", "");
 
         if (string.IsNullOrEmpty(levelID))
