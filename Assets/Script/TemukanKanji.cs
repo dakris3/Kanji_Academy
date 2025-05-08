@@ -171,12 +171,12 @@ public class TemukanKanji : MonoBehaviour
         if (isCorrect)
         {
             if (correctSFX != null) audioSource.PlayOneShot(correctSFX);
-            Invoke("ShowNewKanji", 2f);
+            Invoke("ShowNewKanji", 1f);
         }
         else
         {
             if (wrongSFX != null) audioSource.PlayOneShot(wrongSFX);
-            Invoke("ResetButtonColors", 2f);
+            Invoke("ResetButtonColors", 1f);
         }
     }
 

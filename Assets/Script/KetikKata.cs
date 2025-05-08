@@ -12,6 +12,7 @@ public class KetikKata : MonoBehaviour
     public TMP_Text kanjiText;
     public TMP_InputField inputField;
     public Image kanjiImage;
+    public Button audioButton; // tombol untuk memutar suara kanji
 
     [System.Serializable]
     public class KanjiQuestion
@@ -19,6 +20,7 @@ public class KetikKata : MonoBehaviour
         public string kanji;
         public string answer;
         public Sprite image;
+        public AudioClip audio; // audio pelafalan kanji
     }
 
     [Header("Question Settings")]
@@ -71,10 +73,15 @@ public class KetikKata : MonoBehaviour
         switch2Button.onClick.AddListener(() => SwitchToSisi(2));
         switch3Button.onClick.AddListener(() => SwitchToSisi(3));
 
-        UpdateKeyboardVisibility();
-
         checkButton.onClick.AddListener(CheckAnswer);
         deleteButton.onClick.AddListener(DeleteLastCharacter);
+
+        if (audioButton != null)
+        {
+            audioButton.onClick.AddListener(PlayKanjiAudio);
+        }
+
+        UpdateKeyboardVisibility();
     }
 
     void AddListenersToButtons(Button[] buttons)
@@ -95,7 +102,8 @@ public class KetikKata : MonoBehaviour
 
     void AddButtonListener(Button button, string character)
     {
-        button.onClick.AddListener(() => {
+        button.onClick.AddListener(() =>
+        {
             AddHiraganaToInputField(character);
             Debug.Log("Button clicked: " + character);
         });
@@ -128,7 +136,6 @@ public class KetikKata : MonoBehaviour
     void ResetQuestions()
     {
         remainingQuestions = new List<KanjiQuestion>(kanjiQuestions);
-
         if (shuffleQuestions)
         {
             ShuffleQuestions();
@@ -187,6 +194,17 @@ public class KetikKata : MonoBehaviour
             kanjiImage.sprite = currentQuestion.image;
             kanjiImage.gameObject.SetActive(currentQuestion.image != null);
         }
+
+        // Audio tidak diputar otomatis
+        // Pemutaran hanya melalui tombol audioButton
+    }
+
+    void PlayKanjiAudio()
+    {
+        if (currentQuestion != null && currentQuestion.audio != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(currentQuestion.audio);
+        }
     }
 
     public void AddHiraganaToInputField(string hiraganaChar)
@@ -209,7 +227,6 @@ public class KetikKata : MonoBehaviour
     {
         if (string.IsNullOrEmpty(input)) return "";
 
-        // Hapus spasi dan normalisasi unicode (penting untuk karakter Jepang)
         return new string(input.Where(c => !char.IsWhiteSpace(c)).ToArray())
             .Normalize(NormalizationForm.FormC)
             .ToLowerInvariant();

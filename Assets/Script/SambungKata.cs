@@ -65,24 +65,11 @@ public class SambungKata : MonoBehaviour
         }
     }
 
-    string FormatRomaji(string input)
-    {
-        int openParenIndex = input.IndexOf('(');
-        if (openParenIndex > 0)
-        {
-            string main = input.Substring(0, openParenIndex);
-            string romaji = input.Substring(openParenIndex);
-            return main + "\n" + romaji;
-        }
-        return input;
-    }
-
     void SetContent(List<string> romajiContent, List<string> kanjiContent)
     {
         for (int i = 0; i < romajiButtons.Count; i++)
         {
-            string formattedText = FormatRomaji(romajiContent[i]);
-            romajiButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = formattedText;
+            romajiButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = romajiContent[i];
         }
         for (int i = 0; i < kanjiButtons.Count; i++)
         {
@@ -107,14 +94,17 @@ public class SambungKata : MonoBehaviour
             points.Add(selectedRomaji.transform.position);
             points.Add(selectedKanji.transform.position);
 
-            string romajiText = selectedRomaji.GetComponentInChildren<TextMeshProUGUI>().text.Replace("\n", "");
+            string romajiText = selectedRomaji.GetComponentInChildren<TextMeshProUGUI>().text;
             string kanjiText = selectedKanji.GetComponentInChildren<TextMeshProUGUI>().text;
 
-            if (IsCorrectPair(romajiText, kanjiText))
+            string combined = NormalizeText(romajiText) + "-" + NormalizeText(kanjiText);
+            Debug.Log("User selected: " + combined);
+
+            if (IsCorrectPair(combined))
             {
-                Debug.Log("Correct");
+                Debug.Log("Correct: " + combined);
                 selectedRomaji.GetComponent<Image>().color = correctButtonColor;
-                clickedButton.GetComponent<Image>().color = correctButtonColor;
+                selectedKanji.GetComponent<Image>().color = correctButtonColor;
                 connectedRomajiButtons.Add(selectedRomaji);
                 connectedKanjiButtons.Add(selectedKanji);
 
@@ -136,8 +126,7 @@ public class SambungKata : MonoBehaviour
             }
             else
             {
-                Debug.Log("Incorrect");
-
+                Debug.Log("Incorrect: " + combined);
                 if (wrongSFX != null)
                     audioSource.PlayOneShot(wrongSFX);
             }
@@ -147,15 +136,15 @@ public class SambungKata : MonoBehaviour
         }
     }
 
-    bool IsCorrectPair(string romaji, string kanji)
+    bool IsCorrectPair(string combined)
     {
         if (currentSet == 1)
         {
-            return correctPairSet1.Contains(romaji + "-" + kanji);
+            return correctPairSet1.Contains(combined);
         }
         else if (currentSet == 2)
         {
-            return correctPairSet2.Contains(romaji + "-" + kanji);
+            return correctPairSet2.Contains(combined);
         }
         return false;
     }
@@ -164,6 +153,7 @@ public class SambungKata : MonoBehaviour
     {
         connectedRomajiButtons.Clear();
         connectedKanjiButtons.Clear();
+
         foreach (Button button in romajiButtons)
         {
             button.GetComponent<Image>().color = defaultButtonColor;
@@ -172,13 +162,14 @@ public class SambungKata : MonoBehaviour
         {
             button.GetComponent<Image>().color = defaultButtonColor;
         }
+
         SetContent(romajiSet2, kanjiSet2);
         Debug.Log("Switched to Set 2");
     }
 
     void NextQuestion()
     {
-        Debug.Log("Level telah selesai");
+        Debug.Log("Level selesai, pindah ke scene hasil");
         SceneManager.LoadScene("Hasil");
     }
 
@@ -189,5 +180,10 @@ public class SambungKata : MonoBehaviour
         {
             audioSource.PlayOneShot(kanjiSounds[adjustedIndex]);
         }
+    }
+
+    string NormalizeText(string input)
+    {
+        return input.Trim().Replace(" ", "").Replace("\n", "").Replace("\r", "");
     }
 }

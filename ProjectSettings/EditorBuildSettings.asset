@@ -47,11 +47,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tutorial/Tutorial Kuis.unity
     guid: 098e6cdf9c698a146b13674f98c1f24d
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Kuis/Lvl 6.unity
-    guid: f1f70e3a7bb1ff840af6dc6345e8dc96
-  - enabled: 1
-    path: Assets/Scenes/SambungKata/Lvl 7.unity
+    path: Assets/Scenes/SambungKata/Lvl 12.unity
     guid: 0174008a1704e9149b29acd35546d6fc
   - enabled: 1
     path: Assets/Scenes/LengkapiKalimat/Lvl 8.unity
@@ -59,9 +59,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TemukanKata/Lvl 9.unity
     guid: 7738faaae491a644089a458fb14847bf
-  - enabled: 1
-    path: Assets/Scenes/Kuis/Lvl 11.unity
-    guid: 493cae9f70759dc468019c76cceebe75
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Tutorial/Tutorial Sambung Kata.unity
     guid: cda4d0d38a7bd5348a8ee83c384ac758
@@ -179,4 +179,61 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Belajar/Belajar 31.unity
     guid: 4085425944432424fbff7ba402764a8a
+  - enabled: 1
+    path: Assets/Scenes/Kuis/Lvl 6.unity
+    guid: 4636f16bb38fdf743811598d0624958c
+  - enabled: 1
+    path: Assets/Scenes/Kuis/Lvl 11.unity
+    guid: 09a0fa5cc1a235c46a6482304388e62c
+  - enabled: 1
+    path: Assets/Scenes/Kuis/Lvl 16.unity
+    guid: 84de20381b5b17743a5b0e25c8312970
+  - enabled: 1
+    path: Assets/Scenes/Kuis/Lvl 21.unity
+    guid: 3d863cb36406d3941b665ff60e06d444
+  - enabled: 1
+    path: Assets/Scenes/Kuis/Lvl 26.unity
+    guid: 29be0f66f793959458e468953dd5ea8c
+  - enabled: 1
+    path: Assets/Scenes/Kuis/Lvl 31.unity
+    guid: 64d632087b2460c48a53d09f0e283e1f
+  - enabled: 1
+    path: Assets/Scenes/SambungKata/Lvl 7.unity
+    guid: 8091398923342fe4497a61223f2db16a
+  - enabled: 1
+    path: Assets/Scenes/SambungKata/Lvl 17.unity
+    guid: 6cf7bf898db0d294d9767c9203371f98
+  - enabled: 1
+    path: Assets/Scenes/SambungKata/Lvl 22.unity
+    guid: d40db2feca9f6034b884f91b5c29cb77
+  - enabled: 1
+    path: Assets/Scenes/SambungKata/Lvl 27.unity
+    guid: 18ff77e2fc8c28e4fa6a0a10be8f55aa
+  - enabled: 1
+    path: Assets/Scenes/LengkapiKalimat/Lvl 13.unity
+    guid: a87c9b3e36746034998246d081fa5f99
+  - enabled: 1
+    path: Assets/Scenes/LengkapiKalimat/Lvl 18.unity
+    guid: 71bacc2819888634eb21f055a5a091e9
+  - enabled: 1
+    path: Assets/Scenes/LengkapiKalimat/Lvl 23.unity
+    guid: cc04e67e2e371aa42938f5289fef0fbf
+  - enabled: 1
+    path: Assets/Scenes/LengkapiKalimat/Lvl 28.unity
+    guid: ad391f0366bb96d468b1259a5da2e176
+  - enabled: 1
+    path: Assets/Scenes/TemukanKata/Lvl 14.unity
+    guid: 593522c70e1e06e43888bfa8781df889
+  - enabled: 1
+    path: Assets/Scenes/TemukanKata/Lvl 19.unity
+    guid: d42b230a8fd65f64ab5bfd08ce6fd0e0
+  - enabled: 1
+    path: Assets/Scenes/TemukanKata/Lvl 24.unity
+    guid: 437f3857383151742ae7ff171fa4fe7c
+  - enabled: 1
+    path: Assets/Scenes/TemukanKata/Lvl 29.unity
+    guid: 0d205af2aecad4c4984739a92598df00
+  - enabled: 1
+    path: Assets/Scenes/About.unity
+    guid: af69ec8be8e6fd1449493a926d7bb530
   m_configObjects: {}
