@@ -2736,7 +2736,7 @@ MonoBehaviour:
     - "\u7D30\u3044 (hosoi) "
     - "\u91CD\u3044 (omoi)"
     - "\u592A\u3044 (futoi)"
-    correctAnswerIndex: 0
+    correctAnswerIndex: 1
 --- !u!4 &2119063509
 Transform:
   m_ObjectHideFlags: 0

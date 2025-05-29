@@ -9,18 +9,23 @@ using System.Text;
 
 public class KetikKata : MonoBehaviour
 {
-    public TMP_Text kanjiText;
+    public TMP_Text hintText;
     public TMP_InputField inputField;
     public Image kanjiImage;
-    public Button audioButton; // tombol untuk memutar suara kanji
+    public Button audioButton;
 
     [System.Serializable]
     public class KanjiQuestion
     {
-        public string kanji;
+        [Header("Hint 1 (Contoh: Kanji)")]
+        public string hint1;
+
+        [Header("Hint 2 (Contoh: Romaji)")]
+        public string hint2;
+
         public string answer;
         public Sprite image;
-        public AudioClip audio; // audio pelafalan kanji
+        public AudioClip audio;
     }
 
     [Header("Question Settings")]
@@ -41,7 +46,10 @@ public class KetikKata : MonoBehaviour
     public Button checkButton;
     public Button deleteButton;
 
+    public Button hintToggleButton; // 🔁 Satu tombol hint
+
     private int currentSisi = 1;
+    private bool showingHint1 = true; // Untuk toggle
 
     [Header("Sound Effects")]
     public AudioClip correctSFX;
@@ -79,6 +87,11 @@ public class KetikKata : MonoBehaviour
         if (audioButton != null)
         {
             audioButton.onClick.AddListener(PlayKanjiAudio);
+        }
+
+        if (hintToggleButton != null)
+        {
+            hintToggleButton.onClick.AddListener(ToggleHint);
         }
 
         UpdateKeyboardVisibility();
@@ -187,16 +200,18 @@ public class KetikKata : MonoBehaviour
         currentQuestion = remainingQuestions[0];
         remainingQuestions.RemoveAt(0);
 
-        kanjiText.text = currentQuestion.kanji;
-
         if (kanjiImage != null)
         {
             kanjiImage.sprite = currentQuestion.image;
             kanjiImage.gameObject.SetActive(currentQuestion.image != null);
         }
 
-        // Audio tidak diputar otomatis
-        // Pemutaran hanya melalui tombol audioButton
+        if (hintText != null)
+        {
+            hintText.text = "";
+        }
+
+        showingHint1 = true; // Reset ke Hint 1 setiap soal baru
     }
 
     void PlayKanjiAudio()
@@ -204,6 +219,24 @@ public class KetikKata : MonoBehaviour
         if (currentQuestion != null && currentQuestion.audio != null && audioSource != null)
         {
             audioSource.PlayOneShot(currentQuestion.audio);
+        }
+    }
+
+    // 🔁 Toggle Hint 1 dan Hint 2
+    void ToggleHint()
+    {
+        if (currentQuestion != null && hintText != null)
+        {
+            if (showingHint1)
+            {
+                hintText.text = currentQuestion.hint1;
+            }
+            else
+            {
+                hintText.text = currentQuestion.hint2;
+            }
+
+            showingHint1 = !showingHint1;
         }
     }
 

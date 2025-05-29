@@ -11,9 +11,10 @@ public class LengkapiKalimat : MonoBehaviour
     public TextMeshProUGUI japaneseText;
     public TextMeshProUGUI romajiText;
     public TextMeshProUGUI indonesianText;
+    public TextMeshProUGUI hintTMP; // Satu tampilan hint
     public Button[] answerButtons;
+    public Button hintToggleButton; // Tombol untuk toggle hint
 
-    // Tambahan untuk memanggil LevelManager
     public LevelManager levelManager;
 
     [Header("Sound Effects")]
@@ -29,10 +30,13 @@ public class LengkapiKalimat : MonoBehaviour
         public string indonesianText;
         public string[] answers;
         public int correctAnswerIndex;
+        public string hintText1;
+        public string hintText2;
     }
 
     public Question[] questions;
     private int currentQuestionIndex = 0;
+    private int hintState = 0; // 0 = none, 1 = hint1, 2 = hint2
 
     void Start()
     {
@@ -42,7 +46,12 @@ public class LengkapiKalimat : MonoBehaviour
             Debug.LogError("AudioSource tidak ditemukan! Harap tambahkan komponen AudioSource ke GameObject ini.");
         }
 
-        ShuffleQuestions(); // Acak urutan soal
+        if (hintToggleButton != null)
+        {
+            hintToggleButton.onClick.AddListener(ToggleHint);
+        }
+
+        ShuffleQuestions();
         ShowQuestion();
     }
 
@@ -54,8 +63,16 @@ public class LengkapiKalimat : MonoBehaviour
         romajiText.text = currentQuestion.romajiText;
         indonesianText.text = currentQuestion.indonesianText;
 
+        // Reset hint
+        hintState = 0;
+        if (hintTMP != null)
+        {
+            hintTMP.text = "";
+            hintTMP.enabled = false;
+        }
+
         List<string> shuffledAnswers = new List<string>(currentQuestion.answers);
-        Shuffle(shuffledAnswers); // Acak jawaban
+        Shuffle(shuffledAnswers);
 
         for (int i = 0; i < answerButtons.Length; i++)
         {
@@ -164,6 +181,30 @@ public class LengkapiKalimat : MonoBehaviour
             Question temp = questions[i];
             questions[i] = questions[randomIndex];
             questions[randomIndex] = temp;
+        }
+    }
+
+    // Fungsi toggle untuk bergantian antara hint 1, hint 2, dan tidak tampil
+    public void ToggleHint()
+    {
+        if (hintTMP == null) return;
+
+        hintState = (hintState + 1) % 3;
+
+        switch (hintState)
+        {
+            case 0:
+                hintTMP.text = "";
+                hintTMP.enabled = false;
+                break;
+            case 1:
+                hintTMP.text = questions[currentQuestionIndex].hintText1;
+                hintTMP.enabled = true;
+                break;
+            case 2:
+                hintTMP.text = questions[currentQuestionIndex].hintText2;
+                hintTMP.enabled = true;
+                break;
         }
     }
 }

@@ -316,7 +316,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Selamat telah menyelesaikan level\n\u304A\u3081\u3067\u3068\u3046"
+  m_text: "Terima kasih telah memainkan level ini!\n\u304A\u3064\u304B\u308C\u3055\u307E\u3067\u3057\u305F"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ace45eaff40b2db408f0ee501ca71c39, type: 2}
   m_sharedMaterial: {fileID: 3556524417578264515, guid: ace45eaff40b2db408f0ee501ca71c39, type: 2}
@@ -1233,7 +1233,7 @@ MonoBehaviour:
   textSelamat: {fileID: 121119946}
   coin: {fileID: 217676289}
   point: {fileID: 351132052}
-  sudahMainSelamat: "\n\nLevel telah selesai.\n\u3042\u308A\u304C\u3068\u3046\u3054\u3056\u3044\u307E\u3059\n\nTerima
+  sudahMainSelamat: "\n\nLevel telah selesai!\n\u304A\u3064\u304B\u308C\u3055\u307E\u3067\u3057\u305F\n\nTerima
     kasih telah bermain"
   sudahPernahMain: 0
   sceneOpenedSFX: {fileID: 8300000, guid: f584bf92afd0f3d4abb946fcc0260938, type: 3}

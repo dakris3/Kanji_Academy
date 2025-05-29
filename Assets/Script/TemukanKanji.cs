@@ -9,14 +9,16 @@ public class TemukanKanji : MonoBehaviour
 {
     [Header("UI Elements")]
     public TextMeshProUGUI kanjiText;
-    public TextMeshProUGUI romajiText;
+    public TextMeshProUGUI hintText;
+    public Button hintToggleButton; // 🔁 Satu tombol untuk kedua hint
     public Button[] hiraganaButtons;
     public Button checkButton;
 
     [Header("Kanji & Hiragana Data")]
     public List<string> kanjiList = new List<string>();
     public List<string> hiraganaAnswers = new List<string>();
-    public List<string> romajiList = new List<string>();
+    public List<string> hint1List = new List<string>(); // Hint 1 (misal: romaji)
+    public List<string> hint2List = new List<string>(); // Hint 2 (misal: arti)
 
     [Header("Sound Effects")]
     public AudioClip correctSFX;
@@ -32,6 +34,8 @@ public class TemukanKanji : MonoBehaviour
     private Dictionary<Button, Color> originalColors = new Dictionary<Button, Color>();
 
     private LevelManager levelManager;
+    private int currentIndex;
+    private bool showingHint1 = true; // 🔁 Status toggle hint
 
     void Start()
     {
@@ -43,12 +47,11 @@ public class TemukanKanji : MonoBehaviour
             Debug.LogError("AudioSource tidak ditemukan pada GameObject ini.");
         }
 
-        if (kanjiList == null || hiraganaAnswers == null || romajiList == null ||
-            kanjiList.Count != hiraganaAnswers.Count || kanjiList.Count != romajiList.Count || kanjiList.Count == 0)
+        if (kanjiList.Count != hiraganaAnswers.Count || kanjiList.Count != hint1List.Count || kanjiList.Count != hint2List.Count || kanjiList.Count == 0)
         {
-            Debug.LogError("Data Kanji, Hiragana, atau Romaji tidak valid! Periksa Inspector.");
+            Debug.LogError("Data Kanji, Hiragana, atau Hint tidak valid! Periksa Inspector.");
             kanjiText.text = "Data tidak valid!";
-            if (romajiText != null) romajiText.text = "";
+            if (hintText != null) hintText.text = "";
             return;
         }
 
@@ -70,6 +73,10 @@ public class TemukanKanji : MonoBehaviour
         }
 
         checkButton.onClick.AddListener(CheckAnswer);
+
+        // 🔁 Tambahkan listener tombol toggle hint
+        if (hintToggleButton != null)
+            hintToggleButton.onClick.AddListener(ToggleHint);
     }
 
     void Shuffle(List<int> list)
@@ -87,21 +94,27 @@ public class TemukanKanji : MonoBehaviour
     {
         if (currentQuestionCount < totalQuestions)
         {
-            int index = remainingIndexes[0];
+            currentIndex = remainingIndexes[0];
             remainingIndexes.RemoveAt(0);
 
-            kanjiText.text = kanjiList[index];
-            correctHiragana = hiraganaAnswers[index];
-            if (romajiText != null) romajiText.text = romajiList[index];
+            kanjiText.text = kanjiList[currentIndex];
+            correctHiragana = hiraganaAnswers[currentIndex];
+
+            if (hintText != null)
+            {
+                hintText.text = "";
+                hintText.enabled = true;
+            }
 
             currentQuestionCount++;
+            showingHint1 = true; // 🔁 Reset toggle ke Hint 1
             selectedButtons.Clear();
             ResetButtonColors();
         }
         else
         {
             kanjiText.text = "Semua pertanyaan selesai!";
-            if (romajiText != null) romajiText.text = "";
+            if (hintText != null) hintText.text = "";
 
             Debug.Log("Level telah selesai");
 
@@ -199,5 +212,23 @@ public class TemukanKanji : MonoBehaviour
         }
 
         selectedButtons.Clear();
+    }
+
+    // 🔁 Fungsi toggle antara Hint 1 dan Hint 2
+    public void ToggleHint()
+    {
+        if (hintText != null)
+        {
+            if (showingHint1 && currentIndex < hint1List.Count)
+            {
+                hintText.text = hint1List[currentIndex];
+            }
+            else if (!showingHint1 && currentIndex < hint2List.Count)
+            {
+                hintText.text = hint2List[currentIndex];
+            }
+
+            showingHint1 = !showingHint1;
+        }
     }
 }
