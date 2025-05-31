@@ -12066,6 +12066,139 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 789872646}
   m_CullTransparentMesh: 1
+--- !u!1 &798423965
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 798423966}
+  - component: {fileID: 798423969}
+  - component: {fileID: 798423968}
+  - component: {fileID: 798423967}
+  m_Layer: 5
+  m_Name: Petunjuk
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &798423966
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798423965}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1890400142}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 101, y: 260}
+  m_SizeDelta: {x: 50, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &798423967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798423965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 798423968}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &798423968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798423965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 5c21a92f52629674e91e8a17ae46b00e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &798423969
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 798423965}
+  m_CullTransparentMesh: 1
 --- !u!1 &800867297
 GameObject:
   m_ObjectHideFlags: 0
@@ -26187,7 +26320,7 @@ GameObject:
   - component: {fileID: 1741019084}
   - component: {fileID: 1741019083}
   m_Layer: 5
-  m_Name: Romaji
+  m_Name: Hint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27485,6 +27618,7 @@ RectTransform:
   - {fileID: 178640891}
   - {fileID: 1545098627}
   - {fileID: 1608003629}
+  - {fileID: 798423966}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -28044,48 +28178,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 715f236f26a751545a132a83825c5be5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kanjiText: {fileID: 1741019083}
+  hintText: {fileID: 1741019083}
   inputField: {fileID: 1458326212}
   kanjiImage: {fileID: 1545098628}
   audioButton: {fileID: 1608003630}
   kanjiQuestions:
-  - kanji: "\u3053\u3081"
+  - hint1: Kome
+    hint2: "\u3053\u3081"
     answer: "\u3053\u3081"
     image: {fileID: 21300000, guid: ff7ed53731ddd8e459a1bdab247cf04f, type: 3}
     audio: {fileID: 8300000, guid: ded76dd94eba8594eb1f5dfcaed17736, type: 3}
-  - kanji: "\u306F\u304B\u308B "
+  - hint1: Hakaru
+    hint2: "\u306F\u304B\u308B "
     answer: "\u306F\u304B\u308B "
     image: {fileID: 21300000, guid: def89251f7bf08f4b806dd2f4c155977, type: 3}
     audio: {fileID: 8300000, guid: c251f9294a7104d41aded9764715f58d, type: 3}
-  - kanji: "\u308A\u3086\u3046 "
+  - hint1: Riyuu
+    hint2: "\u308A\u3086\u3046"
     answer: "\u308A\u3086\u3046"
     image: {fileID: 21300000, guid: 2d5cbb3f7edde194896ab9f247101526, type: 3}
     audio: {fileID: 8300000, guid: 223987793d267ac4d9ce18f5aebf8cfd, type: 3}
-  - kanji: "\u306B\u304F"
+  - hint1: Niku
+    hint2: "\u306B\u304F"
     answer: "\u306B\u304F"
     image: {fileID: 21300000, guid: e7feca5a7465e194aba2a1562da95033, type: 3}
     audio: {fileID: 8300000, guid: b9aa063567ca3a24cbb6195f84a45c49, type: 3}
-  - kanji: "\u3068\u308A"
+  - hint1: Tori
+    hint2: "\u3068\u308A"
     answer: "\u3068\u308A"
     image: {fileID: 21300000, guid: 86e871733089a64439db7cfd7d7e6476, type: 3}
     audio: {fileID: 8300000, guid: 4e0ee91e31b34bf4881f5c21399b50e1, type: 3}
-  - kanji: "\u306E\u306F\u3089"
+  - hint1: Nohara
+    hint2: "\u306E\u306F\u3089"
     answer: "\u306E\u306F\u3089"
     image: {fileID: 21300000, guid: 494f5ee8d18144d43a8349e06f9ca2c4, type: 3}
     audio: {fileID: 8300000, guid: 75975f941defe5b40bff39440bfb1f2d, type: 3}
-  - kanji: "\u3084\u3055\u3044"
+  - hint1: Yasai
+    hint2: "\u3084\u3055\u3044"
     answer: "\u3084\u3055\u3044"
     image: {fileID: 21300000, guid: d1d13041aca715c4e8d1b6e260d0e3ba, type: 3}
     audio: {fileID: 8300000, guid: cc84ca1971256e742b734bc15dcb4097, type: 3}
-  - kanji: "\u3061\u3083"
+  - hint1: Cha
+    hint2: "\u3061\u3083"
     answer: "\u3061\u3083"
     image: {fileID: 21300000, guid: 2976065fe62bb9f4f82b2980b2baf41a, type: 3}
     audio: {fileID: 8300000, guid: 9746631da4ef8e14880606d3a3a055eb, type: 3}
-  - kanji: "\u3054\u306F\u3093"
+  - hint1: Gohan
+    hint2: "\u3054\u306F\u3093"
     answer: "\u3054\u306F\u3093"
     image: {fileID: 21300000, guid: 38b8b8018740188439d08e4f7aa24fca, type: 3}
     audio: {fileID: 8300000, guid: 324aa44bb31f9bc45bc4b248dbb58098, type: 3}
-  - kanji: "\u3042\u3058"
+  - hint1: Aji
+    hint2: "\u3042\u3058"
     answer: "\u3042\u3058"
     image: {fileID: 21300000, guid: fc50d83ea6ca0c146bb4f661e801f2d9, type: 3}
     audio: {fileID: 8300000, guid: 0538f26ae3b631b4aa34dbadaf3bd535, type: 3}
@@ -28205,6 +28349,7 @@ MonoBehaviour:
   switch3Button: {fileID: 178640892}
   checkButton: {fileID: 21906804}
   deleteButton: {fileID: 1033017466}
+  hintToggleButton: {fileID: 798423967}
   correctSFX: {fileID: 8300000, guid: 8ae94b577f9593d47945d3d14ecab8d3, type: 3}
   wrongSFX: {fileID: 8300000, guid: 74983ed0569a3794dbb440c6a4645bdb, type: 3}
 --- !u!4 &1928871470

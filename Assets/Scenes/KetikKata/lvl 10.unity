@@ -6488,48 +6488,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 715f236f26a751545a132a83825c5be5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kanjiText: {fileID: 1982391909}
+  hintText: {fileID: 1982391909}
   inputField: {fileID: 256785509}
   kanjiImage: {fileID: 421526843}
   audioButton: {fileID: 1803112306}
   kanjiQuestions:
-  - kanji: "\u306F\u306A\u3059"
+  - hint1: Hanasu
+    hint2: "\u306F\u306A\u3059"
     answer: "\u306F\u306A\u3059"
     image: {fileID: 21300000, guid: d4d472287b38e2848bb0607cc7ba93e8, type: 3}
     audio: {fileID: 8300000, guid: a493d1e9696fe0946b12808b978de22e, type: 3}
-  - kanji: "\u3088\u3080"
+  - hint1: Yomu
+    hint2: "\u3088\u3080"
     answer: "\u3088\u3080"
     image: {fileID: 21300000, guid: a4ff69d66da5e9b44bcfc2672ad5bd07, type: 3}
     audio: {fileID: 8300000, guid: 5929e512d945b654588d58d005cb3deb, type: 3}
-  - kanji: "\u3053\u3068\u3070"
+  - hint1: Kotoba
+    hint2: "\u3053\u3068\u3070"
     answer: "\u3053\u3068\u3070"
     image: {fileID: 21300000, guid: e1435feef6840204c934f81f2f86f369, type: 3}
     audio: {fileID: 8300000, guid: d3181031d0b1fe149bd8e81b2c7c5a57, type: 3}
-  - kanji: "\u3042\u3044\u3060"
+  - hint1: Aida
+    hint2: "\u3042\u3044\u3060"
     answer: "\u3042\u3044\u3060"
     image: {fileID: 21300000, guid: 0bf6b557389c35c4ea805949e11a9c87, type: 3}
     audio: {fileID: 8300000, guid: 3534a19341df1c64298a92dd9df3b2b9, type: 3}
-  - kanji: "\u304D\u304F"
+  - hint1: Kiku
+    hint2: "\u304D\u304F"
     answer: "\u304D\u304F"
     image: {fileID: 21300000, guid: d6dd7c24435bd11449ec43da310b08d3, type: 3}
     audio: {fileID: 8300000, guid: 89ce70211ec0fe140ab2b49d03cf9061, type: 3}
-  - kanji: "\u304B\u3046"
+  - hint1: Kau
+    hint2: "\u304B\u3046"
     answer: "\u304B\u3046"
     image: {fileID: 21300000, guid: 670233db96ee1ea4699d4be0b41bf16c, type: 3}
     audio: {fileID: 8300000, guid: 6ddc3d9142a3db54abd57b99fdbf98fc, type: 3}
-  - kanji: "\u3084\u3059\u3080"
+  - hint1: Yasumu
+    hint2: "\u3084\u3059\u3080"
     answer: "\u3084\u3059\u3080"
     image: {fileID: 21300000, guid: 8ac6785ee8eb07c4ebe3015f8b30647a, type: 3}
     audio: {fileID: 8300000, guid: d41cbc3215c9c3a44a776e4e6cca83ba, type: 3}
-  - kanji: "\u3058\u304B\u3093"
+  - hint1: Jikan
+    hint2: "\u3058\u304B\u3093"
     answer: "\u3058\u304B\u3093"
     image: {fileID: 21300000, guid: bf9e05687a8ccb44299d17b93610d55d, type: 3}
     audio: {fileID: 8300000, guid: e2e762fa07761274191f38da9b96b503, type: 3}
-  - kanji: "\u3057\u3085\u3046"
+  - hint1: Shuu
+    hint2: "\u3057\u3085\u3046"
     answer: "\u3057\u3085\u3046"
     image: {fileID: 21300000, guid: 10981db8ef963c84b9dcf768451a9644, type: 3}
     audio: {fileID: 8300000, guid: 234c9e87ca9ce914087461c937d57381, type: 3}
-  - kanji: "\u307F\u3061"
+  - hint1: Michi
+    hint2: "\u307F\u3061"
     answer: "\u307F\u3061"
     image: {fileID: 21300000, guid: be9274dcfaed50a43992fcce6461fe52, type: 3}
     audio: {fileID: 8300000, guid: e6d7af9f8c726224e97b7d3cb75cfbef, type: 3}
@@ -6649,6 +6659,7 @@ MonoBehaviour:
   switch3Button: {fileID: 614367159}
   checkButton: {fileID: 1583761427}
   deleteButton: {fileID: 445088012}
+  hintToggleButton: {fileID: 835630022}
   correctSFX: {fileID: 8300000, guid: 8ae94b577f9593d47945d3d14ecab8d3, type: 3}
   wrongSFX: {fileID: 8300000, guid: 74983ed0569a3794dbb440c6a4645bdb, type: 3}
 --- !u!4 &411940044
@@ -9003,6 +9014,7 @@ RectTransform:
   - {fileID: 614367158}
   - {fileID: 421526842}
   - {fileID: 1803112305}
+  - {fileID: 835630021}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13521,6 +13533,139 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 834142356}
+  m_CullTransparentMesh: 1
+--- !u!1 &835630020
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 835630021}
+  - component: {fileID: 835630024}
+  - component: {fileID: 835630023}
+  - component: {fileID: 835630022}
+  m_Layer: 5
+  m_Name: Petunjuk
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &835630021
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835630020}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 555806693}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 101, y: 260}
+  m_SizeDelta: {x: 50, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &835630022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835630020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 835630023}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 411940037}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &835630023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835630020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 5c21a92f52629674e91e8a17ae46b00e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &835630024
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835630020}
   m_CullTransparentMesh: 1
 --- !u!1 &838147847
 GameObject:
@@ -29283,7 +29428,7 @@ GameObject:
   - component: {fileID: 1982391910}
   - component: {fileID: 1982391909}
   m_Layer: 5
-  m_Name: Romaji
+  m_Name: Hint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

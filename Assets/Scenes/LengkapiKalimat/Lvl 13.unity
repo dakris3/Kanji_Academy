@@ -226,6 +226,8 @@ RectTransform:
   - {fileID: 161006911}
   - {fileID: 463994584}
   - {fileID: 1654616140}
+  - {fileID: 1184503740}
+  - {fileID: 1549274735}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1056,8 +1058,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 54}
-  m_SizeDelta: {x: 240, y: 90}
+  m_AnchoredPosition: {x: 0.5, y: 30}
+  m_SizeDelta: {x: 280, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &736277951
 MonoBehaviour:
@@ -1313,8 +1315,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00000083447, y: -59}
-  m_SizeDelta: {x: 240, y: 90}
+  m_AnchoredPosition: {x: 0.5, y: -60}
+  m_SizeDelta: {x: 280, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &972826532
 MonoBehaviour:
@@ -1481,6 +1483,139 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1184503739
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1184503740}
+  - component: {fileID: 1184503743}
+  - component: {fileID: 1184503742}
+  - component: {fileID: 1184503741}
+  m_Layer: 5
+  m_Name: Petunjuk
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1184503740
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184503739}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 85670193}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 95, y: 252.99998}
+  m_SizeDelta: {x: 50, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1184503741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184503739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1184503742}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2119063508}
+        m_TargetAssemblyTypeName: LengkapiKalimat, Assembly-CSharp
+        m_MethodName: ToggleHint
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1184503742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184503739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 5c21a92f52629674e91e8a17ae46b00e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1184503743
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184503739}
+  m_CullTransparentMesh: 1
 --- !u!1 &1211672244
 GameObject:
   m_ObjectHideFlags: 0
@@ -1600,8 +1735,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 166}
-  m_SizeDelta: {x: 240, y: 90}
+  m_AnchoredPosition: {x: 0.5, y: 122}
+  m_SizeDelta: {x: 280, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1312822117
 MonoBehaviour:
@@ -2054,6 +2189,141 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1549274734
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1549274735}
+  - component: {fileID: 1549274737}
+  - component: {fileID: 1549274736}
+  m_Layer: 5
+  m_Name: Kata petunjuk
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1549274735
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549274734}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 85670193}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.5000076, y: 192.00006}
+  m_SizeDelta: {x: 145, y: 38.345}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1549274736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549274734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: New Text
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: ace45eaff40b2db408f0ee501ca71c39, type: 2}
+  m_sharedMaterial: {fileID: 3556524417578264515, guid: ace45eaff40b2db408f0ee501ca71c39, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 1024
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1549274737
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1549274734}
+  m_CullTransparentMesh: 1
 --- !u!1 &1654616139
 GameObject:
   m_ObjectHideFlags: 0
@@ -2631,16 +2901,18 @@ MonoBehaviour:
   japaneseText: {fileID: 1312822117}
   romajiText: {fileID: 736277951}
   indonesianText: {fileID: 972826532}
+  hintTMP: {fileID: 1549274736}
   answerButtons:
   - {fileID: 282330052}
   - {fileID: 469877163}
   - {fileID: 879355118}
   - {fileID: 161006912}
+  hintToggleButton: {fileID: 0}
   levelManager: {fileID: 2119063506}
   correctSFX: {fileID: 8300000, guid: 8ae94b577f9593d47945d3d14ecab8d3, type: 3}
   wrongSFX: {fileID: 8300000, guid: 74983ed0569a3794dbb440c6a4645bdb, type: 3}
   questions:
-  - japaneseText: "\u3078\u3084\u3092_(akarui) \u3044\u308D\u3067 \u306C\u3063\u3066\u304F\u3060\u3055\u3044"
+  - japaneseText: "\u3078\u3084\u3092..... \u3044\u308D\u3067 \u306C\u3063\u3066\u304F\u3060\u3055\u3044"
     romajiText: Heya o akarui iro de nutte kudasai
     indonesianText: Silakan cat ruangan ini dengan warna terang
     answers:
@@ -2649,7 +2921,9 @@ MonoBehaviour:
     - "\u91CD\u3044 (omoi)"
     - "\u5F31\u3044 (yowai)"
     correctAnswerIndex: 0
-  - japaneseText: "\u3067\u3093\u304D\u3092\u3051\u3057\u3066_(kurai) \u307E\u307E\u306B
+    hintText1: "\u3042\u304B\u308B\u3044"
+    hintText2: akarui
+  - japaneseText: "\u3067\u3093\u304D\u3092\u3051\u3057\u3066..... \u307E\u307E\u306B
       \u3057\u307E\u3057\u3087\u3046"
     romajiText: Denki o keshite kurai mama ni shimashou
     indonesianText: Matikan lampunya dan biarkan tetap gelap
@@ -2659,7 +2933,9 @@ MonoBehaviour:
     - "\u660E\u308B\u3044 (akarui)"
     - "\u6697\u3044 (kurai) "
     correctAnswerIndex: 3
-  - japaneseText: "\u3048\u304D\u307E\u3067_(tooi) \u307F\u3061\u3092 \u3042\u308B\u304D\u307E\u3057\u305F"
+    hintText1: "\u304F\u3089\u3044"
+    hintText2: kurai
+  - japaneseText: "\u3048\u304D\u307E\u3067..... \u307F\u3061\u3092 \u3042\u308B\u304D\u307E\u3057\u305F"
     romajiText: Eki made tooi michi o arukimashita
     indonesianText: Saya berjalan melalui jalan yang jauh ke stasiun
     answers:
@@ -2668,7 +2944,9 @@ MonoBehaviour:
     - "\u9060\u3044 (tooi) "
     - "\u5F31\u3044 (yowai)"
     correctAnswerIndex: 2
-  - japaneseText: "\u3048\u304D\u306F \u3053\u306E\u307F\u305B\u306E_(chikai) \u306B
+    hintText1: "\u3068\u304A\u3044"
+    hintText2: tooi
+  - japaneseText: "\u3048\u304D\u306F \u3053\u306E\u307F\u305B\u306E..... \u306B
       \u3042\u308A\u307E\u3059"
     romajiText: Eki wa kono mise no chikai ni arimasu
     indonesianText: Stasiun berada dekat toko ini
@@ -2678,7 +2956,9 @@ MonoBehaviour:
     - "\u592A\u3044 (futoi)"
     - "\u660E\u308B\u3044 (akarui)"
     correctAnswerIndex: 1
-  - japaneseText: "\u3042\u306E\u305B\u3093\u3057\u3085\u306F_(tsuyoi) \u30D1\u30F3\u30C1\u3092
+    hintText1: "\u3061\u304B\u3044"
+    hintText2: chikai
+  - japaneseText: "\u3042\u306E\u305B\u3093\u3057\u3085\u306F..... \u30D1\u30F3\u30C1\u3092
       \u3082\u3061\u307E\u3059"
     romajiText: Ano senshu wa tsuyoi panchi o mochimasu
     indonesianText: Petarung itu memiliki pukulan yang kuat
@@ -2688,7 +2968,9 @@ MonoBehaviour:
     - "\u5F37\u3044 (tsuyoi) "
     - "\u7D30\u3044 (hosoi)"
     correctAnswerIndex: 2
-  - japaneseText: "\u3053\u306E\u30ED\u30DC\u30C3\u30C8\u306F_(yowai) \u30A8\u30CD\u30EB\u30AE\u30FC\u3057\u304B
+    hintText1: "\u3064\u3088\u3044"
+    hintText2: tsuyoi
+  - japaneseText: "\u3053\u306E\u30ED\u30DC\u30C3\u30C8\u306F..... \u30A8\u30CD\u30EB\u30AE\u30FC\u3057\u304B
       \u3042\u308A\u307E\u305B\u3093"
     romajiText: Kono robotto wa yowai enerugii shika arimasen
     indonesianText: Robot ini hanya memiliki energi yang lemah
@@ -2698,7 +2980,9 @@ MonoBehaviour:
     - "\u5F37\u3044 (tsuyoi)"
     - "\u5F31\u3044 (yowai) "
     correctAnswerIndex: 3
-  - japaneseText: "\u306B\u3082\u3064\u304C_(omoi) \u306E\u3067\u3001\u304D\u3092\u3064\u3051\u3066
+    hintText1: "\u3088\u308F\u3044"
+    hintText2: yowai
+  - japaneseText: "\u306B\u3082\u3064\u304C..... \u306E\u3067\u3001\u304D\u3092\u3064\u3051\u3066
       \u304F\u3060\u3055\u3044"
     romajiText: Nimotsu ga omoi node, ki o tsukete kudasai
     indonesianText: Karena barangnya berat, harap berhati-hati
@@ -2708,7 +2992,9 @@ MonoBehaviour:
     - "\u7D30\u3044 (hosoi)"
     - "\u9060\u3044 (tooi)"
     correctAnswerIndex: 0
-  - japaneseText: "\u3053\u306E\u306F\u3053\u306F_(karui) \u304B\u3089\u3001\u3053\u3069\u3082\u3067\u3082
+    hintText1: "\u304A\u3082\u3044"
+    hintText2: omoi
+  - japaneseText: "\u3053\u306E\u306F\u3053\u306F..... \u304B\u3089\u3001\u3053\u3069\u3082\u3067\u3082
       \u3082\u3066\u307E\u3059"
     romajiText: Kono hako wa karui kara, kodomo demo motemasu
     indonesianText: Karena kotak ini ringan, anak kecil pun bisa membawanya
@@ -2718,7 +3004,9 @@ MonoBehaviour:
     - "\u8EFD\u3044 (karui)"
     - "\u5F37\u3044 (tsuyoi)"
     correctAnswerIndex: 2
-  - japaneseText: "(Futoi)_\u30DA\u30F3\u3092 \u3064\u304B\u3063\u3066 \u304F\u3060\u3055\u3044"
+    hintText1: "\u304B\u308B\u3044"
+    hintText2: karui
+  - japaneseText: ".....\u30DA\u30F3\u3092 \u3064\u304B\u3063\u3066 \u304F\u3060\u3055\u3044"
     romajiText: Futoi pen o tsukatte kudasai
     indonesianText: Silakan gunakan pulpen yang tebal
     answers:
@@ -2727,7 +3015,9 @@ MonoBehaviour:
     - "\u660E\u308B\u3044 (akarui)"
     - "\u9060\u3044 (tooi)"
     correctAnswerIndex: 0
-  - japaneseText: "\u3053\u306E\u3048\u3093\u3074\u3064\u306F_(hosoi) \u306E\u3067\u3001\u3059\u3050
+    hintText1: "\u3075\u3068\u3044"
+    hintText2: futoi
+  - japaneseText: "\u3053\u306E\u3048\u3093\u3074\u3064\u306F..... \u306E\u3067\u3001\u3059\u3050
       \u304A\u308C\u307E\u3059"
     romajiText: Kono enpitsu wa hosoi node, sugu oremasu
     indonesianText: Pensil ini tipis, jadi mudah patah
@@ -2737,6 +3027,8 @@ MonoBehaviour:
     - "\u91CD\u3044 (omoi)"
     - "\u592A\u3044 (futoi)"
     correctAnswerIndex: 1
+    hintText1: "\u307B\u305D\u3044"
+    hintText2: hosoi
 --- !u!4 &2119063509
 Transform:
   m_ObjectHideFlags: 0

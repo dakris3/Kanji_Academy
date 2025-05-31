@@ -588,8 +588,8 @@ MonoBehaviour:
     writingImage: {fileID: 0}
     meaning: Masuk
     kunyomi: "\u306F\u3044\u308B"
-    romaji: "\u30CB\u30E5\u30A6"
-    onyomi: hairu
+    romaji: hairu
+    onyomi: "\u30CB\u30E5\u30A6"
     kanjiAudio: {fileID: 8300000, guid: e2f3acb8437dd874989c305c5b8d18a8, type: 3}
     urutanImage1: {fileID: 21300000, guid: 049f88ad0685f3249aa0f880fd2650e8, type: 3}
     urutanImage2: {fileID: 0}

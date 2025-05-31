@@ -11647,53 +11647,53 @@ MonoBehaviour:
   kanjiImage: {fileID: 1386860068}
   audioButton: {fileID: 832382046}
   kanjiQuestions:
-  - hint1: "\u3061\u3061"
-    hint2: "\u306F\u306F"
+  - hint1: Chichi
+    hint2: "\u3061\u3061"
     answer: "\u3061\u3061"
     image: {fileID: 21300000, guid: c2cdbade8637320408e14356b1c54370, type: 3}
     audio: {fileID: 8300000, guid: 697bbf9cfe864b744b42f41ffb2f8734, type: 3}
-  - hint1: "\u306F\u306F"
-    hint2: 
+  - hint1: Haha
+    hint2: "\u306F\u306F"
     answer: "\u306F\u306F"
     image: {fileID: 21300000, guid: bbaece2283fef5b46ad9ffbc47d087ea, type: 3}
     audio: {fileID: 8300000, guid: afe09bd3422a9f44ea367721c285b906, type: 3}
-  - hint1: "\u3055\u304D"
-    hint2: 
+  - hint1: Saki
+    hint2: "\u3055\u304D"
     answer: "\u3055\u304D"
     image: {fileID: 21300000, guid: 9e4af94782bafba4795e0f00d66d223f, type: 3}
     audio: {fileID: 8300000, guid: ace5cf706b16fe343a6c05317cd0b3b8, type: 3}
-  - hint1: "\u3046\u307E\u308C\u308B"
-    hint2: 
+  - hint1: Umareru
+    hint2: "\u3046\u307E\u308C\u308B"
     answer: "\u3046\u307E\u308C\u308B"
     image: {fileID: 21300000, guid: 180b20cb9869fa04599e2c358bcf93ac, type: 3}
     audio: {fileID: 8300000, guid: c3e44fe0279209a429deb38878b01f2c, type: 3}
-  - hint1: "\u3079\u3093\u304D\u3087\u3046"
-    hint2: 
+  - hint1: Benkyou
+    hint2: "\u3079\u3093\u304D\u3087\u3046"
     answer: "\u3079\u3093\u304D\u3087\u3046"
     image: {fileID: 21300000, guid: 5161e146ff0dba2449f29701feafd1ed, type: 3}
     audio: {fileID: 8300000, guid: bf06cf90285c3c444b0e98fc87fd2f2d, type: 3}
-  - hint1: "\u304C\u3053\u3046"
-    hint2: 
+  - hint1: Gakkou
+    hint2: "\u304C\u3053\u3046"
     answer: "\u304C\u3053\u3046"
     image: {fileID: 21300000, guid: 1c7ff7c27eb652645bea992a16c6b6d1, type: 3}
     audio: {fileID: 8300000, guid: 66e5375d21069084880604244d803a0f, type: 3}
-  - hint1: "\u3068\u3082\u3060\u3061"
-    hint2: 
+  - hint1: Tomodachi
+    hint2: "\u3068\u3082\u3060\u3061"
     answer: "\u3068\u3082\u3060\u3061"
     image: {fileID: 21300000, guid: 916b60b6a216e9340a499a94ef97c251, type: 3}
     audio: {fileID: 8300000, guid: 387066160663fc44485748ed790d491f, type: 3}
-  - hint1: "\u307B\u3093"
-    hint2: 
+  - hint1: Hon
+    hint2: "\u307B\u3093"
     answer: "\u307B\u3093"
     image: {fileID: 21300000, guid: 21d1189cb3bbd0e479a27c53bc6ebe18, type: 3}
     audio: {fileID: 8300000, guid: e8641f8988417cf4dabeb45f07c1524e, type: 3}
-  - hint1: "\u307E\u3044"
-    hint2: 
+  - hint1: Mai
+    hint2: "\u307E\u3044"
     answer: "\u307E\u3044"
     image: {fileID: 21300000, guid: 145ddc9c817370742ab3c6d15f067e1a, type: 3}
     audio: {fileID: 8300000, guid: 1bfddfb6025e3bb47bddcef62b83fabe, type: 3}
-  - hint1: "\u306A\u306B"
-    hint2: 
+  - hint1: Nani
+    hint2: "\u306A\u306B"
     answer: "\u306A\u306B"
     image: {fileID: 21300000, guid: d6cf67267730e76488b4233286676010, type: 3}
     audio: {fileID: 8300000, guid: f43a269c2835ff445a9e7fd9546ccc7f, type: 3}
@@ -21596,7 +21596,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 100.819984, y: 259.79996}
+  m_AnchoredPosition: {x: 101, y: 260}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1421846000
@@ -21663,7 +21663,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a52c1625c6414694b95f8bcd91f46353, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5c21a92f52629674e91e8a17ae46b00e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

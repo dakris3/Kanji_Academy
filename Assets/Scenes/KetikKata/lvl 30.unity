@@ -2140,7 +2140,7 @@ GameObject:
   - component: {fileID: 154708130}
   - component: {fileID: 154708129}
   m_Layer: 5
-  m_Name: Romaji
+  m_Name: Hint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3532,6 +3532,7 @@ RectTransform:
   - {fileID: 827763065}
   - {fileID: 1621706613}
   - {fileID: 1279578702}
+  - {fileID: 1040880725}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11243,48 +11244,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 715f236f26a751545a132a83825c5be5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  kanjiText: {fileID: 154708129}
+  hintText: {fileID: 154708129}
   inputField: {fileID: 1628078312}
   kanjiImage: {fileID: 1621706614}
   audioButton: {fileID: 1279578703}
   kanjiQuestions:
-  - kanji: "\u305F\u305A\u306D\u308B "
+  - hint1: Tazuneru
+    hint2: "\u305F\u305A\u306D\u308B "
     answer: "\u305F\u305A\u306D\u308B "
     image: {fileID: 21300000, guid: f21fdbde92abf4446a93432a44226f06, type: 3}
     audio: {fileID: 8300000, guid: 4fe0b1aa6a8272c42bec324b980cf173, type: 3}
-  - kanji: "\u3060\u3044"
+  - hint1: Dai
+    hint2: "\u3060\u3044"
     answer: "\u3060\u3044"
     image: {fileID: 21300000, guid: b3dd24e800bc43248aebc3dc8e34f807, type: 3}
     audio: {fileID: 8300000, guid: 7d9922bc02458dd4a9b8fc60593ec10b, type: 3}
-  - kanji: "\u305F\u3081\u3059 "
+  - hint1: Tamesu
+    hint2: "\u305F\u3081\u3059 "
     answer: "\u305F\u3081\u3059 "
     image: {fileID: 21300000, guid: 653ebf47d5e9b9545b78489c4f7d392e, type: 3}
     audio: {fileID: 8300000, guid: 76227bd12cfd50b469f270fa4d2c79db, type: 3}
-  - kanji: "\u3057\u3089\u3079\u308B"
+  - hint1: Shiraberu
+    hint2: "\u3057\u3089\u3079\u308B"
     answer: "\u3057\u3089\u3079\u308B"
     image: {fileID: 21300000, guid: f07faee8c43e355419f1e96999d9fda4, type: 3}
     audio: {fileID: 8300000, guid: 276ab929668889c4487be8cacd0fccd0, type: 3}
-  - kanji: "\u3057\u3064"
+  - hint1: Shitsu
+    hint2: "\u3057\u3064"
     answer: "\u3057\u3064"
     image: {fileID: 21300000, guid: 629e3e7b0d6f93a4b9c43647706a76f5, type: 3}
     audio: {fileID: 8300000, guid: 089d0df7f9ec5d54197bfb63089f9674, type: 3}
-  - kanji: "\u3042\u3046"
+  - hint1: Au
+    hint2: "\u3042\u3046"
     answer: "\u3042\u3046"
     image: {fileID: 21300000, guid: e8c7bd06937f78746969be9959412147, type: 3}
     audio: {fileID: 8300000, guid: 6b4559d5aeda90d47ba5b9ccece52ad9, type: 3}
-  - kanji: "\u3053\u305F\u3048\u308B"
+  - hint1: Kotaeru
+    hint2: "\u3053\u305F\u3048\u308B"
     answer: "\u3053\u305F\u3048\u308B"
     image: {fileID: 21300000, guid: d5cc4613aaa67d74aa22795ff83ddd2e, type: 3}
     audio: {fileID: 8300000, guid: 84cd184366b7ad942850f9404df26588, type: 3}
-  - kanji: "\u3064\u304B\u3046 "
+  - hint1: Tsukau
+    hint2: "\u3064\u304B\u3046 "
     answer: "\u3064\u304B\u3046 "
     image: {fileID: 21300000, guid: 987c8e26042ebe74a85cf0ce4847cad7, type: 3}
     audio: {fileID: 8300000, guid: 0b8578e75074f5f4ca47371c66df0824, type: 3}
-  - kanji: "\u304B\u307F"
+  - hint1: Kami
+    hint2: "\u304B\u307F"
     answer: "\u304B\u307F"
     image: {fileID: 21300000, guid: e4cf8ebfb57393f4f9acdec27659cefe, type: 3}
     audio: {fileID: 8300000, guid: f9a94c4b754e15f4282dbcc2b7e3f3f7, type: 3}
-  - kanji: "\u304B\u3093\u304C\u3048 "
+  - hint1: Kangae
+    hint2: "\u304B\u3093\u304C\u3048 "
     answer: "\u304B\u3093\u304C\u3048 "
     image: {fileID: 21300000, guid: 8afa46ab7a17138489a15a461dcf3f5e, type: 3}
     audio: {fileID: 8300000, guid: b1a5e7558343573429aaf385f7bf5a95, type: 3}
@@ -11404,6 +11415,7 @@ MonoBehaviour:
   switch3Button: {fileID: 827763066}
   checkButton: {fileID: 1705537806}
   deleteButton: {fileID: 1006552471}
+  hintToggleButton: {fileID: 1040880726}
   correctSFX: {fileID: 8300000, guid: 8ae94b577f9593d47945d3d14ecab8d3, type: 3}
   wrongSFX: {fileID: 8300000, guid: 74983ed0569a3794dbb440c6a4645bdb, type: 3}
 --- !u!4 &810768044
@@ -15104,6 +15116,139 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1039747549}
+  m_CullTransparentMesh: 1
+--- !u!1 &1040880724
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1040880725}
+  - component: {fileID: 1040880728}
+  - component: {fileID: 1040880727}
+  - component: {fileID: 1040880726}
+  m_Layer: 5
+  m_Name: Petunjuk
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1040880725
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040880724}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 260012108}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 101.000015, y: 260}
+  m_SizeDelta: {x: 50, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1040880726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040880724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1040880727}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1040880727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040880724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 5c21a92f52629674e91e8a17ae46b00e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1040880728
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040880724}
   m_CullTransparentMesh: 1
 --- !u!1 &1063218815
 GameObject:
