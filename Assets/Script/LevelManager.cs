@@ -4,58 +4,72 @@ using TMPro;
 
 public class LevelManager : MonoBehaviour
 {
-    public int levelPointReward = 100; // Poin yang diberikan per level selesai
-    public TextMeshProUGUI pointText;  // UI untuk menampilkan poin
-    public bool allowReward = true;    // Default-nya true, nanti diatur otomatis
+    public TextMeshProUGUI pointText;         // Menampilkan jumlah poin yang diperoleh
+    public TextMeshProUGUI playCountText;     // Menampilkan jumlah penyelesaian level
+
+    private int levelPointReward = 0;         // Poin yang akan diberikan
 
     private void Start()
     {
-        // Cek jika berada di scene "Hasil"
+        // Hanya jalankan logika ini jika berada di scene "Hasil"
         if (SceneManager.GetActiveScene().name == "Hasil")
         {
-            // Ambil nama level terakhir yang disimpan sebelum load scene "Hasil"
             string lastLevel = PlayerPrefs.GetString("LastPlayedLevel", "");
 
-            // Cek apakah level itu sudah pernah dimainkan
-            if (PlayerPrefs.GetInt($"LevelPlayed_{lastLevel}", 0) == 1)
-            {
-                allowReward = false;
-            }
+            // Ambil jumlah berapa kali level ini telah diselesaikan
+            int levelPlayCount = PlayerPrefs.GetInt($"LevelPlayCount_{lastLevel}", 0);
 
-            // Tampilkan poin ke UI
+            // Hitung reward berdasarkan jumlah penyelesaian
+            levelPointReward = GetRewardByPlayCount(levelPlayCount);
+
+            // Tambahkan poin ke total poin pemain
+            int totalPoints = PlayerPrefs.GetInt("TotalPoints", 0);
+            totalPoints += levelPointReward;
+
+            // Simpan informasi ke PlayerPrefs
+            PlayerPrefs.SetInt("TotalPoints", totalPoints);
+            PlayerPrefs.SetInt($"LevelPlayCount_{lastLevel}", levelPlayCount + 1);
+            PlayerPrefs.SetInt("LastRewardPoint", levelPointReward); // Untuk Hasil.cs
+            PlayerPrefs.Save();
+
+            // Tampilkan hanya angka poin tanpa teks
             if (pointText != null)
             {
-                pointText.text = levelPointReward.ToString();
+                pointText.text = $"{levelPointReward}";
             }
 
-            // Beri reward jika diperbolehkan
-            if (allowReward)
+            // Tampilkan jumlah penyelesaian level secara dinamis
+            if (playCountText != null)
             {
-                int totalPoints = PlayerPrefs.GetInt("TotalPoints", 0);
-                totalPoints += levelPointReward;
-                PlayerPrefs.SetInt("TotalPoints", totalPoints);
-                PlayerPrefs.SetInt($"LevelPlayed_{lastLevel}", 1); // Tandai sudah dimainkan
-                PlayerPrefs.Save();
+                playCountText.text = $"Level telah dimainkan {levelPlayCount + 1}x";
+            }
 
-                Debug.Log($"[LEVEL LOADED] Pemain mendapatkan {levelPointReward} poin! Total sekarang: {totalPoints}");
-            }
-            else
-            {
-                Debug.Log("[LEVEL LOADED] Tidak memberi poin karena level sudah pernah dimainkan.");
-            }
+            Debug.Log($"[LEVEL MANAGER] Level '{lastLevel}' dimainkan ke-{levelPlayCount + 1} kali. Dapat {levelPointReward} poin. Total sekarang: {totalPoints}");
         }
     }
 
     public void LevelComplete()
     {
-        // Ambil nama level dari scene saat ini
+        // Simpan nama level yang baru saja diselesaikan
         string currentLevel = SceneManager.GetActiveScene().name;
-
-        // Simpan nama level untuk pengecekan di scene "Hasil"
         PlayerPrefs.SetString("LastPlayedLevel", currentLevel);
         PlayerPrefs.Save();
 
-        // Pindah ke scene "Hasil"
+        // Pindah ke scene hasil
         SceneManager.LoadScene("Hasil");
+    }
+
+    private int GetRewardByPlayCount(int playCount)
+    {
+        // Sistem reward menurun berdasarkan jumlah penyelesaian
+        switch (playCount)
+        {
+            case 0: return 100; // Pertama kali
+            case 1: return 90;
+            case 2: return 80;
+            case 3: return 70;
+            case 4: return 60;
+            default: return 50; // Mulai dari penyelesaian ke-6 dan seterusnya
+        }
     }
 }

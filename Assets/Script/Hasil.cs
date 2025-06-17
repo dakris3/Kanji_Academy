@@ -7,101 +7,71 @@ public class Hasil : MonoBehaviour
     public string nextSceneName;
 
     public TMP_Text textSelamat;
+    public TMP_Text pointText;            // Tambahan: untuk menampilkan poin
     public GameObject coin;
     public GameObject point;
 
     [TextArea]
-    public string sudahMainSelamat = "Level telah selesai.\nおつかれさまでした";
-
-    public bool sudahPernahMain = false;
-    public static bool isLevelAlreadyPlayed = false;
+    public string pesanSelamat = "Level telah selesai.\nおつかれさまでした";
 
     [Header("Sound Effect")]
     public AudioClip sceneOpenedSFX;
     private AudioSource audioSource;
 
     private string levelID;
-    private int rewardPoint = 100;
 
     void Start()
     {
+        // Setup Audio
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
         {
             audioSource = gameObject.AddComponent<AudioSource>();
-            Debug.LogWarning("[HASIL] AudioSource tidak ditemukan. Menambahkan komponen AudioSource.");
+            Debug.LogWarning("[HASIL] AudioSource tidak ditemukan. Menambahkan komponen.");
         }
 
         if (sceneOpenedSFX != null)
         {
             audioSource.PlayOneShot(sceneOpenedSFX);
-            Debug.Log("[HASIL] Memainkan SFX scene terbuka.");
+            Debug.Log("[HASIL] Memainkan suara pembuka scene.");
         }
 
+        // Ambil ID Level
         levelID = PlayerPrefs.GetString("PreviousLevelID", "");
-
         if (string.IsNullOrEmpty(levelID))
         {
-            Debug.LogError("[HASIL] LevelID tidak ditemukan di PlayerPrefs!");
+            Debug.LogError("[HASIL] Level ID tidak ditemukan di PlayerPrefs!");
             return;
         }
 
-        sudahPernahMain = PlayerPrefs.GetInt(levelID, 0) == 1;
-        isLevelAlreadyPlayed = sudahPernahMain;
+        // Ambil poin terakhir dari LevelManager
+        int rewardPoint = PlayerPrefs.GetInt("LastRewardPoint", 0);
 
-        Debug.Log("[HASIL] Cek level " + levelID + " - Sudah pernah main: " + sudahPernahMain);
+        Debug.Log($"[HASIL] Menampilkan hasil untuk level '{levelID}'. Poin diperoleh: {rewardPoint}");
 
-        if (!sudahPernahMain)
-        {
-            // Tambahkan coin
-            int currentCoins = PlayerPrefs.GetInt("coins", 0);
-            PlayerPrefs.SetInt("coins", currentCoins + rewardPoint);
-
-            // Tambahkan poin ke sistem Achievement
-            int totalPoints = PlayerPrefs.GetInt("TotalPoints", 0);
-            totalPoints += rewardPoint;
-            PlayerPrefs.SetInt("TotalPoints", totalPoints);
-
-            // Simpan bahwa level ini sudah dimainkan
-            PlayerPrefs.SetInt(levelID, 1);
-            PlayerPrefs.Save();
-
-            Debug.Log($"[HASIL] Poin diberikan untuk level '{levelID}': {rewardPoint}");
-            Debug.Log($"[HASIL] Total poin pemain sekarang: {totalPoints}");
-        }
-        else
-        {
-            Debug.Log("[HASIL] Level sudah pernah dimainkan, tidak ada poin.");
-        }
-
-        ShowResult();
+        // Tampilkan hasil di UI
+        ShowResult(rewardPoint);
     }
 
-    public void ShowResult()
-    {
-        Debug.Log("Level telah selesai! Menampilkan hasil...");
-
-        if (sudahPernahMain)
-        {
-            TampilkanPerubahanJikaSudahMain();
-        }
-    }
-
-    void TampilkanPerubahanJikaSudahMain()
+    public void ShowResult(int rewardPoint)
     {
         if (textSelamat != null)
         {
-            textSelamat.text = sudahMainSelamat;
+            textSelamat.text = pesanSelamat;
             textSelamat.alignment = TextAlignmentOptions.Center;
-            textSelamat.fontSize *= 1.1f;
             textSelamat.enableAutoSizing = false;
         }
 
-        if (coin != null) coin.SetActive(false);
-        if (point != null) point.SetActive(false);
+        if (pointText != null)
+        {
+            pointText.text = $"Poin Diperoleh: {rewardPoint}";
+        }
+
+        if (coin != null) coin.SetActive(true);
+        if (point != null) point.SetActive(true);
     }
 
-    void LoadNextScene()
+    public void LoadNextScene()
     {
         if (!string.IsNullOrEmpty(nextSceneName))
         {

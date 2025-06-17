@@ -990,7 +990,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 10, y: 120}
-  m_SizeDelta: {x: 45.7086, y: 39.1029}
+  m_SizeDelta: {x: 35, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &526749686
 MonoBehaviour:
@@ -2302,7 +2302,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 10, y: -166}
-  m_SizeDelta: {x: 45.7086, y: 39.1029}
+  m_SizeDelta: {x: 35, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1154561122
 GameObject:
@@ -3037,7 +3037,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 10, y: -19.551}
-  m_SizeDelta: {x: 45.7086, y: 39.1029}
+  m_SizeDelta: {x: 35, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1466671638
 MonoBehaviour:
@@ -4681,7 +4681,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 10, y: -93}
-  m_SizeDelta: {x: 45.7086, y: 39.1029}
+  m_SizeDelta: {x: 35, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1924657025
 MonoBehaviour:
@@ -5107,7 +5107,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 10, y: 50}
-  m_SizeDelta: {x: 45.7086, y: 39.1029}
+  m_SizeDelta: {x: 35, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2032627993
 MonoBehaviour:
@@ -5236,9 +5236,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e876024a3c0f72d439eb0c7130d621d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelPointReward: 100
   pointText: {fileID: 0}
-  allowReward: 1
+  playCountText: {fileID: 0}
 --- !u!114 &2034807075
 MonoBehaviour:
   m_ObjectHideFlags: 0
