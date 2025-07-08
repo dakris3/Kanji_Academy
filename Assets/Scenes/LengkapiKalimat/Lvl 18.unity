@@ -1393,6 +1393,67 @@ MonoBehaviour:
     correctAnswerIndex: 3
     hintText1: "\u304B\u305C"
     hintText2: kaze
+  - japaneseText: "\u30AD\u30E3\u30F3\u30D7 \u3092 \u3059\u308B \u306A\u3089\u3001.....
+      \u306E \u3061\u304B\u304F \u304C \u3044\u3061\u3070\u3093 \u3044\u3044 \u3068
+      \u304A\u3082\u3044\u307E\u3059"
+    romajiText: Kyanpu o suru nara, mori no chikaku ga ichiban ii to omoimasu
+    indonesianText: Kalau mau berkemah, saya rasa dekat hutan adalah tempat terbaik
+    answers:
+    - "\u68EE (mori)"
+    - "\u6D77 (umi)"
+    - "\u6797 (hayashi)"
+    - "\u96EA (yuki)"
+    correctAnswerIndex: 0
+    hintText1: "\u3082\u308A"
+    hintText2: Mori
+  - japaneseText: "\u306A\u3064 \u306B \u306F \u307F\u3093\u306A \u3067 ..... \u3078
+      \u3042\u305D\u3073 \u306B \u3044\u304D\u307E\u3057\u3087\u3046"
+    romajiText: Natsu ni wa minna de umi e asobi ni ikimashou
+    indonesianText: Saat musim panas, ayo kita semua pergi bermain ke laut
+    answers:
+    - "\u5149 (hikari)"
+    - "\u6797 (hayashi)"
+    - "\u68EE (mori)"
+    - "\u6D77 (umi)"
+    correctAnswerIndex: 3
+    hintText1: "\u3046\u307F"
+    hintText2: Umi
+  - japaneseText: "\u308F\u305F\u3057 \u306E \u3044\u3048 \u306E \u3046\u3057\u308D
+      \u306B \u306F \u3061\u3044\u3055\u306A ..... \u304C \u3042\u308A\u307E\u3059"
+    romajiText: Watashi no ie no ushiro ni wa chiisana hayashi ga arimasu
+    indonesianText: Di belakang rumah saya ada hutan kecil
+    answers:
+    - "\u68EE (mori)"
+    - "\u6797 (hayashi)"
+    - "\u6D77 (umi)"
+    - "\u96EA (yuki)"
+    correctAnswerIndex: 1
+    hintText1: "\u306F\u3084\u3057"
+    hintText2: Hayashi
+  - japaneseText: "\u3075\u3086 \u306B \u306A\u3063\u305F\u3089\u3001\u307E\u3061
+      \u306F \u307E\u3063\u3057\u308D \u306A ..... \u3067 \u304A\u304A\u308F\u308C\u307E\u3059"
+    romajiText: Fuyu ni nattara, machi wa masshiro na yuki de oowaremasu
+    indonesianText: Saat musim dingin, kota tertutup oleh salju putih
+    answers:
+    - "\u6D77 (umi)"
+    - "\u5149 (hikari)"
+    - "\u96EA (yuki)"
+    - "\u68EE (mori)"
+    correctAnswerIndex: 2
+    hintText1: "\u3086\u304D"
+    hintText2: Yuki
+  - japaneseText: "\u30AB\u30FC\u30C6\u30F3 \u3092 \u3042\u3051\u308B \u3068\u3001\u3042\u3055
+      \u306E ..... \u304C \u3078\u3084 \u306B \u306F\u3044\u3063\u3066 \u304D\u307E\u3057\u305F"
+    romajiText: Kaaten o akeru to, asa no hikari ga heya ni haitte kimashita
+    indonesianText: Saat membuka tirai, cahaya pagi masuk ke dalam kamar
+    answers:
+    - "\u5149 (hikari)"
+    - "\u96EA (yuki)"
+    - "\u6797 (hayashi)"
+    - "\u6D77 (umi)"
+    correctAnswerIndex: 0
+    hintText1: "\u3072\u304B\u308A"
+    hintText2: Hikari
 --- !u!4 &705764902
 Transform:
   m_ObjectHideFlags: 0

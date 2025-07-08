@@ -2888,6 +2888,66 @@ MonoBehaviour:
     correctAnswerIndex: 0
     hintText1: "\u306F\u3084\u3044"
     hintText2: hayai
+  - japaneseText: "\u3053\u306E \u3084\u307E \u306F \u65E5\u672C \u3067 \u3044\u3061\u3070\u3093
+      ..... \u3067\u3059"
+    romajiText: Kono yama wa Nihon de ichiban takai desu
+    indonesianText: Gunung ini adalah yang paling tinggi di Jepang
+    answers:
+    - "\u9AD8\u3044 (takai)"
+    - "\u5B89\u3044 (yasui)"
+    - "\u53E4\u3044 (furui)"
+    - "\u65B0\u3057\u3044 (atarashii)"
+    correctAnswerIndex: 0
+    hintText1: "\u305F\u304B\u3044"
+    hintText2: Takai
+  - japaneseText: "\u30BB\u30FC\u30EB \u3067 \u30B7\u30E3\u30C4 \u304C \u3068\u3066\u3082
+      ..... \u304F \u306A\u308A\u307E\u3057\u305F"
+    romajiText: Seeru de shatsu ga totemo yasuku narimashita
+    indonesianText: Karena diskon, kaos menjadi sangat murah
+    answers:
+    - "\u65B0\u3057\u3044 (atarashii)"
+    - "\u5C0F\u3055\u3044 (chiisai)"
+    - "\u9AD8\u3044 (takai)"
+    - "\u5B89\u3044 (yasui)"
+    correctAnswerIndex: 3
+    hintText1: "\u3084\u3059\u3044"
+    hintText2: Yasui
+  - japaneseText: "\u305D\u306E \u3044\u306C \u306F \u307E\u3060 \u3042\u304B\u3061\u3083\u3093
+      \u3067 \u3068\u3066\u3082 ..... \u3067\u3059"
+    romajiText: Sono inu wa mada akachan de totemo chiisai desu
+    indonesianText: Anjing itu masih bayi, jadi sangat kecil
+    answers:
+    - "\u9AD8\u3044 (takai)"
+    - "\u5C0F\u3055\u3044 (chiisai)"
+    - "\u5B89\u3044 (yasui)"
+    - "\u53E4\u3044 (furui)"
+    correctAnswerIndex: 1
+    hintText1: "\u3061\u3044\u3055\u3044"
+    hintText2: chiisai
+  - japaneseText: "\u308F\u305F\u3057 \u306E \u3058\u3044\u3055\u3093 \u306F \u307E\u3060
+      ..... \u3044\u3048 \u306B \u3059\u3093\u3067 \u3044\u307E\u3059"
+    romajiText: Watashi no jiisan wa mada furui ie ni sundeimasu
+    indonesianText: Kakek saya masih tinggal di rumah yang lama
+    answers:
+    - "\u65B0\u3057\u3044 (atarashii)"
+    - "\u5C0F\u3055\u3044 (chiisai)"
+    - "\u53E4\u3044 (furui)"
+    - "\u9AD8\u3044 (takai)"
+    correctAnswerIndex: 2
+    hintText1: "\u3075\u308B\u3044"
+    hintText2: Furui
+  - japaneseText: "\u304D\u3087\u306D\u3093\u3001\u308F\u305F\u3057 \u306E \u304C\u3063\u3053\u3046
+      \u306F ..... \u305F\u3066\u3082\u306E \u306B \u304B\u308F\u308A\u307E\u3057\u305F"
+    romajiText: Kyonen, watashi no gakkou wa atarashii tatemono ni kawarimashita
+    indonesianText: ahun lalu, sekolah saya pindah ke gedung yang baru
+    answers:
+    - "\u65B0\u3057\u3044 (atarashii)"
+    - "\u53E4\u3044 (furui)"
+    - "\u9AD8\u3044 (takai)"
+    - "\u5C0F\u3055\u3044 (chiisai)"
+    correctAnswerIndex: 0
+    hintText1: "\u3042\u305F\u3089\u3057\u3044"
+    hintText2: atarashii
 --- !u!4 &1682853961
 Transform:
   m_ObjectHideFlags: 0

@@ -7,13 +7,12 @@ using TMPro;
 
 public class LengkapiKalimat : MonoBehaviour
 {
-    // UI Elements
     public TextMeshProUGUI japaneseText;
     public TextMeshProUGUI romajiText;
     public TextMeshProUGUI indonesianText;
-    public TextMeshProUGUI hintTMP; // Satu tampilan hint
+    public TextMeshProUGUI hintTMP;
     public Button[] answerButtons;
-    public Button hintToggleButton; // Tombol untuk toggle hint
+    public Button hintToggleButton;
 
     public LevelManager levelManager;
 
@@ -35,8 +34,10 @@ public class LengkapiKalimat : MonoBehaviour
     }
 
     public Question[] questions;
+    private Question[] activeQuestions;
+
     private int currentQuestionIndex = 0;
-    private int hintState = 0; // 0 = none, 1 = hint1, 2 = hint2
+    private int hintState = 0;
 
     void Start()
     {
@@ -52,18 +53,26 @@ public class LengkapiKalimat : MonoBehaviour
         }
 
         ShuffleQuestions();
+
+        // Pilih hanya 10 pertanyaan pertama
+        int jumlahPertanyaan = Mathf.Min(10, questions.Length);
+        activeQuestions = new Question[jumlahPertanyaan];
+        for (int i = 0; i < jumlahPertanyaan; i++)
+        {
+            activeQuestions[i] = questions[i];
+        }
+
         ShowQuestion();
     }
 
     void ShowQuestion()
     {
-        Question currentQuestion = questions[currentQuestionIndex];
+        Question currentQuestion = activeQuestions[currentQuestionIndex];
 
         japaneseText.text = currentQuestion.japaneseText;
         romajiText.text = currentQuestion.romajiText;
         indonesianText.text = currentQuestion.indonesianText;
 
-        // Reset hint
         hintState = 0;
         if (hintTMP != null)
         {
@@ -140,7 +149,7 @@ public class LengkapiKalimat : MonoBehaviour
 
     void NextQuestion()
     {
-        if (currentQuestionIndex < questions.Length - 1)
+        if (currentQuestionIndex < activeQuestions.Length - 1)
         {
             currentQuestionIndex++;
             ShowQuestion();
@@ -184,7 +193,6 @@ public class LengkapiKalimat : MonoBehaviour
         }
     }
 
-    // Fungsi toggle untuk bergantian antara hint 1, hint 2, dan tidak tampil
     public void ToggleHint()
     {
         if (hintTMP == null) return;
@@ -198,11 +206,11 @@ public class LengkapiKalimat : MonoBehaviour
                 hintTMP.enabled = false;
                 break;
             case 1:
-                hintTMP.text = questions[currentQuestionIndex].hintText1;
+                hintTMP.text = activeQuestions[currentQuestionIndex].hintText1;
                 hintTMP.enabled = true;
                 break;
             case 2:
-                hintTMP.text = questions[currentQuestionIndex].hintText2;
+                hintTMP.text = activeQuestions[currentQuestionIndex].hintText2;
                 hintTMP.enabled = true;
                 break;
         }

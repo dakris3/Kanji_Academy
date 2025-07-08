@@ -3038,6 +3038,66 @@ MonoBehaviour:
     correctAnswerIndex: 2
     hintText1: "\u3044\u3082\u3046\u3068"
     hintText2: imouto
+  - japaneseText: "\u3080\u305A\u304B\u3057\u3044 \u3053\u3068 \u306F \u307E\u305A
+      ..... \u3067 \u3084\u3063\u3066 \u307F\u3066 \u304F\u3060\u3055\u3044"
+    romajiText: Muzukashii koto wa mazu jibun de yatte mite kudasai
+    indonesianText: Hal yang sulit, cobalah dulu dikerjakan sendiri
+    answers:
+    - "\u81EA (jibun)"
+    - "\u89AA (oya)"
+    - "\u59B9 (imouto)"
+    - "\u5144 (ani)"
+    correctAnswerIndex: 0
+    hintText1: "\u3058\u3076\u3093"
+    hintText2: Jibun
+  - japaneseText: "\u3053\u3069\u3082 \u306F ..... \u306E \u3053\u3068\u3070 \u3092
+      \u304D\u3044\u3066 \u305D\u3060\u3061\u307E\u3059"
+    romajiText: Kodomo wa oya no kotoba o kiite sodachimasu
+    indonesianText: Anak-anak tumbuh dengan mendengar kata-kata dari orang tua
+    answers:
+    - "\u5BB6 (ie)"
+    - "\u5144 (ani)"
+    - "\u81EA (jibun)"
+    - "\u89AA (oya)"
+    correctAnswerIndex: 3
+    hintText1: "\u304A\u3084"
+    hintText2: Oya
+  - japaneseText: "\u3057\u3085\u3046\u307E\u3064 \u306F \u304B\u305E\u304F \u3068
+      \u3044\u3063\u3057\u3087 \u306B ..... \u3067 \u3086\u3063\u304F\u308A \u3059\u3054\u3057\u307E\u3057\u305F"
+    romajiText: Shuumatsu wa kazoku to issho ni ie de yukkuri sugoshimashita
+    indonesianText: Akhir pekan, saya bersantai bersama keluarga di rumah
+    answers:
+    - "\u89AA (oya)"
+    - "\u5BB6 (ie)"
+    - "\u59B9 (imouto)"
+    - "\u81EA (jibun)"
+    correctAnswerIndex: 1
+    hintText1: "\u3044\u3048"
+    hintText2: ie
+  - japaneseText: "\u308F\u305F\u3057 \u306E ..... \u306F \u3046\u305F\u3046 \u3053\u3068
+      \u304C \u3068\u3066\u3082 \u3059\u304D \u3067\u3059"
+    romajiText: Watashi no imouto wa utau koto ga totemo suki desu
+    indonesianText: Adik perempuan saya sangat suka bernyanyi
+    answers:
+    - "\u89AA (oya)"
+    - "\u59C9 (ane)"
+    - "\u59B9 (imouto)"
+    - "\u5F1F (otouto)"
+    correctAnswerIndex: 2
+    hintText1: "\u3044\u3082\u3046\u3068"
+    hintText2: imouto
+  - japaneseText: "..... \u306F \u3044\u3064\u3082 \u308F\u305F\u3057 \u306B \u3079\u3093\u304D\u3087\u3046
+      \u3092 \u304A\u3057\u3048\u3066 \u304F\u308C\u307E\u3059"
+    romajiText: Ani wa itsumo watashi ni benkyou o oshiete kuremasu
+    indonesianText: Kakak laki-laki saya selalu mengajari saya belajar
+    answers:
+    - "\u5BB6 (ie)"
+    - "\u89AA (oya)"
+    - "\u59B9 (imouto)"
+    - "\u5144 (ani)"
+    correctAnswerIndex: 3
+    hintText1: "\u3042\u306B"
+    hintText2: Ani
 --- !u!4 &1952672422
 Transform:
   m_ObjectHideFlags: 0

@@ -299,6 +299,64 @@ MonoBehaviour:
     correctAnswerIndex: 3
     hintText1: "\u306A\u304B"
     hintText2: Naka
+  - japaneseText: "\u304D\u306E\u3046 \u308F\u305F\u3057 \u306F ..... \u306E \u30B7\u30E3\u30C4
+      \u3092 \u304B\u3044\u307E\u3057\u305F"
+    romajiText: Kinou watashi wa hyaku no shatsu o kaimashita
+    indonesianText: Kemarin saya membeli baju seharga seratus yen
+    answers:
+    - "\u767E (hyaku)"
+    - "\u5343 (sen)"
+    - "\u4E07 (man)"
+    - "\u5186 (en)"
+    correctAnswerIndex: 0
+    hintText1: "\u3072\u3083\u304F"
+    hintText2: Hyaku
+  - japaneseText: "\u3053\u306E \u30AB\u30E1\u30E9 \u306F ..... \u3048\u3093 \u3057\u307E\u3059"
+    romajiText: Kono kamera wa sen en shimasu
+    indonesianText: Kamera ini harganya seribu yen
+    answers:
+    - "\u5186 (en)"
+    - "\u4E07 (man)"
+    - "\u767E (hyaku)"
+    - "\u5343 (sen)"
+    correctAnswerIndex: 3
+    hintText1: "\u305B\u3093"
+    hintText2: Sen
+  - japaneseText: "\u3053\u306E \u30B1\u30FC\u30AD \u306F \u4E94\u767E ..... \u3067\u3059"
+    romajiText: Kono keeki wa gohyaku en desu
+    indonesianText: Kue ini harganya 500 yen
+    answers:
+    - "\u5343 (sen)"
+    - "\u5186 (en)"
+    - "\u767E (hyaku)"
+    - "\u4E07 (man)"
+    correctAnswerIndex: 1
+    hintText1: "\u3048\u3093"
+    hintText2: En
+  - japaneseText: "\u305D\u306E \u304F\u308B\u307E \u306F \u4E09\u767E ..... \u3048\u3093
+      \u3050\u3089\u3044 \u3067\u3059"
+    romajiText: Sono kuruma wa sanbyaku man en gurai desu
+    indonesianText: Mobil itu harganya sekitar tiga juta yen
+    answers:
+    - "\u767E (hyaku)"
+    - "\u5343 (sen)"
+    - "\u4E07 (man)"
+    - "\u5186 (en)"
+    correctAnswerIndex: 2
+    hintText1: "\u307E\u3093"
+    hintText2: Man
+  - japaneseText: "\u3053\u3053 \u304B\u3089 \u3048\u304D \u307E\u3067 \u5341 .....
+      \u304B\u304B\u308A\u307E\u3059"
+    romajiText: Koko kara eki made juppun kakarimasu
+    indonesianText: Dari sini ke stasiun memakan waktu sekitar 10 menit
+    answers:
+    - "\u5206 (fun)"
+    - "\u5343 (sen)"
+    - "\u4E0A (ue)"
+    - "\u5E74 (nen)"
+    correctAnswerIndex: 0
+    hintText1: "\u3075\u3093"
+    hintText2: Fun
 --- !u!114 &85816848
 MonoBehaviour:
   m_ObjectHideFlags: 0
